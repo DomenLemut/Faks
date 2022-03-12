@@ -12,7 +12,7 @@ Zapiski pri predmetu Programiranje 2
 solsko leto 2021/2022
 								
 ****************************************************************************************
-> 11.3.2022:
+# 11.3.2022:
 
 INT, FLOAT, STEVILSKI TIPI...
 ---
@@ -107,7 +107,7 @@ preostanek je razdeljen na tri podrocja:
 - sklad => (kos pomnilnika, na katerega nizamo podatke), -malo prostora
 - kopica => (rezervni kos pomnilnika za podatke). -veliko prostora
 	   
-[link] [https://aticleworld.com/memory-layout-of-c-program/]
+[link][https://aticleworld.com/memory-layout-of-c-program/]
 	  
 	  
 ***
