@@ -90,6 +90,7 @@ int y = 3;  //zapis .....0011
 ```
 						
 x & y , x | y => pogleda zadnji bit in izracuna logicno vrednost.
+
 ----------------------------------------------------------------------------------------
 ##SPREMENLJIVKE IN PODATKOVNI TIPI:
 	>RAM si morajo programi v racunalniku razdeliti, svoj del dobi tudi (./a.out)
