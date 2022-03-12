@@ -14,8 +14,8 @@ solsko leto 2021/2022
 ****************************************************************************************
 # 11.3.2022:
 
-INT, FLOAT, STEVILSKI TIPI...
----
+## INT, FLOAT, STEVILSKI TIPI...
+
 
 
 zapis 0.1 v dvojiskem sistemu:
@@ -49,8 +49,8 @@ else {}
 			
 vrze v else{} zanko.
 
-PRINTF FUNKCIJA:
-----------------------------------------------------------------------------------------
+## PRINTF FUNKCIJA:
+
 
 
 printf:(%d, %ld, %u, %lu, %f, %lf) 
@@ -81,8 +81,8 @@ if(1) == if(true);
 if(0) == if(false);
 ```
 
-OPERATORJI AND IN OR;
----
+## OPERATORJI AND IN OR;
+
 
 > (&& || !) - (in, ali, negator)
 
@@ -96,8 +96,8 @@ int y = 3;  //zapis .....0011
 x & y , x | y => pogleda zadnji bit in izracuna logicno vrednost.
 
 
-SPREMENLJIVKE IN PODATKOVNI TIPI:
----
+## SPREMENLJIVKE IN PODATKOVNI TIPI:
+
 
 > RAM si morajo programi v racunalniku razdeliti, svoj del dobi tudi (./a.out)
 	
