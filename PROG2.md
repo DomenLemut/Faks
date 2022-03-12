@@ -1,9 +1,11 @@
-██████╗ ██████╗  ██████╗  ██████╗     ██████╗  
-██╔══██╗██╔══██╗██╔═══██╗██╔════╝     ╚════██╗  
-██████╔╝██████╔╝██║   ██║██║  ███╗     █████╔╝  
-██╔═══╝ ██╔══██╗██║   ██║██║   ██║    ██╔═══╝  
-██║     ██║  ██║╚██████╔╝╚██████╔╝    ███████╗  
-╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝     ╚══════╝  
+ ________  ________  ________  ________    _______     
+|\   __  \|\   __  \|\   __  \|\   ____\  /  ___  \    
+\ \  \|\  \ \  \|\  \ \  \|\  \ \  \___| /__/|_/  /|   
+ \ \   ____\ \   _  _\ \  \\\  \ \  \  __|__|//  / /   
+  \ \  \___|\ \  \\  \\ \  \\\  \ \  \|\  \  /  /_/__  
+   \ \__\    \ \__\\ _\\ \_______\ \_______\|\________\  
+    \|__|     \|__|\|__|\|_______|\|_______| \|_______|  
+                                                       
 ****************************************************************************************
 
 Domen Lemut  
@@ -99,15 +101,15 @@ x & y , x | y => pogleda zadnji bit in izracuna logicno vrednost.
 SPREMENLJIVKE IN PODATKOVNI TIPI:
 ---
 
-	>RAM si morajo programi v racunalniku razdeliti, svoj del dobi tudi (./a.out)
+> RAM si morajo programi v racunalniku razdeliti, svoj del dobi tudi (./a.out)
 	
-	   - en del programa rezerviran za strojno kodo programa,
-	preostanek je razdeljen na tri podrocja: 
-	   - prostor za staticne spremenljivke (in konstante), -dovolj prostora
-	   - sklad => (kos pomnilnika, na katerega nizamo podatke), -malo prostora
-	   - kopica => (rezervni kos pomnilnika za podatke). -veliko prostora
+- en del programa rezerviran za strojno kodo programa,
+preostanek je razdeljen na tri podrocja: 
+- prostor za staticne spremenljivke (in konstante), -dovolj prostora
+- sklad => (kos pomnilnika, na katerega nizamo podatke), -malo prostora
+- kopica => (rezervni kos pomnilnika za podatke). -veliko prostora
 	   
-	   [link] (https://aticleworld.com/memory-layout-of-c-program/)
+[link] [https://aticleworld.com/memory-layout-of-c-program/]
 	  
 	  
 ***
