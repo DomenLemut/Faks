@@ -1,21 +1,21 @@
-██████╗ ██████╗  ██████╗  ██████╗     ██████╗ 
-██╔══██╗██╔══██╗██╔═══██╗██╔════╝     ╚════██╗
-██████╔╝██████╔╝██║   ██║██║  ███╗     █████╔╝
-██╔═══╝ ██╔══██╗██║   ██║██║   ██║    ██╔═══╝ 
-██║     ██║  ██║╚██████╔╝╚██████╔╝    ███████╗
-╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝     ╚══════╝
+██████╗ ██████╗  ██████╗  ██████╗     ██████╗ /
+██╔══██╗██╔══██╗██╔═══██╗██╔════╝     ╚════██╗/
+██████╔╝██████╔╝██║   ██║██║  ███╗     █████╔╝/
+██╔═══╝ ██╔══██╗██║   ██║██║   ██║    ██╔═══╝ /
+██║     ██║  ██║╚██████╔╝╚██████╔╝    ███████╗/
+╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝     ╚══════╝/
 ****************************************************************************************
 
->Domen Lemut
->FRI - prvi letnik
->Zapiski pri predmetu Programiranje 2
->solsko leto 2021/2022
+Domen Lemut/
+FRI - prvi letnik/
+Zapiski pri predmetu Programiranje 2/
+solsko leto 2021/2022
 								
 ****************************************************************************************
->11.3.2022:
+> 11.3.2022:
 
-##INT, FLOAT, STEVILSKI TIPI...
------------------------------------------------------------------------------------------
+#INT, FLOAT, STEVILSKI TIPI...
+
 
 zapis 0.1 v dvojiskem sistemu:
 
@@ -26,8 +26,11 @@ zapis 0.1 v dvojiskem sistemu:
 
 Primer (z nenatancnostjo floata nikoli ne dosezemo zeljene vrednosti):
 
-			float x = 0.1;
-			while (x! = 1.0) x = x + 0.1;
+```c
+float x = 0.1;
+while (x! = 1.0) x = x + 0.1;
+```
+
 	-ta zanka se nikoli ne zakljuci.
 
 NEENAKOST ENAKIH FLOAT IN DOUBLE STEVIL:
@@ -37,66 +40,69 @@ Pri floatih in doublih tudi ne velja vedno primer
 		
 in tako nas lahko za dolocena stevila koda:
 
-			if(a + (b + c) == (a + b) + c)
-				{}
-			else 
-				{}
+```c
+if(a + (b + c) == (a + b) + c){}
+else 
+	{}
+```
 			
 vrze v else{} zanko.
 
 ----------------------------------------------------------------------------------------
 ##PRINTF FUNKCIJA:
 
-printf:(%d, %ld, -
-	    %u, %lu, -
-	    %f, %lf) -
+printf:(%d, %ld, %u, %lu, %f, %lf) 
 	    
-´´´C
+```c
 printf(%d, %ld,%u, %lu,%f, %lf);
-´´´
+```
 			
 logicni tip (bool):
 
-´´´C
-			#include<stdbool.h>
+```c
+#include<stdbool.h>
 			
-			bool b;
-			b = true;
-			//ali
-			b = false;
-´´´
+bool b;
+b = true;
+//ali
+b = false;
+```
 			
 s tem dela tudi pogoj:
 
-			if(b) == if(b==true)
-
+```c
+if(b) == if(b==true)
+```
 ubistvu dela po principu:
-
-			if(1) == if(true);
-			if(0) == if(false);
-
+```c
+if(1) == if(true);
+if(0) == if(false);
+```
 ----------------------------------------------------------------------------------------
 ##OPERATORJI AND IN OR;
-(&& || !) - (in, ali, negator)
+> (&& || !) - (in, ali, negator)
 
-			int x = 1;  //zapis .....0001
-			int y = 3;  //zapis .....0011
-			(x & y) == true;
-			(x | y) == true;
+```c
+int x = 1;  //zapis .....0001
+int y = 3;  //zapis .....0011
+(x & y) == true;
+(x | y) == true;
+```
 						
 x & y , x | y => pogleda zadnji bit in izracuna logicno vrednost.
 ----------------------------------------------------------------------------------------
 ##SPREMENLJIVKE IN PODATKOVNI TIPI:
 	>RAM si morajo programi v racunalniku razdeliti, svoj del dobi tudi (./a.out)
 	
-	   *en del programa rezerviran za strojno kodo programa,
+	   - en del programa rezerviran za strojno kodo programa,
 	preostanek je razdeljen na tri podrocja: 
-	   *prostor za staticne spremenljivke (in konstante), -dovolj prostora
-	   *sklad => (kos pomnilnika, na katerega nizamo podatke), -malo prostora
-	   *kopica => (rezervni kos pomnilnika za podatke). -veliko prostora
+	   - prostor za staticne spremenljivke (in konstante), -dovolj prostora
+	   - sklad => (kos pomnilnika, na katerega nizamo podatke), -malo prostora
+	   - kopica => (rezervni kos pomnilnika za podatke). -veliko prostora
 	   
-	   [link] [https://aticleworld.com/memory-layout-of-c-program/]
-	   
+	   [link] (https://aticleworld.com/memory-layout-of-c-program/)
+	  
+	  
 ***
 	   
 	   
