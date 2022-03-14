@@ -1,6 +1,6 @@
-#Racunalniske komunikacije
+# Racunalniske komunikacije
 
-###IP protokol(Internet protocol)
+### IP protokol(Internet protocol)
 
 >Ip je shit, to se resuje na aplikacijski plasti.
 
@@ -17,7 +17,7 @@ Usmerjanje:
 - izbira poti
 - RIP, OSPF BGP
 
-######format paketa IPv4
+###### format paketa IPv4
 deli IP paketa:
 - VER (4b): verzija IP protokola
 - HEADER LENGTH (4b): dolžina glave
@@ -43,7 +43,7 @@ začetka podatkov; običajno jih ni, glava dolga 20B)
 > ta opcija je slaba in nepotrebna, Bosnic ne supporta :-(
 - PODATKI (spremenljiva dolžina)
 
-######Fragmentacija
+###### Fragmentacija
 
 razbijanje paketa na manjse, ker so paketi preveliki
 ---
