@@ -12,7 +12,7 @@ so informacije, ki jih znajo izvajati procesorji.
 
 * UKAZI - zaporedje bitov, sestavljena iz 
 - informacije o operaciji - katero informacijo naj izvede
-- in informacije - kje so operandi
+- in informacije o pomnilniski besedi- kje so operandi
 
 * Turingov stroj
 
@@ -24,14 +24,33 @@ so informacije, ki jih znajo izvajati procesorji.
 (primarni vrstni red) ukazi v pomnilniku napisani en za drugim in cpu naj jih izvaja v taksnem redu
 (sekundarni vrstni red) "program counter"
 
-*Kje so pa operandi?
-*Naj bo pomnilnik sestavljen iz predalov.
-*"pomnilniska beseda" - vedno en izmed predalov hrani n bitov, natancnjeje 8 bitov
-*vsega prostora -"predalov" je 2 na 32 oz. 2 na 64
+* Kje so pa operandi?
+Naj bo pomnilnik sestavljen iz predalov.  
+"pomnilniska beseda" - vedno en izmed predalov hrani n bitov, natancnjeje 8 bitov  
+vsega prostora -"predalov" je 2 na 32 oz. 2 na 64
 
 > Von neumanovo ozko grlo... Pomnlinik je pocasnejsi od procesorja, to ga omejuje.
 
-* Ukaze, do katerih dostopamo pogosto jih hranimo v CPU - registri, to je majhen pomnilnik(8, 16, 32 bitov)
+* Ukaze, do katerih dostopamo pogosto jih hranimo v CPU - registri, to je majhen pomnilnik(8, 16, 32 registrov)
+
+LOAD/STORE ukazi preklapljajo podatke med pomnilnikom in registri  
+
+Ukazi imajo lahko razlicno kolicino informacije, ki jo nosijo v sebi. Primer a = b + c nosi 4 informacije
+- kmalu so naredili vse ukaze enako dolge (vsi razen Intel)
+
+## Load/Store:
+
+zraven potrebujemo se informacijo v registru aka. v kateri register prenasamo podatke. Za to porabimo 5 bitov to je 2⁵ = 32.
+
+informacije o pomnilniski besedi imao m biten naslov pomnilniske besede.  
+
+Pri tem preidemo mejo 32 bitov, ki jih imamo na voljo v load/store.   
+
+Te zato naslove hranimo posredno v enem izmed 32 registrov   
+
+
+
+
 
 
 
