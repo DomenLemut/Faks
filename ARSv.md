@@ -48,6 +48,27 @@ Pri tem preidemo mejo 32 bitov, ki jih imamo na voljo v load/store.
 
 Te zato naslove hranimo posredno v enem izmed 32 registrov   
 
+// poglej si zapis registrov in load/ store
+
+* LOAD :
+1. 1B : LB
+2. 2B : LH
+3. 4B : LW
+
+pri Load Byte(LB) obstaja tudi verzija LBU, ki pomeni load byte unsigned
+
+* Pravilo debelega konca(BIG ENDIAN) => proti bitu 0 - tega uporablja hip
+* Pravilo tankega konca(LITTLE ENDIAN) => od bita 0 - tega uporabljata ARM in Intel
+
+* STORE :
+1. SB
+2. SH
+3. SW
+
+# ASEMBLER:
+
+
+
 
 
 
