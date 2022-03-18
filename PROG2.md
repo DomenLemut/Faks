@@ -5,13 +5,17 @@
 				██║     ██║  ██║╚██████╔╝╚██████╔╝    ███████╗  
 				╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝     ╚══════╝                                           
 ****************************************************************************************
-
 **Domen Lemut**  
 **FRI - prvi letnik**  
 **Zapiski pri predmetu Programiranje 2**  
-**solsko leto 2021/2022**
-								
+**solsko leto 2021/2022**	
 ****************************************************************************************
+    
+    
+    
+    
+    
+     
 # 11.3.2022 (3. predavanje):
 
 ## INT, FLOAT, STEVILSKI TIPI...
@@ -107,7 +111,7 @@ x & y , x | y => pogleda zadnji bit in izracuna logicno vrednost.
 - **sklad** => (kos pomnilnika, na katerega nizamo podatke), -**malo prostora**
 - **kopica** => (rezervni kos pomnilnika za podatke). -**veliko prostora**
 	   
-[https://aticleworld.com/memory-layout-of-c-program/]
+[link do razlage](https://aticleworld.com/memory-layout-of-c-program/)
 
 ***
 
@@ -206,7 +210,7 @@ int main(){
 }
 ```
 
-##Dolzina int, char...
+## Dolzina int, char...
 ```c
 int i; //4 bytes
 int *pi; //8 bytes
@@ -215,7 +219,7 @@ char c;  //1 byte
 char *pc; //8 bytes
 ```
 
-> **V c-ju lahko naredimo packarijo:**
+> **V c-ju lahko tako naredimo packarijo:**
 `*((int*)pc)`
 
 **Semanticen prepad**
@@ -235,6 +239,40 @@ i = 19;
 printf("%d\n", *p); //19
 
 ```
+
+---
+**Za nazaj**
+```c
+int c; //staticna spremenljivka
+
+int f(int a){
+	int b; //na skladu
+	return a + b + c;
+}
+```
+> v javi bi se napaka zaznala, v c - ju pa se gladko prevede.
+
+Koliko je vrednost b?
+:   ne vemo
+
+**kopica**
+
+> Da lahko uporabljamo kopico rabimo kazalce, ki kazejo na prostor na kopici.
+
+```c
+#include <stdlilo.h>
+
+malloc
+free
+```
+
+```c
+int *p;
+
+p = (int*)malloc(sizeof(int)); 
+// na koncu stevilo bajtov, ki jih potrebujemo v malloc, najlepse je, da damo sizeof(int);
+```
+---
 
 
 	
@@ -272,10 +310,10 @@ printf("%d\n", *p); //19
     ].                 `.`.....      ..'.,:░░░╔╣╣╣M░░░░░░░░░░░░░░░]░░░░░░]H"`
 	    
 	
-	
+	                                  
 
 
-                   
+        
 		
 
 		
