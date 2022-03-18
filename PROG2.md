@@ -6,13 +6,13 @@
 				╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝     ╚══════╝                                           
 ****************************************************************************************
 
-Domen Lemut  
-FRI - prvi letnik  
-Zapiski pri predmetu Programiranje 2  
-solsko leto 2021/2022
+**Domen Lemut**  
+**FRI - prvi letnik**  
+**Zapiski pri predmetu Programiranje 2**  
+**solsko leto 2021/2022**
 								
 ****************************************************************************************
-# 11.3.2022:
+# 11.3.2022 (3. predavanje):
 
 ## INT, FLOAT, STEVILSKI TIPI...
 
@@ -111,7 +111,7 @@ x & y , x | y => pogleda zadnji bit in izracuna logicno vrednost.
 
 ***
 
-# 18.3.2022
+# 18.3.2022 (4. predavanje):
 
 - auto
 - return
@@ -160,7 +160,7 @@ inf fac(int n){
 }
 ```
 
-##register
+## register
 
 ```c
 inf fac(int n){
@@ -172,9 +172,39 @@ inf fac(int n){
 }
 ```
 
->register je mal useless, za prog2 ga ne boste rabli, le za kasno ustno uprasanje
+> register je malo useless, za prog2 ga ne boste rabli, le za kasno uprasanje na ustnem
 
-**Glavno je, da register in static poveta, kam mora dati spremenljivke**
+**Glavno je vedeti, da register in static poveta, kam mora dati spremenljivke**
+
+## kopica
+
+> Da spravimo kaj na kopico potrebujemo kazalec.
+
+64 bitni naslovi   
+
+**"kazalec je spremenljivka, ki vsebuje naslov"**
+
+Za p vzamemo referenco na i.
+```c
+int i = 17;
+int *p;
+p = &i; //p je naslov i-ja
+```
+
+Izpise nam, kam kaze p.
+```c
+#include <stdio.h>
+
+int main(){
+	int i; int *p;
+	i = 17; p = &i;
+	printf("i = %d @ %016\n", i, &i);
+	printf("p = %016lx @ %016\n", (unsigned long int) p, &p);
+	printf("%d\n", *p);
+	return 0;
+}
+```
+
 
 
 	
