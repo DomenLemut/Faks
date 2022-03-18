@@ -140,7 +140,7 @@ int f(int a, int b){
 > static spremenljivko vrze med staticne spremenljivke, nato pa jo se malo "skrije"
 
 **Zakaj bi hoteli tako spremenljivko imeti?**    
-: Ker je aktivna med celim izvajanjem programa, in je vidna le lokalno.
+:   Ker je aktivna med celim izvajanjem programa, in je vidna le lokalno.
 
 ```c
 inf fac(int n){
@@ -219,7 +219,7 @@ char *pc; //8 bytes
 `*((int*)pc)`
 
 **Semanticen prepad**
-: v spremenljivko lahko nekaj spravimo, a ne vemo kaj je tam shranjeno.
+:   v spremenljivko lahko nekaj spravimo, a ne vemo kaj je tam shranjeno.
 
 ```c
 int i; int *pi;
@@ -238,6 +238,7 @@ printf("%d\n", *p); //19
 
 
 	
+***
 
     ╣╬╬ÑÑ]]]]Ñ]]]ÑÑÑÑÑ]H`   .,░]]╫╬╣╣╣╣╣╬╢M╢M╬╢╢╢▀╢╬▓▌░░]░░"░░░]]╫╟╬╬╬▓█████████████
     ╟╬╬╬╣╣╣╬╬╬╬╬╬╬╬╬╟╣ææææMM░░░]]]╬╬½╬╬Ñ]]╬╢M╢╬╢╢╬╢▓▓▌╬j]░░:░░░]░j╬╬╬╢▓▓▓▓▓▓▓▓▓▓▓▓▓▓
