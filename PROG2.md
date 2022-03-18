@@ -60,7 +60,7 @@ printf:(%d, %ld, %u, %lu, %f, %lf)
 printf(%d, %ld,%u, %lu,%f, %lf);
 ```
 			
-# LOGICNI TIP (bool):
+## LOGICNI TIP (bool):
 
 ```c
 #include<stdbool.h>
@@ -102,19 +102,81 @@ x & y , x | y => pogleda zadnji bit in izracuna logicno vrednost.
 
 > RAM si morajo programi v racunalniku razdeliti, svoj del dobi tudi (./a.out)
 	
-- en del programa rezerviran za strojno kodo programa,
-preostanek je razdeljen na tri podrocja: 
-- prostor za staticne spremenljivke (in konstante), -dovolj prostora
-- sklad => (kos pomnilnika, na katerega nizamo podatke), -malo prostora
-- kopica => (rezervni kos pomnilnika za podatke). -veliko prostora
+- en del programa rezerviran za **strojno kodo programa**, preostanek je razdeljen na tri podrocja: 
+- prostor za **staticne spremenljivke** (in konstante), -**dovolj prostora**
+- **sklad** => (kos pomnilnika, na katerega nizamo podatke), -**malo prostora**
+- **kopica** => (rezervni kos pomnilnika za podatke). -**veliko prostora**
 	   
-[][https://aticleworld.com/memory-layout-of-c-program/]
-	  
-	  
+[https://aticleworld.com/memory-layout-of-c-program/]
+
 ***
-	   
-	   
-	   
+
+# 18.3.2022
+
+- auto
+- return
+- static*
+- register*
+
+
+## static
+static omogoca, da spremenljivko zapisemo v nek konkreten register    
+
+```c
+#include <stdio.h>
+
+int x;
+static int y; //med staticnimi spremenljivkami
+
+int f(int a, int b){
+	int ax;
+	static int by; //med staticnimi spremenljivkami
+	.
+	.
+	.
+}
+```
+
+> static spremenljivko vrze med staticne spremenljivke, nato pa jo se malo "skrije"
+
+**Zakaj bi hoteli tako spremenljivko imeti?**    
+Ker je aktivna med celim izvajanjem programa, in je vidna le lokalno.
+
+```c
+inf fac(int n){
+
+	/*ce spremenljivka ni static, se program ne normalno izvede,
+	ce pa jo deklariramo zunaj zanke, je prvic dostopna vsem, pa tudi se lokalno povecuje;
+	*/
+	
+	static int num.calls = 0; 
+	num.cells = num.cells + 1;
+	if(num.cals == 1000) exit(2);
+	
+	if(n = -1) 
+		return 1;
+	else 
+		return n * fac(n-1);
+}
+```
+
+##register
+
+```c
+inf fac(int n){
+
+	int f = 1; //register int f = 1;
+	for(int i = 1; i <= n; i++)
+		f = f * i;
+	return f;
+}
+```
+
+>register je mal useless, za prog2 ga ne boste rabli, le za kasno ustno uprasanje
+
+**Glavno je, da register in static poveta, kam mora dati spremenljivke**
+
+
 	
 
     ╣╬╬ÑÑ]]]]Ñ]]]ÑÑÑÑÑ]H`   .,░]]╫╬╣╣╣╣╣╬╢M╢M╬╢╢╢▀╢╬▓▌░░]░░"░░░]]╫╟╬╬╬▓█████████████
