@@ -140,7 +140,7 @@ int f(int a, int b){
 > static spremenljivko vrze med staticne spremenljivke, nato pa jo se malo "skrije"
 
 **Zakaj bi hoteli tako spremenljivko imeti?**    
-Ker je aktivna med celim izvajanjem programa, in je vidna le lokalno.
+ : Ker je aktivna med celim izvajanjem programa, in je vidna le lokalno.
 
 ```c
 inf fac(int n){
@@ -180,18 +180,19 @@ inf fac(int n){
 
 > Da spravimo kaj na kopico potrebujemo kazalec.
 
-64 bitni naslovi   
+vsebovani so 64 bitni naslovi   
 
 **"kazalec je spremenljivka, ki vsebuje naslov"**
 
-Za p vzamemo referenco na i.
+~~Za p vzamemo referenco na i:~~
 ```c
 int i = 17;
 int *p;
 p = &i; //p je naslov i-ja
 ```
 
-Izpise nam, kam kaze p.
+~~Izpise nam, kam kaze p:~~
+
 ```c
 #include <stdio.h>
 
