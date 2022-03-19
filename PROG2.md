@@ -241,6 +241,7 @@ printf("%d\n", *p); //19
 ```
 
 ---
+---
 **Za nazaj**
 ```c
 int c; //staticna spremenljivka
@@ -272,6 +273,7 @@ int *p;
 p = (int*)malloc(sizeof(int)); 
 // na koncu stevilo bajtov, ki jih potrebujemo v malloc, najlepse je, da damo sizeof(int);
 ```
+---
 ---
 
 
