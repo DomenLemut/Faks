@@ -1,4 +1,19 @@
+
 # Racunalniske komunikacije
+
+```
+  ___   _      ___   _      ___   _      ___   _      ___   _
+ [(_)] |=|    [(_)] |=|    [(_)] |=|    [(_)] |=|    [(_)] |=|
+  '-`  |_|     '-`  |_|     '-`  |_|     '-`  |_|     '-`  |_|
+ /mmm/  /     /mmm/  /     /mmm/  /     /mmm/  /     /mmm/  /
+       |____________|____________|____________|____________|
+                             |            |            |
+                         ___  \_      ___  \_      ___  \_
+                        [(_)] |=|    [(_)] |=|    [(_)] |=|
+                         '-`  |_|     '-`  |_|     '-`  |_|
+                        /mmm/        /mmm/        /mmm/
+```
+
 
 ## IP protokol(Internet protocol)
 
@@ -124,11 +139,94 @@ Lifetime: 3600 secs
 |172.16.0.0 - 172.31.255.255 | 172.16.0.0/12 | 2²⁰ |
 |192.168.0.0 - 192.168.255.255 | 192.168.0.0/16 | 2¹⁶ |
 
-* usmerjevalnik uporabi NAT, da lokalni naslov preslika v globalni
+* usmerjevalnik uporabi NAT, da lokalni naslov preslika v globali
+
+## Traceroute
+
+izvor posilja serijo paketov proti cilju, prvi ima ttl=1, drugi ttl=2...
+
+administrator se lahko odloci, da ne izdaja svojega imena, usmerjavalnik ne odgovarja na pinge
+
+# IPv6
+
+## Sintaksa Ipv6 naslova
+**zakaj sploh?**
+
+1. potreben večji naslovni prostor
+	temo smo se poskusili izogniti s cider..., a prostora enostavni ni vec
+	namesto 32-bitnih naslovov imamo zdaj 128-bitne naslove
+	
+2. hitrejse usmerjanje
+	fiksna glava 40 byte-ov, opcij nimamo.
+	fragmentacija ni dovoljena, ker upočasnjuje procesiranje.
+	
+3. Potrebno zagotavljanje karkovosti storitev
+	**oznaka "vrste toka"(flow label) v paketu IPv6**
+
+128 bitov delimo v 8 16 bitnih skupin
+zapišemo jih v šesnajstiškem sistemu
+vodilne ničle lahko izpustimo(004f v 4f)(0000 v 0)
+zaporedne bloke s samimi niclami lahko zapisemo samo z dvopicjem(:0000:0000:0000: => ::)
+
+**Kompatibilnost z IPv4 naslovi**
+193.2.72.1 -> ::193.2.72.1
+
+**fragmentacija se ne izvaja vec**
+ce je paket preveli, usmerjevalnik zavrze paket in rece "Packet too big"
+glava vec ne vsebuje kontrolne vsote, ker je ta enkapsulirane ze v protokolih notraj IP paketa in zavira hitro procesiranje(preracunavanje ob spremembi TTL)
+polja za opcije v glavi ni vec, Mozno jih je implementirati kot poseben enkapsuliran protokol (uporaba polja next header)
 
 
+**Prehod iz IPv4 na IPv6**
+
+- dual stack(dvojni sklad, vozlisca uporabljajo vzporedni implementaciji IPv4 in IPv6)
+
+**kako naprava ugotovi, da mora uporabljati IPv4 ali 6?**: pri povprasevanju za ip, dns streznik(DNS) vrne IPv4 ali IPv6 naslov.
+
+> komur zanas govort IPv6 mu govori IPv6, ostalim govori IPv4,
+
+## tuneliranje
+po IPv4 se ne more prenasati Flow Label
+**"tunel"**
+med usmerjevalnikoma ustvarimo IPv6 tunel
+
+>v tunelu IPv4 carry-ja IPv6 paket
+
+**IPv6 paket znotraj IPv4 paketa**
+
+## Varnost na omrezni plasti
+
+komunikacija poteka neverovano
+
+IPSec: nabor protokolov, ki skrbijo za varno komunikacijo na omreznem nivoju(AH, ESP)
+
+- dogovor o uporabljenih kriptografskih algoritmih in kljucih
+- ekriptacija in dekriptacija
+- integriteta podatkov
+- avtentikacija izvora
 
 
+> IP scooping hocemo prepreciti
+
+## usmerjanje
+
+> kaj je najboljs pot od posiljatelja do sprejemnika?
+
+**Omrezja modeliramo s teorijo grafov!**
+	vozlisca so usmerjevalniki
+	
+	
+Posredovalne tabele:
+> ce hoces poslati na tak cilj, poslji na vrata...
+
+uvedemo:
+1. ceno poti
+2. ceno povezave
+
+> vecja vrednost je drazja, iscemo ceno povezave z najmanjso vrednostjo(oznacimo jo s c).
+
+**Kaj je cena povezave?**
+imamo dve kombinaciji lastnosti: centralitirani ali decentralizirani
 
 
 

@@ -241,7 +241,6 @@ printf("%d\n", *p); //19
 ```
 
 ---
----
 **Za nazaj**
 ```c
 int c; //staticna spremenljivka
@@ -274,13 +273,8 @@ p = (int*)malloc(sizeof(int));
 // na koncu stevilo bajtov, ki jih potrebujemo v malloc, najlepse je, da damo sizeof(int);
 ```
 ---
----
 
-
-	
-***
 ```
-
                        .,,uod8B8bou,,.
               ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
          ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
@@ -311,35 +305,9 @@ p = (int*)malloc(sizeof(int));
                   `!988888888899fT|!^"'
                     `!9899fT|!^"'
                       `!^"'
-	
-	                                  
 ```
 
-```bash
-            .-/+oossssoo+/-.               domen@domenYoga 
-        `:+ssssssssssssssssss+:`           --------------- 
-      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 20.04.4 LTS x86_64 
-    .ossssssssssssssssssdMMMNysssso.       Host: 82MS Yoga Slim 7 Pro 14ACH5 
-   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 5.13.0-35-generic 
-  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: 4 hours, 43 mins 
- /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: 1901 (dpkg), 19 (snap) 
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Shell: bash 5.0.17 
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   Resolution: 2880x1800 
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   DE: GNOME 
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter 
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   WM Theme: Adwaita 
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Theme: Adapta-Orange-Eta [GTK2/3] 
- /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    Icons: Papirus [GTK2/3] 
-  +sssssssssdmydMMMMMMMMddddyssssssss+     Terminal: gnome-terminal 
-   /ssssssssssshdmNNNNmyNMMMMhssssss/      CPU: AMD Ryzen 7 5800H with Radeon G 
-    .ossssssssssssssssssdMMMNysssso.       GPU: AMD ATI 03:00.0 Device 1638 
-      -+sssssssssssssssssyyyssss+-         Memory: 5358MiB / 13845MiB 
-        `:+ssssssssssssssssss+:`
-            .-/+oossssoo+/-.                                       
-                                                                  
 
-```
-		
 
 		
 
