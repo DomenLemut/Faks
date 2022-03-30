@@ -272,6 +272,43 @@ int *p;
 p = (int*)malloc(sizeof(int)); 
 // na koncu stevilo bajtov, ki jih potrebujemo v malloc, najlepse je, da damo sizeof(int);
 ```
+
+# 25.3.2022 (5. predavanje):
+## Kazalci in Tabele
+
+```c
+int  *pi; pi = (int*) malloc(sizeof(int[100]));
+```
+> ce imate kazalec se lahko vedno delate, kot da ta kaze na tabelo
+
+**pi kaze na zacetek tabele**
+
+
+```c
+i = 17;
+*p = 19; 
+int t[1000];
+p = &(t[0]);
+
+p[0] = 31; //je enako kot 
+t[0] = 31;
+
+p[1] = 107; //enako kot
+t[1] = 107;
+
+p[j] = p + j * sizeof(int);
+```
+
+> ce gremo izven kazalcev vrednosti spremenljivk, ne moremo vedeti, kaj se tocno tam nahaja   
+, zato se temu nacinu pisanja kode raje izogibamo
+
+```c
+int f(int *t){...}
+int f(int t[100]){...}
+int f(int t[]){...}
+```
+
+
 ---
 
 ```
