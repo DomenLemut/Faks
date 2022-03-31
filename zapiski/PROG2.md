@@ -299,8 +299,8 @@ t[1] = 107;
 p[j] = p + j * sizeof(int);
 ```
 
-> ce gremo izven kazalcev vrednosti spremenljivk, ne moremo vedeti, kaj se tocno tam nahaja   
-, zato se temu nacinu pisanja kode raje izogibamo
+> ce gremo izven kazalcev vrednosti spremenljivk, ne moremo vedeti,    
+kaj se tocno tam nahaja, zato se temu nacinu pisanja kode raje izogibamo
 
 ```c
 int f(int *t){...}
@@ -308,10 +308,38 @@ int f(int t[100]){...}
 int f(int t[]){...}
 ```
 
+- f(n) => funkcija f prejme le naslov tabele, natancneje: naslov 0- tega elementa tabele
+- f(pi) => funkcija prejme naslov, ki je shranjen v spremenjlivki pi
+
+> namesto t.lenght lahko rocno ugotovimo dolzino tabele s
+
+**vracanje spremenljive iz funkcije** 
+za return spremenljivke oziroma tabele, ki jo deklariramo v funkciji, potrebujemo static deklaracijo spremenljivke.   
+
+```c
+int n[100];
+int *p1 = findfirst3div7(n, 100);
+int *p2 = findfirst3div7(&(n[50]), 50);
+```	
+
+```c
+int* findalldiv7(int t[], int len_t, int *len_7){
+	int *t7 = (int*)malloc(sizeof(int[len_t]));
+	*len7 = 0;
+	for(int i = 0; i < len.t; i++){
+		if(t[i] % 7 == 0){
+			t7[*len7] = t[i];
+			(*len7) = (*len) + 1;
+		}
+	}
+
+}
+```	
+
 
 ---
 
-```
+``
                        .,,uod8B8bou,,.
               ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
          ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
