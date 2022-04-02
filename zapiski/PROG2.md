@@ -10,12 +10,14 @@
 **Zapiski pri predmetu Programiranje 2**  
 **solsko leto 2021/2022**	
 ****************************************************************************************
-    
-    
-    
-    
-    
-     
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
 # 11.3.2022 (3. predavanje):
 
 ## INT, FLOAT, STEVILSKI TIPI...
@@ -113,7 +115,14 @@ x & y , x | y => pogleda zadnji bit in izracuna logicno vrednost.
 	   
 [link do razlage](https://aticleworld.com/memory-layout-of-c-program/)
 
-***
+
+---
+</br>
+</br>   
+</br>
+</br>
+</br>
+</br>
 
 # 18.3.2022 (4. predavanje):
 
@@ -272,6 +281,13 @@ int *p;
 p = (int*)malloc(sizeof(int)); 
 // na koncu stevilo bajtov, ki jih potrebujemo v malloc, najlepse je, da damo sizeof(int);
 ```
+---
+</br>
+</br>   
+</br>
+</br>
+</br>
+</br>
 
 # 25.3.2022 (5. predavanje):
 ## Kazalci in Tabele
@@ -334,12 +350,145 @@ int* findalldiv7(int t[], int len_t, int *len_7){
 	}
 
 }
-```	
-
-
+```	 
 ---
+</br>
+</br>   
+</br>
+</br>
+</br>
+</br>
 
-``
+# 1.4.2022 (6. predavanje):
+
+## NIZI V C-ju
+
+niz v c-ju = tabela znakov, ki ima na koncu znak \0
+
+**#include<string.h>**
+
+ 
+```c
+#include<string.h>
+int strlen(char*); 
+
+char str1[100];
+
+----------------------------------
+
+char str1[4],str2[4];
+str1[0] = 'A';
+str1[1] = 'B';
+str1[2] = 'C';
+str1[3] = '\0';
+
+str2[0] = 'a';
+str2[1] = 'b';
+str2[2] = '\0';
+
+strlen(str1) => 3
+strlen(str2) => 2
+
+str2[2] = 'c';
+strlen(str2) => ?
+```
+```
+strcpy(s1, "RACUNALNISTVO"); //14 bajtov - 13 zakov plus znak za zakljucek
+```
+
+## Vecdimenzionalne tabele
+
+```
+int a[100][200];
+```
+
+V pomniliku: V kos pomnilnika, ki je namenjen tabeli, tabelo shranimo po vrsticah,   
+V zgornjem primeru bi recimo shranili tabelo po 100 nizih dolzine 200 
+
+> "Desni indeks tece najhitreje"
+
+
+**izracunavanje mesta shranjevanja v tabeli**
+
+```c
+&(a[i][j]) = a + i * sizeof(int[200]) + j * sizeof(int);
+```
+
+```c
+int f(int x[100][200]){}
+
+//je isto kot
+int f(int x[0][200]){}
+//zaradi prej izpeljane formule
+```
+**3 dimenzije:**
+V tri dimenzije se to prevede kot
+```c
+int g(int y[][100][200]){}
+```
+Drugace receno, lahko izpustimo le prvo dimenzijo vecdimentionalne tabele, ko jo dodjamo v funkcijo.
+
+
+**TABELA S KAZALCI (kot jo poznamo v javi):**
+```c
+int **p
+pa = (int**)malloc(100*sizeof(int*));
+for(int i = 0; i < 100; i++)
+	pa[i] = (int*)malloc(200*sizeof(int));
+
+//potem lahko recemo
+pa[i][j];
+pa[2][7];
+```
+
+> kazalce lahko dajemo na kopico, dejanske vrednosti tabele pa na sklad, c nam to omogoca
+
+Ta nacin je mogoce pocasnejsi, ko imamo veliko stevilo dostopov do pomnilnika, se to pozna.
+
+**Kako poslati tako tabelo v funkcijo?**
+```c
+int f(int **p){
+	pa;
+	pa[2];
+	p[2][7];
+	---------------------
+	pa + 2 * sizeof(int);
+	--------------------- 
+}
+```
+
+**V Javi:**
+```java
+public static void main(String [] args){...}
+```
+**V C - ju:**
+```c
+//do zdaj
+int main(){...}
+
+//lahko tudi
+int main(int argc, char *argc[]){...}
+```
+
+```bash
+$ .a/a.out a b c
+```
+```c
+argc = 4
+//imamo 4 razlicne...
+```
+> v main metodi brez argumentov se zgodi tocno isto, a do tega nimamo dostopa.
+
+## PROBLEM N KRALJIC NA DESKO N x N
+...
+
+
+---   
+</br>
+</br>
+</br>
+
+```
                        .,,uod8B8bou,,.
               ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
          ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
