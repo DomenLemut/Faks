@@ -482,6 +482,33 @@ argc = 4
 ## PROBLEM N KRALJIC NA DESKO N x N
 ...
 
+</br>
+</br>   
+</br>
+</br>
+</br>
+</br>
+
+# 8.4.2022 (7. predavanje):
+
+```c
+void combs(int *tab, int m, int n, int k, int *t){
+	if(n == 0){
+		for(int i = m - 1; i >= 0; i--){
+			printf("%d ", tab[i]);
+			printf("\n");
+		}
+
+	} else{
+		for(int i = 1; i <=k ; i++){
+			t[0] = i;
+			combs(tab, n - 1, k, t + 1);
+		}
+	}
+}
+```
+
+
 
 ---   
 </br>
@@ -491,7 +518,7 @@ argc = 4
 ```
                        .,,uod8B8bou,,.
               ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
-         ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
+         ,=m8BBBBBBBBBBBBBBBRWTF?!||||||||||||||
          !...:!TVBBBRPFT||||||||||!!^^""'   ||||
          !.......:!?|||||!!^^""'            ||||
          !.........||||                     ||||
