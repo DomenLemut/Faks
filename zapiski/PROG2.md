@@ -508,6 +508,22 @@ void combs(int *tab, int m, int n, int k, int *t){
 }
 ```
 
+**NO M and no *t**
+```c
+void perms(int *tab, int n, int j){
+	if(j < n){
+		for(int i = j; i < n; i++){
+			int tmp;
+			tmp = tab[i]; tab[i] = tab[j]; tab[j] = tmp;
+			perms(tabb, n, j + 1);
+		}
+	} else {
+		for(int i = 0; i < n; i++)
+			pritf("%d ", tab[i]);
+		printf("\n");
+	}
+}
+```
 
 
 ---   
