@@ -1,3 +1,4 @@
+
 <img align="left" src="github_2.png" >
 
 
@@ -18,4 +19,12 @@ I have things sorted out as [notes](https://github.com/DomenLemut/Faks/tree/main
 
 
 
+
+
 **Happy browsing and studying!** 🎉
+
+***
+contacts: 
+[instagram](https://www.instagram.com/domenlemut/)
+[discord](https://discord.gg/ZjWgGtxX9T)
+[facebook](https://www.facebook.com/domen.lemut)
