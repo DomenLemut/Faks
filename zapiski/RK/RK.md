@@ -228,15 +228,195 @@ uvedemo:
 **Kaj je cena povezave?**
 imamo dve kombinaciji lastnosti: centralitirani ali decentralizirani
 
+## RWND - recieve window
 
+**nadzor pretoka - flow control**
+Po prvem sendu si pošiljatelja izmenjata tudi rwnd.
 
+**nadzor zasičenja - congestion control**
+zasicenje je stanje omrezja ko prevec posiljateljev posilja prevec podatkov.    
+Zacnejo se dogajati stvari kot je naprimer izguba segmentov in velike zakasnitve.
+</br>
+</br>
+> Goodput - uspesno poslan promet (paketi na sekundo)
 
+</br>
 
+tega najbrs nikoli nismo doziveli, ker obstaja congestion control
+</br>
+</br>
 
+> ARPANET je primer omrezja, ki je veckrat dozivel nasicenje
 
+za cakalni interval in ponovno posiljanje skrbi Transportna plast. 
 
+- Scenarij 1:
+segment oddamo le, ko j prostor v vrsti.
 
+- Scenarij 2: dogajajo se izgube paketov in ponovna posiljanja
 
+- Scenarij 3: ponovna posiljanja tudi zaradi velikih zakasnitev.
+
+**pri vec usmerjevalnikih je potreben le en neuspesen hop, da je potrebno ponovno posiljanje.**
+
+</br>
+
+**Kaj se da narediti?**
+
+### TCP nadzor nasicenja 
+
+za vsako uspesno prejeto potrditev lahko povec hitrost, drugace jo zmanjsa.
+
+> Deluje kot AIMD algoritem - additive increase multiplicative decrease
+
+### Pocasen zacetek -  slow start
+
+cwnd = 1
+
+- za vsako prejeto potrditev povecaj cwnd za * 2
+(gre za eksponentno rast)
+
+- Ko pride do prve zgube se cwnd ponovno nastavi na 1.
+
+- Naslednjic slow start gre do prve meje, nato prestavimo na pocasnejse narascanje cwnd - ja. Natancneje za eno enoto MSS - ja. Temu delu pravimo congestion avoidance.
+
+**kaj se zgodi, ce pride do izgube?**
+
+**3x podvojeni ACK**: prheod v fazo hitre obnove "fast recovery", v katero preideta pocasen zacetek in izogibanje zasicenju ob prejemu 3 ponovljenih ACK.
+
+### **Verzije TCP po casovnici:**
+1. **TCP Tahoe**
+2. **TCP Reno**
+3. **TCP Vegas**
+</br>
+
+> "UDP je kot prijatelj, ki prevec govori"
+
+**MSS = MTU - 40**
+
+</br>
+</br>
+</br>
+
+## Uvod v aplikacijsko plast:
+
+### Omrežne aplikacije:
+**arhitekture aplikacij:**
+- streznik in odjemalec
+- peer-to-pear(P2P)
+- mešana arhitektura
+
+</br>
+
+**Skype**
+
+# Predavanje 25.4.2022
+
+## http:
+
+pojavi  se v 90ih, omogoca:
+1. dostop do vsebin na zahtevo
+2. vsak lahko oglasuje
+3. iskanja, povezave, grafika, vmesniki, multimedija
+
+- RFC 1945 (HTTP 1.0)
+- RFC 2616 (HTTP 1.1)
+
+**DELOVANJE:**
+- odjemalec naslovi  TCP zahtevo n avrata 80 strezika
+- streznik vrne http odgovor
+- TCP poskrbi za potrditve...
+
+**Zanimivost => telnet...**
+
+**zahteva:**
+```
+GET /index.html 
+```
+
+Statusne spremenljivke:
+1.  Information (1xx)
+2. Successful (2xx)
+3. Rediection (3xx)
+4. Client Error (4xx)
+5. Server Error (5xx)
+
+> Po rokovanju je 5s odprta povezava, nato se zapre.
+
+> HTTP ne pomni povezav
+
+**PROBLEM:    varovanje zasebnosti !!**
+
+## Piškotki: 
+Indentifikator, ki ga strežnik dodeli uporabniku in ga uporabnik lokalno shrani. 
+
+## Medstreznik (proxy)
+
+odgovarja ne zahteve namesto streznikov, ima svoje kopije spletnih strani (ce je nima, jo zahteva od pravega streznika)
+
+**Zakaj medstrezniki?**
+
+igra vlogo odjemalca in streznika
+
+- odjemalec sam ne ve, da mora sprasevati proxi streznik, zato je treba nastaviti proxi.
+
+**pogojna zahteva:**      
+if-modified-since:
+
+## Elektronska posta
+
+**Struktura odjemalec - streznik**
+
+**Protokol SMTP**
+
+- Simple mail transfer protocol
+
+- star vec kot 30 let
+
+- UPORABLJA TCP VRATA 25
+
+- ukazi in telo sporocila morata biti kodirana s 7-bit ascii
+
+## Storitve predstavitvene plasti
+
+**1. predstavitev podatkov**
+
+**2. predstavitev numericnih znakov**
+
+**3. stiskanaje podatkov**
+
+**4. zascita podatkov (kriptiranje)**
+
+## Abstrakna sintaksna notacija:
+**ASN1:**
+> ubistvu je skupni jezih za posiljanje, da je pretvarjanje univerzalno
+
+Sounds easy:)
+
+Clienti morajo tko znat pretvarjati samo v ASN1 in iz ASN1
+
+> dovolj se je nauciti enega abstraknega jezika, ki ga bodo vsi razumeli
+
+# Kriptografija
+
+- varnostni izzivi pri elektronski komunikaciji
+
+Poznamo dve vrsti napadov:
+1. pasivni napad => prisluskovanje
+
+2. aktivni napad => aktivno spreminjanje podatkov
+
+- indentifikacija in avtentikacija
+
+**Vrste kriptografije (gelede na kluce)**
+- simetricni kljuci
+- javni kluci
+
+**Zgoscevalne funkcije(hash functions)**
+- je tudi enkripcijski algoritem, vendar ne uporablja kljucev
+> hash kriptirano sporocilo ima lahko vec razlicnih originalnih sporocil = attack, ki to izkorisca je imenovan "Birthday attack"
+
+# Predavanje 23. 5. 2022
 
 
 

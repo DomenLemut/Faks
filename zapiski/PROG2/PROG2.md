@@ -11,6 +11,18 @@
 **solsko leto 2021/2022**	
 ****************************************************************************************
 
+<script>
+.body{
+	background-color: red;
+}
+
+.html{
+	background-color: red;
+}
+.md{
+	background-color:red;
+}
+</script>
 </br>
 </br>
 </br>
@@ -524,6 +536,294 @@ void perms(int *tab, int n, int j){
 	}
 }
 ```
+
+</br>
+</br>   
+</br>
+</br>
+</br>
+</br>
+
+# 15.4.2022 (8. predavanje):
+
+## Sudoku Solver
+
+
+
+```c
+//Dosti je skopiranega iz mojga obstojecega java Sudoku solver programa.
+
+include <stdio.h>
+include <stdbool.h>
+
+#define DIM 9 //dimenzija sudokuja
+#define BOX 3 //dimenzija box-a
+
+int sudoku[DIM][DIM] = {{1,0,0,0,0,0,5,6,7},...,{4,0,0,0,0,4,5,6,9}}
+
+//check if number already exists in box with element (x, y)
+bool NumInBox(int [][] sudoku, int x, int y, int num){
+	//zacetni in koncni parametri boxa
+	int strX = (x / BOX) * BOX;
+	int endX = strX + BOX;
+	int strY = (y / BOX) * BOX;
+	int endY = strY + BOX;
+	
+	for(int currX = strX; x < endX; currX++){
+		for(int currY = strY; y < endY; currY++){
+			if(sudoku[currX][currY] == num)
+				return true;
+		}
+	}
+	
+	return false;
+}
+
+//check if number already exists in row x
+bool NumInRow(int [][] sudoku, int x, int num){
+	for(int i = 0; i < dimension; i++){
+		if(sudoku[x][i] == num)
+			return true;
+	}
+	
+	return false;
+
+}
+
+//check if number already exists in collumn y
+bool NumInColl(int [][] sudoku, int y, int num){
+	for(int i = 0; i < dimension; i++){
+		if(sudoku[i][y] == num)
+			return true;
+	}
+	
+	return false;
+}
+
+void PrintSudoku(int [][] sudoku){
+	for(int x = 0; x < DIM; x++){
+		for(int y = 0, y < DIM; y++){
+			printf("%d", sudoku[x][y]);
+		}
+		printf("\n");
+	}
+}
+
+//solve sudoku
+int solve(int s[DIM][DIM], int i, int j){
+	if(i == DIM)
+		//izpise se rešitev, return 1
+	if(s[i][j] != 0) return solve(s, j == 8 ? i+1:i, j == 8 ? 0: j + 1);
+
+	int n = 0;
+
+	for(int m = 1; m <= DIM; m++){
+		//preveri vse pogoje
+
+		s[i][j] = m;
+		n = n + solve(s, j == 8?i + 1:i, j == 8?0:j + 1);
+		s[i][j] = 0;
+	}
+	return n;
+}
+
+
+```
+
+</br>
+</br>   
+</br>
+</br>
+</br>
+</br>
+
+# 6.5.2022 (10. predavanje):
+
+```c
+char** board;
+
+int di[8]={+2,+1,-1,-2,-2,-1,+1,+2}
+int dj[8]={+1,+2,+2,+1,-1,-2,-2,-1}
+
+board = (char**) malloc (sizeof(char*) * n1)
+for(int i = 0; i < n1; i++){
+	board[i]=(char*)malloc(sizeof(char)*n2)
+	for(int j = 0; j < n2; j++)
+		board[i][j] = ' ';
+}
+
+int knight(char **board, int i, int j, int n1, int n2){
+	if(board[i][j] == 'x')
+		return 0;
+	int max = 0;
+	
+	board[i][j] == 'x';
+	for(int m = 0; m < 8; m++){
+		int ii = i + di[m];
+		int jj = j + dj[m];
+
+		if((0 <= ii) && (ii < n1) 
+		&& (0 <= jj) && (jj < n2)) {
+			int len = knight(board, ii, jj, n1, n2);
+			if(len > max)
+				max = len;
+		}
+	}
+	board[i][j] = ' ';
+	return max + 1;
+
+}
+
+knight(board, 0, 0, n1, n2);
+
+```
+
+**hardware verzija**
+
+```c
+unsigned long int board = 0;
+
+board = board | (1nl << (i * n2 + j));
+
+```
+</br>
+</br>
+</br>
+
+# 20.5.2022
+
+## <div style="color: violet">C predprocesor</div>
+
+<div style="color: red">Poenostavljena slika:</div>
+
+```
+prog.c ––––> [prevajalnik] ––––> a.out
+```
+
+```bash
+$ gcc prog.c
+```
+
+<div style="color: red">Dejanska slika:</div>
+
+```
+prog.c ––––> [c predprocesor] ––––> [c prevajalnik] ––––> [povezovalnik] ––––> a.out
+					|						|					|
+					V                   	V					V
+             prevede izvorno       prevede izvorno         doda stat.
+			 kodo                   kodo                   knjižnico
+```
+
+
+</br>
+</br>
+</br>
+
+
+**Prevajanje**
+
+```c
+# include < ... >
+# include " ... "
+```
+
+
+> <div style="color: pink; font-size: 18px">v header datotekah so prototipi funkcij</div>
+
+</br>
+
+```c
+# include <studio.h>
+# include "prog.c"
+-------------------------------------
+prog.c:
+-------------------------------------
+int main{printf ("HW\n");}
+-------------------------------------
+```
+
+### #define (MACROS)
+
+```c
+#define N 1000
+
+int i = N; // => int i = 1000;
+char *s = "NEXT"; //=> char *s = "NEXT"
+int N = 10; //=> int 1000 = 10; !NAPAKA
+
+#define STRLEN 100 + 1
+char s[STRLEN]
+```
+> <div style="color: pink; font-size: 18px">Imajo pa macroji tudi grdo lastnost</div>
+</br>
+
+```c
+if(i > 2*STRLEN){...} //=>
+
+if(i > 2*(100+1)){...}
+
+// v tem primeru je treba vedno pisati oklepaje
+```
+
+</br>
+
+### mozno je tudi:
+```C
+#define MAX(N1, N2)  N1>N2?N1:N2
+
+int i = 5;
+if(MAX(i,8)==8){...} //=> if(i>8?i:8==8){...}
+```
+ali...
+```C
+#define PLUSONE(X) X+1
+
+PLUSONE(2*i) //=>2*i+1
+
+//boljse
+
+#define PLUSONE(X) ((X)+1)
+#define MAX(N1,N) ((N1)>(N2)?(N1):(N2))
+```
+
+```C
+#if
+#ifdef
+#ifndef
+...
+#else
+...
+#endif
+```
+
+```C
+#define N 5
+#if N>3
+	int i;
+#else
+	double i;
+#endif
+```
+
+</br>
+
+## stdio.h:
+```C
+#ifndef __STDIO__
+#define __STDIO__
+
+–––––––––––––––––––––
+–––––––––––––––––––––
+–––––––––––––––––––––
+–––––––––––––––––––––
+–––––––––––––––––––––
+–––––––––––––––––––––
+–––––––––––––––––––––
+
+#endif
+```
+
+
 
 
 ---   
