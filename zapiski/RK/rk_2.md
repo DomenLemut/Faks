@@ -1,4 +1,18 @@
-# Racunalniske komunikacije
+<style>
+.main{
+    font-size: 40px,
+    color: blue,
+}
+.h1{
+    color: green
+}
+.h2{
+    color:red,
+}
+</style>
+
+
+# <main>Racunalniske komunikacije</main>
 
 ```
   ___   _      ___   _      ___   _      ___   _      ___   _
@@ -13,11 +27,11 @@
                         /mmm/        /mmm/        /mmm/
 ```
 
-# Omrezje
+# <h1>Omrezje</h1>
 
 ## Kaj je omrezje?
-- fizična defininicija: resurs, ki je zmožen povezovanja velikega števila naprav,
-- storitvena definicija: infrastruktura, ki nudi storitve (porazdeljenim) aplikacijam
+- `fizična defininicija`: resurs, ki je zmožen povezovanja velikega števila naprav,
+- `storitvena definicija`: infrastruktura, ki nudi storitve (porazdeljenim) aplikacijam
 (www, VoIP, email, igre, P2P, elektronsko poslovanje)
 
 ### Komponente omrezja
@@ -372,11 +386,120 @@ na podlagi vsebine
 ### NALOGE: 
 **posredovanje, poplavljanje in filtriranje**
 
+## Switch
 
+dopušča več hkratnih povezav (npr. A-F in B-C)
+in dvosmerno (full duplex) povezavo z vozlišči
 
+- **uporablja stikalno tabelo (switch table,
+CAM table, FIB), da se odloči, na katera vrata
+poslati okvir**
 
+- **< naslov MAC | vrata do vmesnika | čas >** 
 
+> cas je TTL
 
+Stikalo se po priklopu uči, kje je dosegljiv kateri vmesnik, in samo vnaša zapise v
+stikalno tabelo. Kadar stikalo sprejme okvir, si za nekaj časa zapomni lokacijo pošiljatelja okvirja
+(=učenje)
+### različne akcije pri sprejemu okvirja:
+1. POPLAVLJANJE na VSA vrata (flooding, če ne vemo, kje je prejemnik)
+2. POSREDOVANJE na IZBRANA vrata (če vemo, kje je prejemnik)
+3. FILTRIRANJE (okvir je namenjen istim vratom, zavržemo ga)
+
+stikalo shrani lokacijo pošiljatelja A
+>ker stikalo ne ve, kje je cilj, poplavi (flood) okvir na vsa vrata
+
+stikala lahko medsebojno povežemo =>
+- pravilnega posredovanja se naučimo z učenjem stikalnih tabel
+- FILTRIRANJE: stikalo S4 bo zavrglo okvir, ki ga npr. A pošlje C, ker je na istih vratih (če
+ima stikalo S4 v stikalni tabeli zapis za C)
+
+## Virtualna lokalna omrežja (VLAN)
+**Uporaba stikal znotraj podjetja ima naslednje slabosti:**
+1. uporaba enega samega stikala kliče k pomanjkanju izolacije prometa (zmanjšanje broadcast
+prometa lahko izboljša performanse, varnostni/zasebnostni razlogi)
+2. uporaba več stikal je cenovno draga rešitev
+3. premik uporabnika na drugo lokacijo zahteva fizično vzpostavitev povezave
+4. Rešitev: uporaba virtualnih lokalnih omrežij (Virtual Local Area Network). Stikalo, ki podpira
+VLANe omogoča uporabo različnih navideznih lokalnih omrežij na isti fizični omrežni
+infrastrukturi (= delitev omrežja na več navideznih podomrežij)
+
+# Omrežna plast
+
+## Naloge omrežne plasti:
+
+1. **transport segmenta od KONČNEGA pošiljatelja do
+prejemnika**
+2. **enkapsulacija segmentov transportne plasti v
+pakete na strani pošiljatelja**
+3. **prisotna v vseh omrežnih napravah in v jedru
+omrežja (=usmerjevalnikih)**
+
+> Razlika med omrežno in transportno plastjo je v tem, da omrežna plast odstavlja od računalnika do računalnika, medtem ko transportna od procesa do procesa.
+
+Enkapsolacija in dekapsulacija
+
+## Usmerjavalnik
+
+**Naprava, ki deluje na omrežni plasti in skrbi za
+transport datagrama po jedru omrežja**
+povezave med različnimi mediji in protokoli, ki izvajajo usmerjanje in posredovanje
+
+### Funkcije:
+1. **posredovanje paketov (forwarding)**: prenos paketa iz vhodnega na
+izhodni vmesnik usmerjevalnika. Poteka znotraj posameznih
+usmerjevalnikov!
+- usmerjevalnik ima posredovalno tabelo (forwarding table) na podlagi katere
+določa, na katera izhodna vrata poslati paket
+- analogija: določitev točke vstopa v posamezen kraj na poti in izstopa iz njega
+2. **usmerjanje (routing)**: določitev poti paketov od izvora do cilja. Je
+"kolektivno delo" vseh omrežnih naprav na poti, ki izvajajo usmerjevalne
+algoritme (in protokole).
+- analogija: planiranje poti od Loma pod Storžičem do Kopra
+- izvajajo usmerjevalni protokoli
+
+## Storitve omrežne plasti:
+1. zagotovljena dostava paketov
+2. dostava paketov v zagotovljenem času
+3. dostava paketov v pravem zaporedju
+4. zagotovljena spodnja meja pasovne širine
+5. največja dovoljena varianca zakasnitve (jitter):
+tpošiljanja(P2) - tpošiljanja(P1) ~ tprejetja(P2) - tprejetja(P1)
+6. varno komunikacijo (zaupnost, integriteto podatkov, avtentikacijo)
+   
+</br>
+</br>
+
+### **Katere od naštetih storitev zagotavlja Internet?**
+
+## Prav nobene. ☺ (best-effort service)
+
+> "Best-effort service is a euphemism for no service at all"
+
+## Povezavna in nepovezavna omrežja
+1. **povezavna omrežja (navidezni vodi)** omogočajo
+vzpostavitev zveze v omrežni infrastrukturi med
+pošiljateljem in prejemnikom
+2. **nepovezavna omrežja (datagramska, paketna)**
+omogočajo posredovanje paketov skozi
+infrastrukturo brez vzpostavljene povezave
+
+=> Kam spada Internet?
+
+## Navidezni vodi:
+podobno kot telefonske zveze
+- faze pri izvedbi navideznega voda: vzpostavitev, tok podatkov, rušenje
+- številke vodov na povezavah neodvisne, kar omogoča lažjo konfiguracijo
+- usmerjevalniki usmerjajo pakete glede na številke vodov
+- uporaba: ATM, X.25, MPLS, Frame Relay (ne Internet!)
+
+## Datagramska omrežja
+- ni faze vzpostavljanja povezave
+- usmerjevalniki ne hranijo podatkov o končnih povezavah
+- paketu se doda naslov cilja in se ga "vrže" v omrežje
+- usmerjevalniki posredujejo glede na ciljni naslov v paketu
+- paket lahko med istim izvorom in ciljem potuje po različnih poteh
 ---
 ---
 ---
@@ -480,6 +603,7 @@ dest.: 255.255.255.255, 67
 yiaddr: 0.0.0.0
 transaction ID: 654
 ```
+
 2. **OFFER**
 ```
 src: 223.1.2.5, 67
@@ -488,6 +612,7 @@ yiaddrr: 223.1.2.4
 transaction ID: 654
 Lifetime: 3600 secs
 ```
+
 3. **REQUEST**
 ```
 src: 0.0.0.0, 68
@@ -496,6 +621,7 @@ yiaddrr: 223.1.2.4
 transaction ID: 655
 Lifetime: 3600 secs
 ```
+
 4. **ACK**
 ```
 src: 223.1.2.5, 67
@@ -504,6 +630,7 @@ yiaddrr: 223.1.2.4
 transaction ID: 655
 Lifetime: 3600 secs
 ```
+
 ### NAT(Network Address Translation)
 
 * preslikovanje IP naslovov(pre - naslavljanje) se uvede zaradi pomanjkanja IPv4 naslovnega prostora
