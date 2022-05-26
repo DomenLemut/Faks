@@ -1,17 +1,3 @@
-<style>
-.main{
-    font-size: 40px,
-    color: blue,
-}
-.h1{
-    color: green
-}
-.h2{
-    color:red,
-}
-</style>
-
-
 # <main>Racunalniske komunikacije</main>
 
 ```
