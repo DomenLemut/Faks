@@ -63,10 +63,12 @@ void printBook( struct Books book ) {
    printf( "Book book_id : %d\n", book.book_id);
 }
 ```
+
 <br>
 <br>
 <br>
 <br>
+
 ## Pointers to structures:
 
 ## 1. Define pointer:
