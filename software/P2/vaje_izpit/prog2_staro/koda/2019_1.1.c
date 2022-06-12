@@ -1,58 +1,47 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <string.h>
+ 
 int main(){
-    // char * open;
-    // // char * write;
-    // char theChar;
+    FILE* in;
+    FILE* out;
 
-    // //scanf("%c", open);
-    // // scanf("%c", write);
-    // // scanf("%c", &theChar);
-    // open = "vhod06.txt";
+    char curr;
 
-    // FILE * in;
-    // // FILE *out;
+//vhod----------------------------------
+    char datIn [] = "vhod06.txt";
+    char datOut [] = "hello";
+    char ch = 'C';
+    // scanf("%s\n%s\n%c", datIn, datOut, &ch);
+    // printf("%s", datIn);
+//--------------------------------------
 
-    // // if(in == NULL || out == NULL){
-    // //     printf("Error!"); 
-    // //     return 0;
-    // // }
-    
+    in = fopen(datIn, "r");
+    out = fopen(datOut, "w");
 
-    // in = fopen(open,"r");
-    // // out = fopen(write,"w");
-
-    // fscanf(in, "%c", &theChar);
-
-    // printf("%d", theChar);
-    // return 0;
-
-    FILE *inputFile;
-
-    inputFile = fopen("vhod06.txt", "r");
-
-    //finds the end of the file
-    fseek(inputFile, 0, SEEK_END);
-
-    //stores the size of the file
-    int size = ftell(inputFile);
-
-    char documentStore [size];
-
-    int i = 0;
-
-    //stores the contents of the file on documentstore
-    while(feof(inputFile))
-    {
-        documentStore[i] = fgetc(inputFile);
-        i++;
+    if (in == NULL) {
+        printf("file can't be opened \n");
+        return 0; 
     }
 
-    //prints out char
-    for (int j = 0; j < size; j++)
-    {
-        printf("%c", documentStore[j]);
+    char a = fgetc(in);
+    char b;
+    for(int i = 0; i < 1000; i++){
+        b = a;
+        a = fgetc(in);
+        if(b == '\n' && a != ch){
+            curr = a;
+            while(curr != '\n'){
+                fprintf(out,"%c", curr);
+                curr = fgetc(in);
+            }
+            break;
+        }
     }
 
+    printf("successful!!\n");
+
+    fclose(in);
+    fclose(out);
     return 0;
 }
