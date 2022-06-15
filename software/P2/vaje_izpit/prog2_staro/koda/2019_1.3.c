@@ -1,46 +1,32 @@
 #include <stdio.h>
-#include <stdlib.h>
+int count = 0;
 
+void poisciKombinacije(int n, int x, int y){
+    if(x == n && y == 0){
+        count++;
+        return;
+    }
+    else{
+        if(x + y == n)
+            poisciKombinacije(n, x + 1, y - 1);
+        else if(y == 0)
+            poisciKombinacije(n, x + 1, y + 1);
+        else{
+            poisciKombinacije(n, x + 1, y - 1);
+            poisciKombinacije(n, x + 1, y + 1);
+        }
+    }
+}
 
 int main(){
     int n;
-    scanf("vnesite stevilo vzponov/padcev: %d", &n);
-    printf("stevilo kombinacij: [%d]", getCombinations(n));
-    return 0;
-}
-
-int getCombinations(int n){
-    int num = 0;
-
-    int sum1; int sum2; int sum = 0;
-    int pointer = n - 1;
-
-    int *t = (int*) malloc(n * sizeof(int));
-    for(int i = 0; i < n; i++){
-        t[i] = 0;
+    scanf("%d", &n);
+    if(n % 2 == 0){
+        poisciKombinacije(n, 0, 0);
+        printf("%d\n", count);
     }
-
-    while(t[0] <= n){
-        for(int i = 0; i < n; i++){
-            sum1 = i % 2 * t[i];
-            sum2 = (i + 1) % 2 * t[i];
-            sum += t[i];
-        }
-        if(sum == n && sum1 == sum2) num++;
-
-        t[n - 1]++;
-
-        if(t[pointer] > n){
-            while(t[pointer] >= n){
-                t[pointer]++;
-            }
-            t[pointer] = 0;
-            pointer = 0;
-        }
-    }
-
+    else
+        printf("0");
     
-
-
-    return num;
+    return 0;
 }
