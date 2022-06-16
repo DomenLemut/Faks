@@ -1,6 +1,6 @@
 # Razčlenitev IP protokola
 
-<img align="left" src="IPscr.png" >
+<img width="350" src="IPscr.png" >
 
 
 ## VER (4b): 
