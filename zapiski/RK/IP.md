@@ -35,3 +35,28 @@ končnega sistema)
 začetka podatkov; običajno jih ni, glava dolga 20B)
 
 ## PODATKI (spremenljiva dolžina)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Fragmentacija:
+
+-> flags in offset<br>
++length
+
+bita v zastavicah (FLAGS):
+- DF: don't fragment
+- MF: more fragments
+
+fragmente združi omrežna plast in preda transportni.
+
+> Dos attack je primer uporabe fragmentacije
+
+## Podomrežje:
+nslov podomrežja je prvih 20 bitov ipv4 naslova, nadaljnih 12 bitov je naslov podomrežja.
+
+
+
