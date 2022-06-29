@@ -1,0 +1,25 @@
+62. Kako lahko podajamo množice? ->a) Z naštevanjem elementov (na primer: A = {0, 1, 2} )b) Z neko izjavno formulo (na primer: A = {x; ϕ(x) } )Velja naslednje: )
+63. Kdaj pravimo da sta množici enaki? ->Množici sta enaki, kadar velja: )
+64. Kdaj je množica A podmnožica množice B? ->Množica A je podmnožica množice B, kadar velja: )
+65. Kdaj je množica A prava podmnožica množice B? ->Množica A je prava podmnožica množice B, kadar velja:Temu predpisu pravimo tudi relacija stroge inkluzije.
+66. Katere operacije z množicami poznaš? ->a) Unija:b) Presek:c) Razlika:d) Simetrična razlika: ⊻
+67. Z Vennovi diagrami predstavi operacije! ->
+68. Kdaj sta množici disjunktni? ->Množici A in B sta disjunktni, če je A ∩ B = 0.
+69. Katera množica je univerzalna množica? ->Univerzalna množica (označimo jo s S – Svet) ustreza področju pogovora v predikatnem računu. Vse obravnavane množice so vsebovane v S.
+70. Kaj je komplement množice? ->Komplement množice A (označimo ga z AC) definiramo kot: AC = S \ A
+71. Kaj je potenčna množica? ->Potenčna množica PA množice A je množica vseh podmnožic A.Definiramo jo kot:
+72. Kakšna je povezava med množico in njeno potenčno množico (glede na elemente)? ->Če množica A vsebuje natanko n elementov (in je n naravno število) potem PA vsebuje natanko 2n elementov.Trditev: Če je , potem je tudi
+73. Kaj je pokritje množice? ->Družina množic , , je pokritje množice B, če je
+74. Kaj je razbitje množice? ->Družina množic , je razbitje množice B, če je:a) A pokritje množice B (velja:b) Elementi A so neprazni c) Elementi A so paroma disjunktni
+75. Kako je definiran urejeni par? ->Urejeni par s prvo komponento (koordinato) a in drugo komponento b označimo z (a, b) in definiramo kot: (a, b) = {{a}, {a, b}}Trditev: (Osnovna lastnost urejenih parov) (a, b) = (c, d) <=> a = c in b = d
+76. Kaj je kartezični produkt množic? ->Kartezični produkt množic A in B je množica vseh urejenih parov, ki je definirana tako: , )
+77. Kaj lahko poveš o moči kartezičnega produkta? ->Moč kartezičnega produkta je enaka produktu moči obeh faktorjev. Če je množica A končna z m elementi in B končna z n elementi, potem je A × B končna z m*n elementi.
+78. Kdaj je element množice minimalen oz. maksimalen? ->Naj bo A delno urejena z relacijo <=. Potem velja:m je minimalen v A, če: : )M je maksimalen v A, če: : )
+79. Kdaj je element množice prvi oz. zadnji? ->Naj bo a delno urejena z relacijo <=. Potem velja:a je prvi v A, če: : )a je zadnji v A, če: : )
+80. Kaj je supremum? ->Če v M obstaja prvi element, je to najmanjša zgornja meja (tudi natančna zgornja meja ali supremum) množice B v množici A. Oznaka sup B.
+81. Kaj je infimum? ->Če v m obstaja zadnji element, je to največja spodnja meja (tudi natančna spodnja meja ali infimum) množice B v množici A. Oznaka inf B.
+82. Kaj je moč končne množice? ->Naj bo A končna množica. Potem |A| označuje število elementov v množici ali tudi moč množice A.
+83. Kdaj sta končni množici enako močni? ->Naj bosta A in B končni množici. Pravimo da sta A in B enako močni, A ~ B, če je |A| = |B|.
+84. Kdaj je množica končna? ->Množica A je končna natanko tedaj, ko ne obstaja prava podmnožica , ki ima enako moč kot A.Izrek: Množica A je končna, če obstaja tako zaporedja a1, a2, a3 … an (ki je lahko tudi prazno), da se vsak element a v zaporedju pojavi vsaj enkrat.
+85. Kdaj je množica neskončna? ->Množica A je neskončna, kadar je enako močna, kot katera izmed njenih pravih množic.
+86. Kaj lahko poveš o moči kartezičnega produkta? ->Moč kartezičnega produkta je enaka produktu moči obeh faktorjev. Če je množica A končna z m elementi in B končna z n elementi, potem je kartezični produkt množice A in B (A × B) končna množica z m*n elementi.

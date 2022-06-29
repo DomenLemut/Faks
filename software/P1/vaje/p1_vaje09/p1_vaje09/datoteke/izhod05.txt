@@ -1,0 +1,8 @@
+faks [i 3]
+zasebno [i 7]
+sluzba [i 3]
+ana [i 2]
+bojan [i 1]
+home [i 2]
+etc [i 2]
+koren [i 2]

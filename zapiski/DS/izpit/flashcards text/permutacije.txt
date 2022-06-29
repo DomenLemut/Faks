@@ -1,0 +1,9 @@
+154. Kaj je permutacija? -> Naj bo A poljubna množica. Permutacija na A je vsaka bijektivna preslikava f: A --> A.
+155. Kako zapisujemo permutacije? -> Vsako permutacijo lahko zapišemo s tabelico ali pa z disjunktivnimi cikli.
+156. Kaj je ciklična struktura permutacije? -> Ciklična struktura permutacije je število dolžin posameznih ciklov v zapisu permutacije z dijunktivnimi cikli. 1 – ciklu pravimo tudi fiksna točka permutacije, 2 – ciklu pa transpozicija
+157. Ali je produkt transpozicij enolično določen? -> Vsako permutacijo lahko zapišemo kot produkt transpozicij. Ker zapis cikla ni enoličen tudi zapis kot produkt transpozicij ni enolično določen.
+158. Kaj pravi izrek o parnosti permutacij? -> Denimo, da lahko permutacijo π zapišemo kot produkt m transpozicij, pa tudi kot produkt (morda drugih) n transpozicij. Potem je: )
+159. Kdaj je permutacija soda? -> Permutacija je soda, če jo lahko zapišemo kot produkt sodo mnogo transpozicij.
+160. Kdaj je permutacija liha? -> Permutacija je liha, če jo lahko zapišemo kot produkt liho mnogo transpozicij.
+161. Kdaj pravimo, da sta števili v inverziji? -> Pravimo, da sta (v permutaciji π) števili m in n v inverziji, če sta v spodnji vrstici tabelice v napačnem vrstnem redu: m je pred n, toda n je zapisan pred m.
+162. Kaj je red permutacije? -> Red permutacije π je najmanjše naravno število k >= 1, za katerega je πk = id. Trditev: Red permutacije π je najmanjši skupni večkratnik dolžin ciklov v zapisu permutacije π z disjunktivnimi cikli.

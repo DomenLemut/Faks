@@ -1,0 +1,28 @@
+87. Kaj je relacija? ->Relacija je posebna vrsta množice.Množica R je (dvomestna) relacija, če je vsak njen element urejen par.R je relacija , , )Množica R je (dvomestna) relacija v množici A, če je .Dogovor: namesto , ) pišemo xRy
+88. Kako je definirano definicijsko območje? ->Naj bo R relacija v A. Potem definicijsko območje Dr definiramo kot: :
+89. Kako je definirana zaloga vrednosti? ->Naj bo R relacija v A. Potem zalogo vrednosti Zr definiramo kot:
+90. Naštej lastnosti relacij! ->
+91. Kako v grafu preverjamo lastnosti relacij? ->Refleksivna: v vsaki točki je zanka (kaže sama nase)Irefleksivna: v nobeni točki ni zankeSimetrična: povezave so obojestranskeAsimetrična: brez zank in vse puščice so enosmerneAntisimetrična: nobena povezava ni obojestranskaTranzitivna: če iz neke točke v drugo pridemo v dveh korakih, lahko tudi v enem samemItranzitivna: če iz neke točke v drugo pridemo v 2 korakih, v enem samem ne moremoSovisna: vsak par različnih točk grafa je povezan s povezavo vsaj v eno smerStrogo sovisna: med vsakima dvema točkama je puščica, imamo tudi vse zankeEnolična: iz vsake točke gre ven kvečjemu ena puščica (ena ali nobena)
+92. Kaj je matrika relacije? ->Matrika relacije R v (končni množici) A je kvadratna 0/1 tabelica, B®. Elemente množice A uredimo: a1, a2, a3 … anVrstice in stolpce matrike B(R) indeksiramo (označimo) po vrsti v tem vrstnem redu.
+93. Kako je definirana inverzna relacija? ->Naj bo R relacija. Potem je R-1 njena inverzna relacija, ki jo definiramo tako: , ) , )
+94. Kako je definiran produkt relacij? ->Produkt relacij R in S označimo z R*S in ga definiramo tako: , ) )
+95. Kaj je tranzitivna ovojnicaNaj bo R relacija v A. Relacijo R+ imenujemo tranzitivna ovojnica in jo definiramo:
+96. Kaj je tranzitivno-refleksivna ovojnica? ->Naj bo R relacija v A. Relacijo R* imenujemo tranzitivno-refleksivna ovojnica in jo definiramo:
+97. Kaj je funkcija? ->Funkcija je enolična relacija.Relacija je preslikava iz A v B, če velja:a) f je enoličnab) Df = Ac) )
+98. Kako je definirana funkcija (kateri dogovori veljajo)? ->Dogovor: pišemo tudi f: A --> BNamesto xfx pišemo y = f(x) …. Pravimo da f (pre)slika x v yX je argument, y pa vrednost funkcije/preslikave f pri x
+99. Kdaj je funkcija injektivna, surjektivna, bijektivna? ->Naj bo f: A --> B. Pravimo, da je f:a) Injektivna, če velja: , ) ) )b) Surjektivna, če je Zf = B (pravimo tudi, da f presila iz A na B)c) Bijektivna, če je surjektivna in injektivna
+100. Kdaj je f1 tudi funkcija oz. preslikava? ->Naj bo f: A --> B. Potem je:a)b) f1: B --> A natanko tedaj, ko je f bijektivna
+101. Kaj je kompozitum? ->Kompozitum preslikav je asociativna operacija, saj velja: (f o g) o h = f o (g o h)
+102. Kako je definiran kompozitum? ->Naj bosta f: A --> B in g: B --> C. Potem je g o f preslikava iz A v C, določena s predpisom g o f = f*gVelja (g o f)(a) = g(f(a)) za vse
+103. Naštej lastnosti kompozitumaTrditev: Naj bo f: A --> B. Potem je: f o ida = idb o f = fTrditev: f : B --> C, g : A --> B
+104. Kaj pravi Dirichletov princip? ->Naj bo A končna množica in f: A --> A. Potem so naslednje trditve enakovredne:a) f je injektivna b) f je surjektivna c) f je bijektivna
+105. Kako je definirana ekvivalenčna relacija? -> je ekvivalenčna če je: a) Refleksivna b) Simetrična c) Tranzitivna
+106. Kaj je kongruenca? ->Kongruenca po modulum je ekvivalenčna relacija. Usklajena je s seštevanjem in množenjem.
+107. Kdaj relacija delno ureja množico? ->Naj bo R relacija v množici A. Relacija R delno ureja množico A, če je: Refleksivna, antisimetrična, tranzitivna
+108. Kdaj relacija linearno ureja množico? ->Naj bo R relacija v množici A. Relacija R delno ureja množico A, če: R delno ureja A in R je sovisna
+109. Kaj je Hassejev diagram? -> Hassejev diagram je slikovni prikaz delne urejenosti.
+110. Kaj je to ekvivalenčni razred? -> Naj bo ekvivalenčna in . Potem je je ekvivalenčni razred elementa x. Trditev: Naj bo R ekvivalenčna relacija na A. Potem za poljubna , velja:
+111. Kako dobimo največji skupni delitelj? -> Največji skupni delitelj GCD dobimo kot zadnji ne ničelni ostanek v razširjenem Evklidovem algoritmu (REA). Obenem gcd(m, n) zapišemo kot celoštevilsko linearno kombinacijo števil m in n
+112. Kdaj sta si števili tuji? -> Števili a in b sta si tuji, če imata za največji skupni delitelj le število 1. Pišemo: gcd(a, b) = 1
+113. Kaj je diofantska enačba? -> Diofantska enačba je enačba z dvema neznankama. Zapišemo jo v obliki ax + by = c, kjer so a, b in c elementi celih števil ter iščemo celoštevilsko rešitev x, y.
+114. Kaj je praštevilo? -> Praštevilo je število, ki ima natanko dva pozitivna delitelja: število 1 in samega sebe.
