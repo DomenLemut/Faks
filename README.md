@@ -13,7 +13,7 @@ Hello Stranger!
 
 **If you have found yourself here, feel free to feel as home and in case you want to contribute to this repository contact me**
 
-I have things sorted out as [notes](https://github.com/DomenLemut/Faks/tree/main/zapiski) and [software](https://github.com/DomenLemut/Faks/tree/main/software), feel free to check both.
+I have things sorted out quit genericly, I hope you wont get lost :-)
 
 </br>
 
