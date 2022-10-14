@@ -80,8 +80,6 @@ static public void hanoi(char A, char B, char C, int n) {
     }
 }
 ```
-```java
-```
 
 **!!!! -> Pri rekurzivni funkciji za izracun fakultete ne govorimo o repni rekurziji**
 
@@ -102,4 +100,20 @@ public static int fib(int n){
 }
 ```
 
+# Primer -> permutacije
+
+# Rekurzija - zakljucek
+-zahteva več režije kot iteracija in je pomnilniško bolj
+zahtevna od iteracije (sklici se shranjujejo na skladu),
+- globina rekurzije = potrebna velikost sklada,
+- ponavadi je rekurzivna koda krajša in preprostejša,
+- rekurzivne probleme lahko rešujemo tudi z iteracijami:
+- vsako repno rekurzijo lahko zamenjamo z iterativno
+zanko,
+(to optimizacijo naredijo boljši prevajalniki)
+- vsak rekurzivni program lahko spremenimo v
+iterativnega s skladom.
+(to počnemo le izjemoma, če dobro poznamo
+algoritem in ga lahko optimiziramo bolje kot
+prevajalnik)
 
