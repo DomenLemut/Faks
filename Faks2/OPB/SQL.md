@@ -154,3 +154,128 @@ select emp_no, last_name, birth_date
 from employees
 order by last_name, birth_date desc;
 ```
+
+# Agregiranje podatkov...
+1. ```ISO``` standard definira pet agregarnih operacij
+1. ```COUNT``` vrne število vrednosti v določenem stolpcu
+1. ```SUM``` vrne seštevek vrednosti v določenem stolpcu
+1. ```AVG``` vrne povprečje vrednosti v določenem stolpcu
+1. ```MIN``` vrne najmanjšo vrednost v določenem stolpcu
+1. ```MAX``` vrne največjo vrednost v določenem stolpcu
+
+- Če se želimo znebiti duplikatov, uporabimo DISTINCT pred
+imenom stolpca.
+- DISTINCT nima učinka na MIN/MAX, lahko pa vpliva na SUM/AVG.
+- Agregarne operacije lahko uporabimo le v SELECT ali HAVING
+sklopu
+
+## Gnezdenje poizvedb...
+- Vgnezdeni SELECT stavki se lahko uporabijo v WHERE ali HAVING
+sklopih drugega SELECT stavka (subselect).
+
+```sql
+select first_name, last_name
+from employees
+where emp_no in (
+select emp_no
+from titles
+where title = 'manager'
+);
+```
+
+## Primer vgnezdenega stavka...WHERE
+- Izpiši imena in priimke zaposlenih, ki so delali na vsaj treh
+delovnih mestih.
+
+```sql
+select first_name, last_name
+from employees
+where emp_no in (
+select emp_no
+from titles
+group by emp_no
+having count(*) > 2
+);
+```
+
+## Primer vgnezdenega stavka ... FROM
+- Izpiši najvišjo povprečno plačo.
+
+```sql
+select max(dE.avgSalary)
+from (
+select avg(salary) as avgSalary
+from salaries
+group by emp_no
+) dE;
+```
+
+
+
+## Pravila gnezdenja SELECT stavkov...
+- Pravila vgnezdenih SELECT stavkov...:
+- Uporaba ORDER BY v vgnezdenem stavku nesmiselna.
+- SELECT vgnezdenega stavka lahko zajema samo en stolpec (razen v
+primeru uporabe ukaza EXISTS.
+> Mnoge implementacije tega ne upoštevajo. Tudi mySQL.
+
+```sql
+select... where (emp_no, title) in (
+select emp_no, title from...
+);
+```
+
+- Pravila vgnezdenih SELECT stavkov...:
+- Imena stolpcev v vgnezdenem stavku se nanašajo na tabele iz
+vgnezdenega ali zunanjega stavka (uporaba alias-ov)
+
+```sql
+select E.emp_no, E.first_name, E.last_name
+from employees E
+where E.emp_no in (
+select S.emp_no
+from salaries S
+where E.birth_date >= S.from_date
+);
+```
+
+# Poizvedbe po vec tabelah
+
+> Za ločevanje med istoimenskimi stolpci uporabljamo sinonime (alias).
+
+```sql
+select E.emp_no, E.first_name, E.last_name
+from employees E, dept_manager DM, departments D
+where
+E.emp_no = DM.emp_no AND
+DM.dept_no = D.dept_no AND
+D.dept_name = 'marketing';
+```
+
+## Alternativni načini stika več tabel
+- Alternativni načini stika med več tabelami:
+  - ```sql
+    FROM employees E JOIN titles T ON E.emp_no = T.emp_no
+    ```
+
+  - ```sql
+    FROM employees JOIN titles USING emp_no
+    ```
+
+  - ```sql
+    FROM employees NATURAL JOIN titles
+    ```
+  
+
+Zgornji zapisi nadomestijo sklopa ```FROM``` in ```WHERE```
+
+- V prvem primeru rezultat vsebuje dva identična stolpca em
+
+</br></br></br>
+> od tu naprej je branje tega skripta izkljucno na lastno odgovornost
+# Da ne pozabimo!!! (Vodlanove fantazije)
+```sql
+select dildo from domen-ass where color = "red" and tetas = "big";
+```
+
+
