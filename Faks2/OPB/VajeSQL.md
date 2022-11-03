@@ -38,5 +38,7 @@ WHERE e.name LIKE "%Ljubljana%"
 ```sql
 SELECT 
 FROM facebook f LEFT OUTER JOIN twitter t ON f.oid = t.oid OR f.oid = t.sid
-
 ```
+
+# Naloga 9
+ 

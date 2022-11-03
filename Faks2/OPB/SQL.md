@@ -60,15 +60,14 @@ FROM TableName [alias] [, ...]
 1. ```ORDER BY``` Določa vrstni red vrstic na izhodu
 
 ## Primeri na podlagi sheme employlees 
-```
-employees(emp_no, birth_date, first_name, last_name, gender,
-hire_date)
-titles(emp_no, title, from_date, to_date)
-salaries(emp_no, salary, from_date, to_date)
-dept_emp(emp_no, dept_no, from_date, to_date)
-departments(dept_no, dept_name)
-dept_manager(dept_no, emp_no, from_date, to_date
-```
+
+- employees(emp_no, birth_date, first_name, last_name, gender, hire_date)
+- titles(emp_no, title, from_date, to_date)
+- salaries(emp_no, salary, from_date, to_date)
+- dept_emp(emp_no, dept_no, from_date, to_date)
+- departments(dept_no, dept_name)
+- dept_manager(dept_no, emp_no, from_date, to_date
+
 
 ## Pravila formtiranja SQL primerov:
 

@@ -1,14 +1,6 @@
-import java.beans.Expression;
+
 
 public class Naloga3 {
-
-    interface Expression {
-        public boolean Compare(NumberListNode node, int num);
-    }
-
-    static Expresion smaller;
-    static Expression greater;
-    static Expresion equal;
     
     public class NumberList {
 
@@ -43,7 +35,6 @@ public class Naloga3 {
             NumberListNode curr = first;
             
             switch(op) {
-                
                 case '*':
                     while(curr != null){
                         curr.num *= val;
@@ -66,44 +57,54 @@ public class Naloga3 {
             NumberListNode curr = first;
             NumberListNode prev = first;
 
-            Expression expression;
-
             switch(op) {
                 case '<':
-                    expression = (NumberListNode node, int num) -> {
-                        return node.num >= val;
-                    };
+                    while(curr != null) {
+                        if(curr.num >= val){
+                            if(curr == first)
+                                first = curr.next;
+                            else 
+                                prev.next = curr.next;
+                            if(curr == last)
+                                last = prev;
+                        }
+                        curr = curr.next;
+                        if(curr != prev.next && curr != prev)
+                            prev = prev.next;
+                    }
                     break;
                 case '>':
-                    expression = (NumberListNode node, int num) -> {
-                        return node.num <= val;
-                    };
+                    while(curr != null) {
+                        if(curr.num <= val){
+                            if(curr == first)
+                                first = curr.next;
+                            else 
+                                prev.next = curr.next;
+                            if(curr == last)
+                                last = prev;
+                        }
+                        curr = curr.next;
+                        if(curr != prev.next && curr != prev)
+                            prev = prev.next;
+                    }
                     break;
                 case '=':
-                    expression = (NumberListNode node, int num) -> {
-                        return node.num != val;
-                    };
+                    while(curr != null) {
+                        if(curr.num != val){
+                            if(curr == first)
+                                first = curr.next;
+                            else 
+                                prev.next = curr.next;
+                            if(curr == last)
+                                last = prev;
+                        }
+                        curr = curr.next;
+                        if(curr != prev.next && curr != prev)
+                            prev = prev.next;
+                    }
                     break;
-                default:
-                    expression = (NumberListNode node, int num) -> {
-                        return true;
-                    };
             }
-            
 
-            while(expression.FitsConditions(curr, val)) {
-                if(curr.num >= val){
-                    if(curr == first)
-                        first = curr.next;
-                    else 
-                        prev.next = curr.next;
-                    if(curr == last)
-                        last = prev;
-                }
-                curr = curr.next;
-                if(curr != prev.next && curr != prev)
-                    prev = prev.next;
-            }
         }
 
         public void zdruzi(char op) { // op = {'*', '+'} sesteje ali zmnozi vse elemente seznama
@@ -143,13 +144,6 @@ public class Naloga3 {
         }
     }
 
-    public static void createExpressions() {
-        smaller = (NumberListNode node, int num) -> {};
-        greater = (NumberListNode node, int num) -> {};
-        equal = (NumberListNode node, int num) -> {};
-    }
-
-
     public static class Main {
         public static void main(String[] args) {
 
@@ -167,7 +161,9 @@ public class Naloga3 {
             numberList.izpisi();
 
 
-            numberList.ohrani('<', 17);
+            numberList.ohrani('>', 17);
+            numberList.izpisi();
+            numberList.zdruzi('*');
             // numberList.zdruzi('+');
             numberList.izpisi();
         }
