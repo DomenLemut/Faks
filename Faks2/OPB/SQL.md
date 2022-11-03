@@ -270,6 +270,160 @@ D.dept_name = 'marketing';
 Zgornji zapisi nadomestijo sklopa ```FROM``` in ```WHERE```
 
 - V prvem primeru rezultat vsebuje dva identična stolpca em
+  
+</br></br></br>
+
+# Podatkovni tipi v ```SQL```
+
+![tipi](img/PodatkovniTipi.png)
+
+![tipi](img/PodatkovniTipi1.png)
+
+# Zagotavljanje kakovosti podatkov
+
+- SQL standard ponuja več vrst omejitev (**Integrity Enhacement
+Fetures**):
+- Obveznost podatkov
+- Omejitve domene (**Domain constraints**)
+- Pravila za celovitost podatkov (**Integrity constraints**)
+  - Celovitost entitet (**Entity Integrity**)
+  - Celovitost povezav (**Referential Integrity**)
+- Števnost (**Multyplicity**)
+- Splošne omejitve (**General constraints**)
+- Omejitve so lahko definirane v ```CREATE``` in ```ALTER TABLE``` stavkih.
+
+```sql
+emp_no numeric(5) NOT NULL
+```
+
+
+```sql
+gender CHAR NOT NULL CHECK (gender in ('M', 'F'))
+```
+
+## Kreiranje domene
+```sql
+CREATE DOMAIN DomainName [AS] dataType [DEFAULT defaultOption] [CHECK (searchCondition)]
+```
+
+1. ### Kreiranje domene
+```sql
+CREATE DOMAIN Tgender AS CHAR CHECK (VALUE IN ('M', 'Ž')); 
+```
+2. ### Sklicovanje
+```sql
+gender Tgender NOT NULL
+```
+> Kako ravnati, ce je domena trenutno v uporabi
+
+```sql
+DROP DOMAIN DomainName [RESTRICT | CASCADE]
+```
+> cascade je sql injection type shit
+
+Vsak ```INSERT/UPDATE``` stavek, ki skuša kreirati FK vrednost v
+tabeli, brez da bi ta vrednost obstajala kot PK v povezani tabeli, je
+zavrnjen.
+Ob zavrnitvi so možne naslednje akcije
+- ```CASCADE```
+- ```SET NULL```
+- ```SET DEFAULT``` 
+- ```NO ACTION```
+
+Kreiranje podatkovnih objektov
+SQL DDL omogoča kreiranje in brisanje podatkovnih objektov, kot
+so: shema, domena, tabela, pogled in indeks.
+
+- Glavni SQL DDL stavki:
+
+
+```sql
+CREATE SCHEMA DROP SCHEMA
+```
+
+```sql
+CREATE/ALTER DOMAIN DROP DOMAIN
+```
+
+```sql
+CREATE/ALTER TABLE DROP TABLE
+```
+
+```sql
+CREATE/ALTER VIEW DROP VIEW
+```
+
+```sql
+CREATE INDEX DROP INDEX
+```
+
+## Kako kreiramo podatkovno bazo??
+
+
+1. ### Kreiramo in izberemo podatkovno bazo 
+```sql
+create database filmoteka;
+use filmoteka;
+```
+2. ### Kreiramo tabelo Avtor
+
+```sql
+create table avtor (
+    avtor_id int(4),
+    ime char(20) not null,
+    priimek char(20) not null,
+primary key (avtor_id));
+```
+3. ### Kreiramo ostale podatkoven tabele
+
+```sql
+create table zanr (
+    zanr_id int(4),
+    naziv char(50) not null,
+primary key (zanr_id));
+create table tip (
+    tip_id int(4),
+    naziv char(50) not null,
+primary key (tip_id));
+create table jezik (
+    jezik_id int(4),
+    naziv char(50) not null,
+primary key (jezik_id));
+```
+
+4. ### Kreiramo tabelo film
+
+```sql
+create table film (
+    film_ID int(6),
+    naslov char(50),
+    zanr int(4),
+    ocenaIMDB decimal(4,1),
+    mojaOcena decimal(4,1),
+    tip int(4),
+    jezik int(4),
+    videno bit,
+primary key (film_id),
+...
+```
+
+5. ### ...Povezave na druge tabele
+
+```sql
+...
+  constraint fk_tip foreign key (tip)
+      references tip(tip_id) on delete cascade,
+  constraint fk_jezik foreign key (jezik)
+      references jezik(jezik_id) on delete cascade,
+  constraint fk_zanr foreign key (zanr)
+      references zanr(zanr_id) on delete cascade
+);
+```
+
+
+
+
+
 
 </br></br></br>
 > od tu naprej je branje tega skripta izkljucno na lastno odgovornost

@@ -25,7 +25,19 @@ long komZPon(int n, int k){
     return komBrezPon(n + k - 1, k);
 }
 
+void System(int type, int n, int k) {
+    switch (type)
+    {
+    case 0:
+        printf("kombinacije brez ponavljanja (%lu  %lu) => %lu\n", n, k, komBrezPon(n, k));
+        break;
+    case 1:
+        printf("kombinacije z ponavljanjem (%lu  %lu) => % lu\n", n, k, komZPon(n, k));
+        break;
+    }
+}
+
 int main(){
-    printf("%ld\n", komZPon(5, 20));
+    System(0, 14, 6);
     return 0;
 }
