@@ -1,4 +1,4 @@
-
+import java.io.InputStream;
 
 public class Naloga3 {
     
@@ -144,28 +144,33 @@ public class Naloga3 {
         }
     }
 
+    public static void Read() {
+
+    }
+
     public static class Main {
         public static void main(String[] args) {
 
             Naloga3 naloga3 = new Naloga3();
             Naloga3.NumberList numberList = naloga3.new NumberList();
 
-            numberList.add(10);
-            numberList.add(17);
-            numberList.add(5);
-            numberList.add(4);
-            numberList.add(13);
-            numberList.add(20);
-            numberList.add(57);
-            numberList.add(1);
-            numberList.izpisi();
+            // numberList.add(10);
+            // numberList.add(17);
+            // numberList.add(5);
+            // numberList.add(4);
+            // numberList.add(13);
+            // numberList.add(20);
+            // numberList.add(57);
+            // numberList.add(1);
+            // numberList.izpisi();
 
 
-            numberList.ohrani('>', 17);
-            numberList.izpisi();
-            numberList.zdruzi('*');
-            // numberList.zdruzi('+');
-            numberList.izpisi();
+            // numberList.ohrani('>', 17);
+            // numberList.izpisi();
+            // numberList.zdruzi('*');
+            // // numberList.zdruzi('+');
+            // numberList.izpisi();
+            Read();
         }
     }
 }

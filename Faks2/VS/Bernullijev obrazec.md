@@ -31,4 +31,4 @@ $$\large P(n, k , p) = \binom{n}{k}p^k (1 - p)^n⁻^k$$
 
  1. $p^k$   moznost uspeha pri uspesnih 
  2. $(1 - p)^k⁻^n$  moznost uspeha v ostalih primerih
- 3. $\binom{n}{k}$ stevilo kombinacij po k nad n
+ 3. $\binom{n}{k}$ stevilo vseh kombinacij - vrstni red je pomemben!!!

@@ -5,7 +5,7 @@ public class Naloga4 {
         //S – dolžina nakupovalnega seznama (število izdelkov, ki jih namerava kupiti),
         private int S;
         //H – čas nabiranja enega izdelka z nakupovalnega seznama,
-        private float H;
+        private int H;
         //G – toleranca do gneče pred blagajno.
         private int G;
 
@@ -15,7 +15,21 @@ public class Naloga4 {
             this.H = H;
             this.G = G;
         }
+
+        @Override
+        public String toString() {
+            return String.format("Kupec -> ID: %d, S: %d, H: %d, G: %d", this.ID, this.S, this.H, this.G);
+        }
     }
+
+    private int T;
+    private int [] LV;
+    private Kupec [] LT;
+    private int [] LS;
+    private int [] LH;
+    private int [] LG;
+
+
 
     // T – število korakov (časovnih enot) simulacije
 
@@ -39,9 +53,13 @@ public class Naloga4 {
     // enega ali več elementov. Na primer, če velja LG = [A], pomeni, da bodo imeli vsi kupci
     // toleranco nastavljeno na A.
 
-    public class Main {
-        // public static void main(String[] args) {
-            
-        // }
+    public static class Main {
+        public static void main(String[] args) {
+            Naloga4 naloga4 = new Naloga4();
+            Naloga4.Kupec kupec = naloga4.new Kupec(0, 0, 0, 0);
+            Naloga4.Kupec drugi = naloga4.new Kupec(1, 2, 3, 4);
+            System.out.println(kupec.toString());
+            System.out.println(drugi.toString());
+        }
     }
 }
