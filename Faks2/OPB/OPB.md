@@ -18,7 +18,13 @@
 - Delni stik (Semijoin)
 ![Theta](img/Theta.jpeg)
 
+## Razlaga stikov
+
+![Theta](img/JoinsExplanation.jpeg)
+
 ## Agregatne operacije
 
 $$𝚪(R)$$
+
+
 
