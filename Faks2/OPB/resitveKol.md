@@ -110,3 +110,39 @@ select Count(ID_zaposleni)
 from zaposleni join oddelek as o
 where o.Ime = "Sales"
 ```
+
+> Izpišite imena tistih produktov, katerih cena je nižja od povprečja vseh produktov. V rezultat naj gredo le tisti produkti, ki še nikoli niso bili poslani (ShipCountry) v Francijo.(Privzeta podatkovna baza northwind) 
+```sql
+select distinct productname
+from products natural join orderdetails natural join orders
+where unitPrice < (
+select avg(unitPrice)
+from products
+) and Shipcountry != "%France%"
+```
+
+ali
+
+```sql
+select distinct productname
+from products as p join orderdetails as o on(
+p.productid = o.productid
+) join orders s on(
+o.orderid = s.orderid
+)
+where p.unitPrice < (
+select avg(unitPrice)
+from products
+) and Shipcountry != "%France%"
+```
+
+> Izpišite število zaposlenih v oddelku "SALES".
+
+```sql
+select count(id_zaposleni)
+from zaposleni as z join oddelek as o on(
+z.id_oddelek = o.id_oddelek
+)
+where o.ime = "Sales"
+
+```
