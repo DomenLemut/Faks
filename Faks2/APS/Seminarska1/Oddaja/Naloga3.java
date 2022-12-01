@@ -4,37 +4,30 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Naloga3InWork {
-    
+public class Naloga3 {
+
     public class NumberList {
 
         private NumberListNode first;
         private NumberListNode last;
-        public FileWriter file;
-        public BufferedWriter buffer;
 
         public NumberList() {
             first = null;
             last = null;
-
-            try (FileWriter file = new FileWriter("out.txt")) {
-                buffer = new BufferedWriter(file);
-            } catch (IOException e) {
-                System.out.println("Cannot write to file!");
-            }
         }
 
-        public void closeBuffer() throws IOException {
-            buffer.close();
-        }
+        @Override
+        public String toString() {
+            StringBuilder str = new StringBuilder();
 
-        public void izpisi() throws IOException {
             NumberListNode curr = first;
-            while(curr != null) {
-                buffer.write(curr.num + " ");
+            while(curr.next != null) {
+                str.append(curr.num + ",");
                 curr = curr.next;
             }
-            buffer.write(" \r\n");
+            str.append(curr.num);
+
+            return str.toString();
         }
 
         public void add(int num) {
@@ -54,18 +47,12 @@ public class Naloga3InWork {
                 case '*':
                     while(curr != null){
                         curr.num *= val;
-
-                        //test
-                        // buffer.write(curr.num + " ");
                         curr = curr.next;
                     }
                     break;
                 case '+':
                     while(curr != null){
                         curr.num += val;
-
-                        //test
-                        // buffer.write(curr.num + " ");
                         curr = curr.next;
                     }
                     break;
@@ -79,6 +66,8 @@ public class Naloga3InWork {
                 prev.next = curr.next;
             if(curr == last)
                 last = prev;
+
+            curr = null;  //nastavi za garbage-collectorja
         }
 
         public void ohrani(char op, int val) { // op = {'<', '>', '='} obdrzi vse elemente, ki vstrezajo pogoju, ostale zavrze
@@ -91,40 +80,31 @@ public class Naloga3InWork {
                     while(curr != null) {
                         if(curr.num >= val)
                             delete(curr, prev);
-                        // else 
-                        //     buffer.write(curr.num + " ");
                         curr = curr.next;
                         if(curr != prev.next && curr != prev)
                             prev = prev.next;
                     }
 
-                    // buffer.write("\r\n");
                     break;
                 case '>':
                     while(curr != null) {
                         if(curr.num <= val)
                             delete(curr, prev);
-                        // else 
-                        //     buffer.write(curr.num + " ");
                         curr = curr.next;
                         if(curr != prev.next && curr != prev)
                             prev = prev.next;
                     }
 
-                    // buffer.write("\r\n");
                     break;
                 case '=':
                     while(curr != null) {
                         if(curr.num != val)
                             delete(curr, prev);
-                        // else 
-                        //     buffer.write(curr.num + " ");
                         curr = curr.next;
                         if(curr != prev.next && curr != prev)
                             prev = prev.next;
                     }
 
-                    // buffer.write("\r\n");
                     break;
             }
 
@@ -154,11 +134,8 @@ public class Naloga3InWork {
 
             first = new NumberListNode(out);
             last = first;
-
-            // buffer.write(first.num + "\r\n");
         }
     }
-
 
     public class NumberListNode {
         public NumberListNode next;
@@ -169,22 +146,29 @@ public class Naloga3InWork {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void izpisi(String out, byte [] t) {
+        try{
+            BufferedWriter buffer = new BufferedWriter(new FileWriter(out));
+            for(int i = 0; i < t.length; i++) {
+                buffer.write((char) (t[i] + '0'));
+            }
+            buffer.close();
+        } catch (IOException e) {
+            System.out.println("Cannot write to file!");
+        }
+    }
 
-        //zbrisi pri oddaji
-        Counter counter1 = new Counter("Program");
-        //zbrisi pri oddaji
-        counter1.Start();
-        
-
+    public static void main(String[] args) {
         Naloga3 naloga3 = new Naloga3();
         Naloga3.NumberList numberList = naloga3.new NumberList();
         
-       
 
         try {
             FileReader fr = new FileReader(args[0]);
             BufferedReader br = new BufferedReader(fr);
+            FileWriter fw = new FileWriter(args[1]);
+            BufferedWriter bw = new BufferedWriter(fw);
+
 
             //preberi prvi lajn in daj vsa stevila v List
             int n = 0;
@@ -198,6 +182,8 @@ public class Naloga3InWork {
                     n = n * 10 + Character.getNumericValue(curr);
                 curr = (char) br.read();
             }
+            numberList.add(n);
+
 
 
             curr = (char) br.read();
@@ -219,28 +205,26 @@ public class Naloga3InWork {
                     case "o":
                         numberList.ohrani(integersInString[1].charAt(0),
                         Integer.parseInt(integersInString[2]));
-                        numberList.izpisi();
+                        bw.append(numberList.toString() + "\n");
                         break;
                     case "p":
                         numberList.preslikaj(integersInString[1].charAt(0),
                         Integer.parseInt(integersInString[2]));
-                        numberList.izpisi();
+                        bw.append(numberList.toString() + "\n");
                         break;
                     case "z":
                         numberList.zdruzi(integersInString[1].charAt(0));
-                        numberList.izpisi();
+                        bw.append(numberList.toString() + "\n");
+                        
                         break;
                 }
             }
 
-            numberList.closeBuffer();
+            bw.close();
 
         } catch (IOException e) {
             System.out.println("File not found!!");
         }    
-
-        //zbrisi pri oddaji
-        counter1.Print();
     }
 
 }

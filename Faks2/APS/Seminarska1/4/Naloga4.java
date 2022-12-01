@@ -10,7 +10,15 @@ public class Naloga4 {
     public static int [][] parameters = new int [5][]; //vsi vhodni parametri
     public static Blagajna [] blagajne; //tabela blagajn, ker jih je koncno mnogo juhejjj :)
     public static Trgovina trgovina;
-    
+
+    // parametri:
+    //     parametri [0] => lv - skeniranje izdelka na posamezni blagajni
+    //     parametri [1] => lt - seznami zamika prihoda kupcev
+    //     parametri [2] => ls - podatki o dolzini kupovalnih seznamov
+    //     parametri [3] => lh - podatki o tem, koloko case kupec nabira en izdelek
+    //     parametri [4] => lg - toleranca do glece kupcev
+
+
 
     public class Kupec {
         public int ID; //ID kupca
@@ -24,7 +32,14 @@ public class Naloga4 {
             this.LH = LH;
             this.LG = LG;
         }
+
+        @Override
+        public String toString() {
+            return String.format("ID: %d, LS: %d, LH: %d, LG: %d", ID, LS, LH, LG);
+        }
     } 
+
+
 
     //Kupec zapakiran v Queue element s next pointerjem in tick integerjem
     public class QueueElement {
@@ -45,10 +60,12 @@ public class Naloga4 {
             return false;
         }
 
-        public void resetTime(int i) {
-            this.timer = i;
+        public void resetTime(int timer) {
+            this.timer = timer;
         }
     }
+
+
 
 
 
@@ -61,36 +78,41 @@ public class Naloga4 {
         private QueueElement last = null;
 
         private int ID = 1;
-        private int nextTime = parameters[1][0];
-
-        //za zbrisat
-        public void rtrn() {
-            QueueElement curr = first;
-
-            System.out.print("V trgovini: (");
-            while(curr != null) {
-                System.out.print(curr.kupec.ID + " ");
-                curr = curr.nextElement;
-            }
-            System.out.print(")");
-            System.out.println();
-        }
+        private int nextTime = 0;
+        private int zapustilo = 0;
 
         public void novKupec(int time) {
             if(time == nextTime) {
                     //ustvarimo novega kupca - tu morajo biti izbrani se pravilni parametri
-                Kupec curr = naloga4.new Kupec(ID, parameters[1].length, time % parameters[2].length, time % parameters[3].length);
+                Kupec curr = naloga4.new Kupec(ID, 
+                parameters[2][(ID - 1) % parameters[3].length], 
+                parameters[1][(ID - 1) % parameters[2].length], 
+                parameters[4][(ID - 1) % parameters[4].length]);
+
+                nextTime += parameters[0][(ID - 1) % parameters[1].length];
         
-                //poglej ce je kaka cakalna vrsta ok, pol dodaj, drugac pusti ta current viset v zraku
-                for(int i = 0; i < blagajne.length; i++) {
-                    //ce je kak ok
-                    if(blagajne[i].lineLength() <= curr.LG) {
-                        trgovina.add(curr);
-                        break;
-                    }
+                if(!checkGneca(curr)) {
+                    zapustilo++;
                 }
+
                 ID++;
             }
+        }
+
+        public int zapustilo() {
+            return zapustilo;
+        }
+
+        public boolean checkGneca(Kupec curr) {
+            //poglej ce je kaka cakalna vrsta ok, pol dodaj
+            for(int i = 0; i < blagajne.length; i++) {
+                //ce je kak ok
+                if(blagajne[i].lineLength() <= curr.LG) {
+                    trgovina.add(curr);
+                    return true;
+                }
+            }
+            return false;
         }
 
         //odstrani element iz lista in ga vrni za nadaljno uporabo na blagajnah
@@ -166,9 +188,6 @@ public class Naloga4 {
         //stetje kupcev v queue
         private int vrsta = 0;
 
-        //stetje vseh kupcev na balagajni
-        private int steviloKupcev = 0;
-
         //prvi in zadnji element
         private QueueElement front = null;
         private QueueElement rear = null;
@@ -177,20 +196,9 @@ public class Naloga4 {
             this.casSkeniranja = casSkeniranja;
         }
 
+
         public int lineLength() {
-            return vrsta;
-        }
-
-        public int returnSteviloKupcev() {
-            return this.steviloKupcev;
-        }
-
-        public boolean Empty() {
-            return front == null;
-        }
-
-        public Kupec Front() {
-            return front.kupec;
+            return this.vrsta;
         }
 
         //dodaj odzadaj
@@ -206,13 +214,14 @@ public class Naloga4 {
 
         //izbrisi odspredaj
         public void DeQueue() {
+            //zbiralnik.add(front);
             if(front == rear){ 
                 rear = null;
                 front = null;
             } else {
                 front = front.nextElement;
             }
-            steviloKupcev++;
+            
             vrsta--;
         }
 
@@ -227,8 +236,10 @@ public class Naloga4 {
         }
 
         public void updateTime() {
-            if(front != null && front.updateTimer())
+            if(front != null && front.updateTimer()) {
+                System.out.println("Dequeue");
                 DeQueue();
+            }
         }
 
     }
@@ -270,21 +281,6 @@ public class Naloga4 {
             parameters[i][j] = Integer.parseInt(integersInString[j]);
     }
 
-    //za zbrisat
-    public static void printOutParameters() {
-        System.out.printf("-------------------------------------------\n");
-        System.out.printf("[Trgovina - parametri]\n");
-        System.out.printf("%d\n", steps);
-        for(int i = 0; i < parameters.length; i++) {
-            for(int j = 0; j < parameters[i].length; j++) {
-                System.out.print(parameters[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-        System.out.printf("-------------------------------------------\n");
-    }
-
     public static boolean preverGneco(Blagajna [] blagajne, int gneca) {
         int min = blagajne[0].lineLength();
         for(int i = 1; i < blagajne.length; i++) {
@@ -296,54 +292,35 @@ public class Naloga4 {
         return true;
     }
 
-    public static void izpisiBlagajne() {
-        for(int i = 0; i < blagajne.length; i++) {
-            System.out.println("(Blagajna " + i + ": " + blagajne[i].vrsta + " )");
-            if(blagajne[i].front != null) {
-                System.out.println(" na blagajni: " + blagajne[i].front.kupec.ID);
-            }
-        }
-    }
-
-
     public static void main(String[] args) {
         Counter program = new Counter("Program");
         program.Start();
+        //*********************************************************************
+        
 
         //initiate classes
         naloga4 = new Naloga4();
         trgovina = naloga4.new Trgovina();
 
-        //ustvari count parametre
-        int time = 0;
-
         //pripravi nalogo
         Load(args[0]);
 
         //glavni loop programa
-        while(time < steps) {
+        for(int time = 0;time < steps; time++) {
             for(Blagajna b: blagajne){
                 b.updateTime();
             }
-
             trgovina.checkTimer();
-
             trgovina.novKupec(time);
-            
-            System.out.printf("\n[krog -> %d]\n", time);
-            izpisiBlagajne();
-            trgovina.rtrn();
 
-            time++;
-        }
+            //System.out.println(trgovina.zapustilo());
+            //System.out.println(blagajne[0].lineLength());
 
+        }   
 
-        System.out.println("\nKoncno stevilo ljudi na blagajnah: ");
-        for(int i = 0; i < blagajne.length; i++) {
-            System.out.println(i + ": " + blagajne[i].returnSteviloKupcev());
-        }
+        System.out.println(trgovina.zapustilo());
 
-
+        //*********************************************************************
         program.Print();
     }
 }

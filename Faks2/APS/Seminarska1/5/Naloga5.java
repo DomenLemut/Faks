@@ -18,13 +18,14 @@ public class Naloga5 {
     public static void main(String[] args) {
         Counter Program = new Counter("Program");
         Program.Start();
+        //*********************************************************************
 
         Load(args[0]);
         printArr(arr);
         printArr(arr1);
 
         
-        
+        //*********************************************************************
         Program.Print();
     }
 
@@ -46,7 +47,6 @@ public class Naloga5 {
             }
         }
     }
-
 
 
     public static void Load(String input) {
