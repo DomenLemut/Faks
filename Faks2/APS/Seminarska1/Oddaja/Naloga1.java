@@ -223,21 +223,17 @@ public class Naloga1 {
     }
 
     public static void main(String[] args) {
-        Counter program = new Counter("Main program");
-        program.Start();
         //*******************************************************************
         if(Load(args[0])) {
             quickSortBesede(0, besede.length - 1); //sortira besede od najkrajse do najdaljse
             if(solve(0)) {
-                System.out.println(resitveString());
-                //Store(args[1], resitveString());
+                Store(args[1], resitveString());
             } else {
                 System.out.println("No solution!!");
             }
         }
 
         //*******************************************************************
-        program.Print();
     }
 }
 

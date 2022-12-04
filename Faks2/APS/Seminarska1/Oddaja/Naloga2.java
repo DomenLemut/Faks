@@ -3,98 +3,11 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
- 
-class Stack {
-    private int [] arr;
-    int pointer;
-
-    public Stack(int length) {
-        arr = new int [length];
-        pointer = 0;
-    }
-
-    public void add(int number) {
-        arr[pointer] = number;
-        pointer++;
-    }
-
-    public int remove() {
-        pointer--;
-        return arr[pointer];
-    }
-
-    public void clear() {
-        pointer = 0;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder str = new StringBuilder();
-        for(int i = 0; i < pointer; i++) {
-            str.append(arr[i]);
-        }
-
-        return str.toString();
-    }
-
-    public int size() {
-        return pointer;
-    }
-
-}
-
-class Queue {
-    private int [] arr;
-    int frontP;
-    int rearP;
-
-    public Queue(int length) {
-        arr = new int[length];
-        rearP = 0;
-        frontP = 0;
-    }
-
-    public void add(int number) {
-        arr[rearP] = number;
-        rearP++;
-    }
-
-    public int remove() {
-        frontP++;
-        return arr[frontP - 1];
-    }
-
-    public void clear() {
-        frontP = 0;
-        rearP = 0;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder str = new StringBuilder();
-        for(int i = frontP; i < rearP; i++) {
-            str.append(arr[i]);
-        }
-
-        return str.toString();
-    }
-
-    public int size() {
-        return rearP - frontP;
-    }
-
-    public int [] returnArr() {
-        return arr;
-    }
-
-}
 
 public class Naloga2 {
 
     private static int n; //stevilo permutacij - koraki
     private static int dLength; //splosna dolzina stringa, ko ga ne stavimo v druge stacke in arraye
-    private static int cyclesRepeat = 1; //na kolko korakih se ponovi
 
     private static byte [] coded;
     private static int [] permutations;
@@ -200,39 +113,11 @@ public class Naloga2 {
             nova[permutations[i]] = i;
 
         permutations = nova;
-    } 
-
-    public static void findCycles() {
-        boolean [] check = new boolean [permutations.length];
-
-        int multipier = 1;
-        int curr;
-        int length;
-
-        for(int start = 0; start < permutations.length - 1; start++) {
-            if(!check[start]) {
-                check[start] = true;
-                curr = permutations[start];
-                
-
-                length = 1;
-                while(curr != start) {
-                    check[curr] = true;
-                    length++;
-
-                    curr = permutations[curr];
-                }
-
-
-                multipier = lcm(multipier, length);
-            }
-        }
-        cyclesRepeat = multipier;
     }
 
-    public static void Store(String out, String output) {
+    public static void Store(String outRoute, String output) {
         try{
-            BufferedWriter buffer = new BufferedWriter(new FileWriter(out));
+            BufferedWriter buffer = new BufferedWriter(new FileWriter(outRoute));
             buffer.write(output);
             buffer.close();
         } catch (IOException e) {
@@ -240,24 +125,12 @@ public class Naloga2 {
         }
     }
 
-    public static int lcm(int n1, int n2) {
-        int gcd = 1;
-        for(int i = 1; i <= n1 && i <= n2; ++i) {
-            if(n1 % i == 0 && n2 % i == 0)
-              gcd = i;
-          }
-      
-          return (n1 * n2) / gcd;
-    }
-
     public static void main(String[] args) {
-        Counter program = new Counter("Program");
-        program.Start();
         //*********************************************************************
 
         if(Load(args[0])) {
             calculatePermutations();
-            reversePermutations(); //ta dela prav zih
+            reversePermutations();
 
             byte [] nova = preslikaj(coded);
             for(int step = 1; step < n; step++) {
@@ -274,6 +147,5 @@ public class Naloga2 {
         }
 
         //*********************************************************************
-        program.Print();
     }
 }

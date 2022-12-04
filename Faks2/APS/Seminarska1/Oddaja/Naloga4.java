@@ -240,8 +240,6 @@ public class Naloga4 {
     }
 
     public static void main(String[] args) {
-        Counter program = new Counter("Program");
-        program.Start();
         //*****************************************************************************
         
         Solutions zapustili = naloga4.new Solutions();
@@ -306,6 +304,5 @@ public class Naloga4 {
 
 
         //*****************************************************************************
-        program.Print();
     }
 }

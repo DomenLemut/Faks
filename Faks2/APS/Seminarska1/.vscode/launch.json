@@ -1,0 +1,60 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Naloga1",
+            "request": "launch",
+            "mainClass": "Naloga1",
+            "projectName": "Seminarska1_a4702007",
+            "args": ["1/Testi/I1_7.txt"]
+        },
+        {
+            "type": "java",
+            "name": "Launch Naloga2",
+            "request": "launch",
+            "mainClass": "Naloga2",
+            "projectName": "Seminarska1_a4702007",
+            "args": ["2/TestniPrimeri/test.txt", "2/Outputs/out.txt"]
+        },
+        {
+            "type": "java",
+            "name": "Launch Naloga2_1",
+            "request": "launch",
+            "mainClass": "Naloga2_1",
+            "projectName": "Seminarska1_a4702007"
+        },
+        {
+            "type": "java",
+            "name": "Launch Naloga3",
+            "request": "launch",
+            "mainClass": "Naloga3",
+            "projectName": "Seminarska1_a4702007",
+            "args": ["3/TestniPrimeri/I2_3.txt"]
+        },
+        {
+            "type": "java",
+            "name": "Launch Naloga4",
+            "request": "launch",
+            "mainClass": "Naloga4",
+            "projectName": "Seminarska1_a4702007",
+            "args": ["4/TestniPrimeri/I4_4.txt", "output.txt"]
+        },
+        {
+            "type": "java",
+            "name": "Launch Naloga5",
+            "request": "launch",
+            "mainClass": "Naloga5",
+            "projectName": "Seminarska1_a4702007"
+        }
+    ]
+}

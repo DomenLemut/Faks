@@ -15,20 +15,6 @@ public class Naloga5 {
 
     public final String [] ukazi = {"GOR", "DOL", "LEVO", "DESNO", "NALOZI", "ODLOZI"};
 
-    public static void main(String[] args) {
-        Counter Program = new Counter("Program");
-        Program.Start();
-        //*********************************************************************
-
-        Load(args[0]);
-        printArr(arr);
-        printArr(arr1);
-
-        
-        //*********************************************************************
-        Program.Print();
-    }
-
     public static void printArr(char [][] t) {
         System.out.printf("\n[Array printed out]\n");
         System.out.printf("-------------------\n");
@@ -111,4 +97,19 @@ public class Naloga5 {
             System.out.println("File not found!!");
         }    
     }
+
+    public static void main(String[] args) {
+        Counter Program = new Counter("Program");
+        Program.Start();
+        //*********************************************************************
+
+        Load(args[0]);
+        printArr(arr);
+        printArr(arr1);
+
+        
+        //*********************************************************************
+        Program.Print();
+    }
 }
+

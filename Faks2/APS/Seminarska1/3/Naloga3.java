@@ -224,6 +224,7 @@ public class Naloga3 {
                 }
             }
 
+            br.close();
             bw.close();
 
         } catch (IOException e) {
