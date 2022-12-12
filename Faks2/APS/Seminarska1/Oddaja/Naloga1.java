@@ -58,22 +58,6 @@ public class Naloga1 {
         }
     }
 
-    public static String checkTabelaString() {
-        StringBuilder str = new StringBuilder();
-
-        for(int i = 0; i < check.length; i++) {
-            for(int j = 0; j < check[i].length; j++) {
-                if(check[j][i])
-                    str.append(tabela[j][i] + " ");
-                else
-                    str.append("- ");
-            }
-            str.append("\n");
-        }
-
-        return str.toString();
-    }
-
     public static String resitveString() {
         StringBuilder str = new StringBuilder();
 
@@ -140,32 +124,6 @@ public class Naloga1 {
         return false;
     }
 
-    public static boolean getBesedaNazaj(int beseda, int x, int y, byte smer) {
-        int maxXMove = (besede[beseda].length() - 1) * xMoves[smer];
-        int maxYMove = (besede[beseda].length() - 1) * yMoves[smer];
-
-        //preglej, ce beseda sploh lahko gre v prostor
-        if(x + maxXMove < tabela.length && x + maxXMove >= 0 && y + maxYMove < tabela.length && y + maxYMove >= 0) {
-            int currX = x + maxXMove;
-            int currY = y + maxYMove;
-            
-            int index = 0;
-
-            while(index < besede[beseda].length() && besede[beseda].charAt(index) == tabela[currX][currY] && !check[currX][currY]){
-                check[currX][currY] = true;
-                currX -= xMoves[smer];
-                currY -= yMoves[smer];
-                index++;
-            }
-
-            if(index == besede[beseda].length()){
-                return true;
-            } 
-            else deleteBeseda(beseda, x + maxXMove, y + maxYMove, (byte) ((smer + 4) % 8), index);
-        }
-        return false;
-    }
-
     public static void deleteBeseda(int beseda, int x, int y, byte smer, int length) {
         int currX = x;
         int currY = y;
@@ -180,46 +138,31 @@ public class Naloga1 {
 
     //rekurzivna solve funkcija
     //pri primeru 7 iz i = 114 prekoci na i = 99
-    public static boolean solve(int i) {
-        System.out.println(checkTabelaString());
-        if(i < tabela.length * tabela[0].length) {
-            int x = i % tabela.length;
-            int y = i / tabela.length;
+    public static boolean solve(int beseda) {
+        if(beseda >= besede.length)
+            return true;
+    
+        for(int y = 0; y < tabela[0].length; y++) {
+            for(int x = 0; x < tabela.length; x++) {
+                for(byte smer = 0; smer < 8; smer++) {
+                    if(getBesedaNaprej(beseda, x, y, smer)){
+                        
+                        resitve[beseda] = String.format(
+                        "%d,%d,%d,%d", 
+                        y, 
+                        x,
+                        y + yMoves[smer] * (besede[beseda].length() - 1),
+                        x + xMoves[smer] * (besede[beseda].length() - 1));
 
-            if(check[x][y]) {
-                return(solve(i + 1));
-            }
-
-            for(int beseda = 0; beseda < besede.length; beseda++) {
-                if(resitve[beseda] == null) {
-                    for(byte smer = 2; smer < 6; smer++) {
-                        if(getBesedaNaprej(beseda, x, y, smer)) {
-                            resitve[beseda] = String.format("%d,%d,%d,%d", y, x, 
-                            y + yMoves[smer] * (besede[beseda].length() - 1),
-                            x + xMoves[smer] * (besede[beseda].length() - 1));
-
-                            if(solve(i + 1))
-                                return true;
-
-                            deleteBeseda(beseda, x, y, smer, besede[beseda].length());
-                        }
-                        if(getBesedaNazaj(beseda, x, y, smer)) {
-                            resitve[beseda] = String.format("%d,%d,%d,%d",
-                            y + yMoves[smer] * (besede[beseda].length() - 1),
-                            x + xMoves[smer] * (besede[beseda].length() - 1), y, x);
-
-                            if(solve(i + 1))
-                                return true;
-                            
-                            deleteBeseda(beseda, x, y, smer, besede[beseda].length());
-                        }
+                        if(solve(beseda + 1))
+                            return true;
+                        
+                        deleteBeseda(beseda, x, y, smer, besede[beseda].length());
                     }
-                    resitve[beseda] = null;
                 }
             }
-            return false;
         }
-        return true;
+        return false;
     }
 
     public static void main(String[] args) {
@@ -228,22 +171,9 @@ public class Naloga1 {
             quickSortBesede(0, besede.length - 1); //sortira besede od najkrajse do najdaljse
             if(solve(0)) {
                 Store(args[1], resitveString());
-            } else {
-                System.out.println("No solution!!");
             }
         }
 
         //*******************************************************************
     }
 }
-
-/*
- * IDEJE:
- * - zacni z daljisimi besedami
- * - ni treba brisat vseh crk vedno, treba je le tiste, ki so v besedi, ki jo iscemo, a je nismo nasli 
- */
-
- /*DEJSTVA:
-  * - vsaj ena beseda se mora zaceti ali koncati na vsakem zaporedno gledanem mestu, ki se ni bilo pregledano
-  * - ce tako nimamo resitve moramo pregledati vse ostale resitve na tistem mestu
-  */

@@ -1,7 +1,6 @@
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.EOFException;
 import java.io.FileWriter;
 
 import java.io.IOException;
@@ -10,92 +9,81 @@ public class Naloga5 {
     public static char [][] arr;
     public static char [][] arr1;
 
-    public static int trak = 0;
-    public static int place = -1;
+    public static int [] zacetnaStanja;
+    public static int [] koncnaStanja;
+
+    public static int steviloStanj;
+    public static int steviloTrakov;
+    public static int dolzinaTrakov;
+    public static int maxCode;
 
     public final String [] ukazi = {"GOR", "DOL", "LEVO", "DESNO", "NALOZI", "ODLOZI"};
 
-    public static void printArr(char [][] t) {
-        System.out.printf("\n[Array printed out]\n");
-        System.out.printf("-------------------\n");
-        for(int i = 0; i < t[0].length; i++) {
-            for(int j = 0; j < t.length; j++) {
-                System.out.printf("%c ", t[j][i]);
-            }
-            System.out.print("\n");
+    public class QueueElement {
+        public QueueElement nextElement;
+        public int [] stanja;
+        
+        public QueueElement() {
+
         }
     }
 
-    public static void clearArr(char [][] arr) {
-        for(int i = 0; i < arr.length; i++) {
-            for(int j = 0; j < arr[i].length; j++) {
-                arr[i][j] = '-';
+    public class Queue {
+        public QueueElement front = null;
+        public QueueElement rear = null;
+
+        //dodaj odzadaj
+        public void EnQueue(QueueElement element) {
+            if(front == null) {
+                front = element;
+                rear = element;
+            } else 
+                rear.nextElement = element;
+            rear = element;
+        }
+
+        //izbrisi odspredaj
+        public void DeQueue() {
+            if(front == rear){ 
+                rear = null;
+                front = null;
+            } else {
+                front = front.nextElement;
             }
         }
     }
 
+    public static boolean Load(String input) {
+        try (BufferedReader br = new BufferedReader(new FileReader(input))) {
+            String [] strings = br.readLine().split(",");
+            steviloTrakov = Integer.parseInt(strings[0]);
+            dolzinaTrakov = Integer.parseInt(strings[1]);
 
-    public static void Load(String input) {
-        try (FileReader fr = new FileReader(input)) {
+
+            return true;
             
-
-            BufferedReader br = new BufferedReader(fr);
-
-            String [] integersInString = br.readLine().split(",");
-
-            int length = Integer.parseInt(integersInString[0]);
-            int height = Integer.parseInt(integersInString[1]);
-
-            arr = new char[height][length];
-            arr1 = new char[height][length];
-
-            clearArr(arr);
-            clearArr(arr1);
-
-            int x = 0;
-            char curr;
-
-
-
-            for(int y = 0; y < arr[0].length; y++) {
-                x = 0;
-                br.skip(2);
-
-                curr = (char) br.read();
-                while(curr != '\r' && curr != '\n' && curr != -1) {
-                    if(curr == ',')
-                        x++;
-                    else
-                        arr[x][y] = curr;
-
-                        
-                    curr = (char) br.read();
-                }
-            }
-
-            for(int y = 0; y < arr1[0].length; y++) {
-                x = 0;
-                
-                br.skip(2);
-                int i = 0;
-
-                curr = (char) br.read();
-
-                while(curr != '\r' && curr != '\n' && curr != -1 && i < 20) {
-                    if(curr == ',')
-                        x++;
-                    else
-                        arr1[x][y] = curr;
-
-
-                    curr = (char) br.read();
-                    i++;
-                }
-            }
-
         } catch (IOException e) {
-            System.out.println("File not found!!");
+            return false;
         }    
+    }
+
+    public static void odlozi(int [] stanja, int stanje, int index) {
+        stanja[index] += stanje;
+    }
+
+    public static int nalozi(int [] stanja, int index) {
+        int save = stanja[index] % steviloStanj;
+        stanja[index] -= stanja[index] % steviloStanj;
+        return save;
+    }
+
+    public static void gor(int [] stanja, int index) {
+        stanja[index] *= steviloStanj;
+        stanja[index] %= maxCode;
+    } 
+
+    public static void dol(int [] stanja, int index) {
+        stanja[index] /= steviloStanj;
     }
 
     public static void main(String[] args) {
@@ -103,9 +91,10 @@ public class Naloga5 {
         Program.Start();
         //*********************************************************************
 
-        Load(args[0]);
-        printArr(arr);
-        printArr(arr1);
+        if(Load(args[0])) {
+
+        }
+
 
         
         //*********************************************************************

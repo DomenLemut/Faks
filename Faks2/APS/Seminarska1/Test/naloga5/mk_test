@@ -1,0 +1,91 @@
+#!/bin/bash
+trap exit SIGINT
+
+# Configure the test environment
+TIMEOUT=2
+JAVA=$(which java)
+JAVAC=$(which javac)
+TIMEOUT_SIGNAL=124
+
+# Check --diff and number
+if [ "$1" == "--diff" ]; then
+  if [ "$2" == "" ]; then
+    echo "Please specify test number"
+    exit 1
+  fi
+  NUM=$2
+  # Check if R{$2}.txt exists
+    if [ ! -f "R${NUM}.txt" ]; then
+        echo "No results found for test ${NUM}"
+        exit 1
+    else
+        diff --color --strip-trailing-cr --minimal O*_${NUM}.txt R${NUM}.txt
+        exit 0
+    fi
+fi
+
+# Check if the first argument is a number
+if [ "$1" != "" ]; then
+    echo "Only running test $1"
+    NUM=$1
+fi
+
+# Get all files that end with .txt and save them to array
+i_files=($(ls -v I*.txt))
+o_files=($(ls -v O*.txt))
+naloga="$(find . -name "Naloga1.java")"
+
+# Compile naloga
+echo "Compiling ..."
+"${JAVAC}" "${naloga}"
+echo "Done"
+echo ""
+
+success=0
+tmpf="$(mktemp)"
+function run_test {
+    # Get the input and output files
+    i_file="${i_files[(($1 - 1))]}"
+    o_file="${o_files[(($1 - 1))]}"
+
+    # Run the program
+    start=$(date +%s.%N)
+    timeout ${TIMEOUT} /usr/bin/time --format "%MK" -o "${tmpf}" "${JAVA}" "${naloga%.*}" "${i_file}" "R$1.txt" 2> /dev/null
+    result=$?
+    end=$(date +%s.%N)
+    memory=$(cat "${tmpf}")
+    
+    if [[ $result != "${TIMEOUT_SIGNAL}" ]]; then
+        end=$(date +%s.%N)
+        if diff --strip-trailing-cr "R$1.txt" "${o_file}" > /dev/null; then
+            # Calculate time from start
+            time=$(printf %.2f "$(echo "(${end} - ${start}) * 1000" | bc)")
+            echo -e "Test $1 \e[1;32mpassed\e[0m [${time}ms $(numfmt --from=auto --to=iec --format="%.2f" ${memory})]"
+            ((success+=1))
+        else
+            echo -e "Test $1 \e[1;31mfailed\e[0m (RESULT)"
+        fi
+    else
+        echo -e "Test $1 \e[1;31mfailed\e[0m (TIMEOUT)"
+    fi
+}
+rm -f "${tmpf}"
+
+# remove prefix path from "Nalogax.java"
+naloga=${naloga##*/}
+tLen=${#i_files[@]}
+
+# Check if NUM is set
+if [ "${NUM}" != "" ]; then
+    run_test "${NUM}"
+    exit 0
+fi
+
+# If not, run all tests
+for (( i=1; i<=tLen; i+=1 )); do
+    run_test "$i"
+done
+
+# Print success rate in color
+echo ""
+echo -e "Success rate: [${success}/${tLen}]"

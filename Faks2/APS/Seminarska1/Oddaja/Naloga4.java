@@ -241,6 +241,10 @@ public class Naloga4 {
 
     public static void main(String[] args) {
         //*****************************************************************************
+        if(args.length < 2) {
+            System.out.println("Premalo argumentov!");
+            System.exit(0);
+        }
         
         Solutions zapustili = naloga4.new Solutions();
 
@@ -281,15 +285,15 @@ public class Naloga4 {
                     ID++;
 
                     //dodaj kupca v trgovino
-                    //System.out.println("Generiran " + kupec.toString());
+                    System.out.println("Generiran " + kupec.toString());
                     if(!addToTrgovina(kupec)) {
-                        //System.out.println("Kupec " + kupec.ID + " ni mogel v trgovino ");
+                        System.out.println("Kupec " + kupec.ID + " ni mogel v trgovino ");
                         zapustili.add(kupec.ID);
                     } else {
-                        //System.out.println("Kupec " + kupec.ID + " zacne z nabiranjem izdelkov");
+                        System.out.println("Kupec " + kupec.ID + " zacne z nabiranjem izdelkov");
                     }
                 }
-                //System.out.println();
+                System.out.println();
             }
             //-------------------------------------------------------------------
 

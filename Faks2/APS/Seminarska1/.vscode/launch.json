@@ -6,6 +6,30 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Naloga5_2",
+            "request": "launch",
+            "mainClass": "Naloga5_2",
+            "projectName": "Seminarska1_a4702007"
+        },
+        {
+            "type": "java",
+            "name": "Launch Naloga5_1",
+            "request": "launch",
+            "mainClass": "Naloga5_1",
+            "projectName": "Seminarska1_a4702007"
+        },
+        {
+            "type": "java",
+            "name": "Launch Naloga1_1",
+            "request": "launch",
+            "mainClass": "Naloga1_1",
+            "projectName": "Seminarska1_a4702007",
+            "args": [
+                "1/Testi/I1_10.txt"
+            ]
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -16,7 +40,9 @@
             "request": "launch",
             "mainClass": "Naloga1",
             "projectName": "Seminarska1_a4702007",
-            "args": ["1/Testi/I1_7.txt"]
+            "args": [
+                "1/Testi/I1_8.txt"
+            ]
         },
         {
             "type": "java",
@@ -24,7 +50,10 @@
             "request": "launch",
             "mainClass": "Naloga2",
             "projectName": "Seminarska1_a4702007",
-            "args": ["2/TestniPrimeri/test.txt", "2/Outputs/out.txt"]
+            "args": [
+                "2/TestniPrimeri/test.txt",
+                "2/Outputs/out.txt"
+            ]
         },
         {
             "type": "java",
@@ -39,7 +68,9 @@
             "request": "launch",
             "mainClass": "Naloga3",
             "projectName": "Seminarska1_a4702007",
-            "args": ["3/TestniPrimeri/I2_3.txt"]
+            "args": [
+                "3/TestniPrimeri/I2_3.txt"
+            ]
         },
         {
             "type": "java",
@@ -47,7 +78,10 @@
             "request": "launch",
             "mainClass": "Naloga4",
             "projectName": "Seminarska1_a4702007",
-            "args": ["4/TestniPrimeri/I4_4.txt", "output.txt"]
+            "args": [
+                "4/TestniPrimeri/I4_3.txt",
+                "output.txt"
+            ]
         },
         {
             "type": "java",
