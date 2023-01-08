@@ -1,0 +1,37 @@
+    private static Node addRecursive1(int dim, int startX, int startY) {
+        Node node = naloga9.new Node(dim);
+        int [] resitev = findMinMax(startX, startY, dim);
+
+        node.min = resitev[0];
+        node.max = resitev[1];
+        
+        if(node.max > node.min) {
+            node.poddrevesa[0] = addRecursive(dim / 2, startX, startY);
+            node.poddrevesa[1] = addRecursive(dim / 2, startX + (dim / 2), startY);
+            node.poddrevesa[2] = addRecursive(dim / 2, startX, startY + (dim / 2));
+            node.poddrevesa[3] = addRecursive(dim / 2, startX + (dim / 2), startY + (dim / 2));
+        }
+
+
+        System.out.printf("%d, %d, dim = %d\n", node.max, node.min, dim);
+
+        return node;
+    }
+
+
+    public static int [] findMinMax(int startX, int startY, int dimenzija) {
+        int max = tabela[startX][startY];
+        int min = tabela[startX][startY];
+
+        for(int x = startX; x < (startX + dimenzija); x++) {
+            for(int y = startY; y < (startY + dimenzija); y++) {
+                if(tabela[y][x] > max)
+                    max = tabela[y][x];
+                if(tabela[y][x] < min)
+                    min = tabela[y][x];
+            }
+        }
+
+        int [] result = {max, min};
+        return result;
+    }
