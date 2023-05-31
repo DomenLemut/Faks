@@ -1,0 +1,15 @@
+execvp: No such file or directory
+execvp: No such file or directory
+execvp: No such file or directory
+execvp: No such file or directory
+symlink() error: No such file or directory
+readlink() error: No such file or directory
+rename() error: No such file or directory
+rm: cannot remove '"the/gray sky"': No such file or directory
+test
+.
+..
+the
+.
+..
+the

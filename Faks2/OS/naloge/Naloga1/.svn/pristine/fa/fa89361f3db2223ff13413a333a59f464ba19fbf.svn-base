@@ -1,0 +1,13 @@
+Izvajanje test-B2
+  Log datoteka: test-B2.log
+  Izhod programa: test-B2.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-B2.in
+  Izhodni status: 1
+  Realni cas izvajanja: 4
+  Uporabniski cas izvajanja: 0
+  Sistemski cas izvajanja: 4
+  Procesorski cas izvajanja: 4
+Preverjanje test-B2
+  Izhodni status: err
+  Tocke: 0

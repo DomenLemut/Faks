@@ -1,0 +1,11 @@
+rename() error: No such file or directory
+rmdir() error: No such file or directory
+rmdir() error: Directory not empty
+0
+0
+test
+Ustvarjanje imenikov
+. .. 1 2 3 
+Preimenovanje imenikov
+. .. a b bn c 
+Odstranjevanje imenikov

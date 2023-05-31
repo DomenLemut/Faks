@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "cerrno": "c",
+    "termios.h": "c"
+  },
+  "C_Cpp.errorSquiggles": "disabled"
+}

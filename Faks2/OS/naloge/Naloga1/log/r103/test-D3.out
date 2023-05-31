@@ -1,0 +1,19 @@
+/proc
+0
+  PID  PPID STANJE IME
+    1     0      S dockinit
+   21     1      S su
+   22    21      S bash
+   76    22      S bash
+   77    76      S timeout
+   78    77      R Naloga1
+0
+
+  PID  PPID STANJE IME
+    1     0      S dockinit
+   21     1      S su
+   22    21      S bash
+   76    22      S bash
+   77    76      S timeout
+   78    77      R Naloga1
+0

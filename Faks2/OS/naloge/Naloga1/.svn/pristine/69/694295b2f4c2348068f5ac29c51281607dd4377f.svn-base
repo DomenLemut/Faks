@@ -1,0 +1,11 @@
+Naloga1.c: In function 'evalComm':
+Naloga1.c:276:13: warning: implicit declaration of function 'get_directory_path' [-Wimplicit-function-declaration]
+   printComm(get_directory_path(dir), out);
+             ^
+Naloga1.c:276:13: warning: passing argument 1 of 'printComm' makes pointer from integer without a cast [-Wint-conversion]
+Naloga1.c:31:6: note: expected 'char *' but argument is of type 'int'
+ void printComm(char *str, FILE *fp);
+      ^
+/tmp/ccLlImai.o: In function `evalComm':
+Naloga1.c:(.text+0x791): undefined reference to `get_directory_path'
+collect2: error: ld returned 1 exit status

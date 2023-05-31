@@ -1,0 +1,134 @@
+count:0
+''
+EOF
+count:0
+''
+EOF
+count:2
+'dirmake'
+'test'
+''
+EOF
+count:2
+'dirchange'
+'test'
+''
+EOF
+count:1
+'dirbase'
+''
+EOF
+test
+count:0
+''
+EOF
+count:5
+'pipes'
+'cpcat /etc/passwd'
+'head -8'
+'wc -l'
+'>count.txt'
+''
+EOF
+count:0
+''
+EOF
+count:4
+'pipes'
+'echo 01234567890123456789'
+'rev'
+'cpcat - digits.txt'
+''
+EOF
+count:0
+''
+EOF
+count:5
+'pipes'
+'cat digits.txt'
+'tr 13579 abcde'
+'rev'
+'>revdigits.txt'
+''
+EOF
+count:0
+''
+EOF
+count:8
+'pipes'
+'cut -d: -f7'
+'sort'
+'uniq -c'
+'sort -nr'
+'head -2'
+'</etc/passwd'
+'>shells.txt'
+''
+EOF
+count:0
+''
+EOF
+cpcat: No such file or directory
+count:2
+'cpcat'
+'count.txt'
+''
+EOF
+cpcat: No such file or directory
+count:2
+'cpcat'
+'digits.txt'
+''
+EOF
+cpcat: No such file or directory
+count:2
+'cpcat'
+'revdigits.txt'
+''
+EOF
+cpcat: No such file or directory
+count:2
+'cpcat'
+'shells.txt'
+''
+EOF
+count:0
+''
+EOF
+unlink: No such file or directory
+count:2
+'unlink'
+'count.txt'
+''
+EOF
+unlink: No such file or directory
+count:2
+'unlink'
+'digits.txt'
+''
+EOF
+unlink: No such file or directory
+count:2
+'unlink'
+'revdigits.txt'
+''
+EOF
+unlink: No such file or directory
+count:2
+'unlink'
+'shells.txt'
+''
+EOF
+count:0
+''
+EOF
+count:2
+'dirchange'
+'..'
+''
+EOF
+count:2
+'dirremove'
+'test'
+''
+EOF

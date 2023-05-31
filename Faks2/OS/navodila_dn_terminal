@@ -1,0 +1,18 @@
+
+Program čim bolj poenostavite. Uporaba globalnih spremenljivk lahko precej poenostavi program.
+Nizom in tabelam statično določite kapaciteto. Npr. za ime lupine definirajte char name[8], podobno za ukazno vrstico itd. Izberite smiselno velike kapacitete. Uporabljajte #define za konstante.
+Uporabi malloc() in njegovih sorodnikov se tako lahko v celoti izognete.
+
+Branje vrstice in razpoznavanje simbolov:
+
+Razpoznavanje sprogramirajte v eni funkciji, npr. int tokenize(char * line). S kazalcem na char potujte po nizu line in z razpoznanimi simboli polnite (globalno) tabelo char* tokens[MAX_TOKENS] - vsakič ko razpoznate en simbol, kazalec nanj shranite v to tabelo. Poleg tega imejte še spremenljivko int token_count, ki pove kako velika je trenutno ta tabela. MAX_TOKENS naj bo večji od 20.
+Ko se premikamo po nizu line, lahko za vsakim razpoznanim simbolom postavimo bajt 0 (konec niza). V tabelo tokens pa shranimo le kazalec na začetek simbola. Tako nam ni potrebno rezervirati dodatnega prostora in kopirati nizov. Juhej!
+Vsak notranji ukaz implementirajte v svoji funkciji. Morebitne parametre ukaza enostavno preberete iz globalne tabele tokens. Iz izvajanjem v ozadju tudi ne bo težav, saj se s forkom vsi podatki kopirajo.
+
+Izvajanje v ozadju in preusmeritve:
+
+Ugotavljanje ali gre za izvajanje v ozadju ali preusmerjanje naredite po razpoznavanju simbolov.
+To naredite preprosto tako, da preverite zaporedoma simbole od zadnjega proti prvemu: najprej ozadje, nato preusmeritev izhoda, nato preusmeritev vhoda.
+Preverite zadnji simbol, če gre za ozadje, si to zapomnite in zmanjšate token_count, nato preverite, če gre za preusmeritev izhoda, si zapomnite ime datoteke in zmanjšate token_count. In po istem principu še preusmeritev vhoda.
+Pripravite si funkcije za stvaritev začetne stopnje cevovoda, vmesne stopnje in končne stopnje. V vsaki stopnji poskrbite za ustrezno cev, stvaritev podprocesa in ustrezne preusmeritve.
+Ko je določena stopnja pripravljena lahko izvedete ustrezen ukaz - podan kot en simbol (v narekovajih) - izkoristite že napisano kodo

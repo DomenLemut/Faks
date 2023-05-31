@@ -1,0 +1,20 @@
+dirmake: File exists
+linkhard: File exists
+unlink: No such file or directory
+unlink: No such file or directory
+rm: cannot remove 'the/gray sky': No such file or directory
+unlink: Is a directory
+test
+Ajka  a  a a     
+Bruno  b  b b  
+1
+17
+18
+89
+90
+91
+.  ..   b
+     the  
+the/sky
+.  ..   b
+     the  

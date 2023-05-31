@@ -1,0 +1,14 @@
+Izvajanje test-R1
+  Log datoteka: test-R1.log
+  Izhod programa: test-R1.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-R1.in
+  Izhodni status: 0
+  Realni cas izvajanja: 12
+  Uporabniski cas izvajanja: 2
+  Sistemski cas izvajanja: 10
+  Procesorski cas izvajanja: 12
+Preverjanje test-R1
+  Izhodni status: ok
+  Standardni izhod: err
+  Tocke: 0

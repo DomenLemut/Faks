@@ -1,0 +1,171 @@
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+unlink: No such file or directory
+dup2: Bad file descriptor
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+: cannot open LOGNAME=test: No such file or directory
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+: cannot open LOGNAME=test: No such file or directory
+A NULL argv[0] was passed through an exec system call.
+: cannot open OLDPWD=/home/test: No such file or directory
+dup2: Bad file descriptor
+: cannot open _=/usr/bin/timeout: No such file or directory
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+: cannot open LOGNAME=test: No such file or directory
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+A NULL argv[0] was passed through an exec system call.
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+A NULL argv[0] was passed through an exec system call.
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+: cannot open LOGNAME=test: No such file or directory
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+: cannot open LOGNAME=test: No such file or directory
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+tr: missing operand after '13579'
+Two strings must be given when translating.
+Try 'tr --help' for more information.
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+*** Error in `./Naloga1': free(): invalid pointer: 0x000000000201b030 ***
+dup2: Bad file descriptor
+======= Backtrace: =========
+dup2: Bad file descriptor
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f5f5d60b7e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f5f5d613e0a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f5f5d61798c]
+./Naloga1[0x402e6b]
+./Naloga1[0x401d8a]
+./Naloga1[0x403124]
+./Naloga1[0x401d7e]
+./Naloga1[0x401888]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f5f5d5b4830]
+./Naloga1[0x401489]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 fd:02 411700375                          /home/test/src/Naloga1
+00603000-00604000 r--p 00003000 fd:02 411700375                          /home/test/src/Naloga1
+00604000-00605000 rw-p 00004000 fd:02 411700375                          /home/test/src/Naloga1
+00605000-00608000 rw-p 00000000 00:00 0 
+02019000-0203b000 rw-p 00000000 00:00 0                                  [heap]
+7f5f58000000-7f5f58021000 rw-p 00000000 00:00 0 
+7f5f58021000-7f5f5c000000 ---p 00000000 00:00 0 
+7f5f5d37e000-7f5f5d394000 r-xp 00000000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5f5d394000-7f5f5d593000 ---p 00016000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5f5d593000-7f5f5d594000 rw-p 00015000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5f5d594000-7f5f5d753000 r-xp 00000000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f5f5d753000-7f5f5d953000 ---p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f5f5d953000-7f5f5d957000 r--p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f5f5d957000-7f5f5d959000 rw-p 001c3000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f5f5d959000-7f5f5d95d000 rw-p 00000000 00:00 0 
+7f5f5d95d000-7f5f5d983000 r-xp 00000000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f5f5db7a000-7f5f5db7d000 rw-p 00000000 00:00 0 
+7f5f5db7f000-7f5f5db80000 rw-p 00000000 00:00 0 
+7f5f5db80000-7f5f5db82000 rw-p 00000000 00:00 0 
+7f5f5db82000-7f5f5db83000 r--p 00025000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f5f5db83000-7f5f5db84000 rw-p 00026000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f5f5db84000-7f5f5db85000 rw-p 00000000 00:00 0 
+7fffc3a89000-7fffc3aaa000 rw-p 00000000 00:00 0                          [stack]
+7fffc3ab3000-7fffc3ab5000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor
+dup2: Bad file descriptor

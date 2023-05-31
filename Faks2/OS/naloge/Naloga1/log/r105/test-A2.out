@@ -1,0 +1,69 @@
+count:0
+''
+EOF
+count:0
+''
+EOF
+count:2
+'print'
+'OS: '
+''
+EOF
+OS: count:2
+'print'
+'Operacijski sistemi'
+''
+EOF
+Operacijski sistemicount:2
+'echo'
+' so super'
+''
+EOF
+ so super
+count:0
+''
+EOF
+count:5
+'print'
+'1'
+'2'
+'3'
+'4'
+''
+EOF
+1 2 3 4count:4
+'echo'
+'5'
+'6'
+'7'
+''
+EOF
+5 6 7
+count:0
+''
+EOF
+count:3
+'print'
+'1   2'
+'3     4  '
+''
+EOF
+1   2 3     4  count:2
+'print'
+'  5     6  '
+''
+EOF
+  5     6  count:2
+'echo'
+' 7   8'
+''
+EOF
+ 7   8
+count:0
+''
+EOF
+count:2
+'exit'
+'14'
+''
+EOF

@@ -1,0 +1,12 @@
+A NULL argv[0] was passed through an exec system call.
+dirremove1: No such file or directory
+dirremove2: Is a directory
+0
+0
+test
+Ustvarjanje imenikov
+.  ..  1  2  3  
+Preimenovanje imenikov
+.  ..  a   b
+  c  
+Odstranjevanje imenikov

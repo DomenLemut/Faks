@@ -1,0 +1,64 @@
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+test
+[TEST] => out: , in: 
+Testiramo delovanje lupine: [TEST] => out: , in: 
+1 2 3[TEST] => out: , in: 
+
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+fork exec
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+1
+[TEST] => out: , in: 
+mysh
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+1
+10
+11
+12
+14
+15
+16
+20
+[TEST] => out: , in: 
+/bin/bash
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/bin/sync
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/bin/false
+/bin/false
+/bin/false
+/bin/false
+/bin/false
+/bin/bash
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+going nowhere
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 

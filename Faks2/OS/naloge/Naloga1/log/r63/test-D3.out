@@ -1,0 +1,18 @@
+0
+  PID  PPID STANJE IME
+    1 (dockinit)      0 1
+   17  (su)      1 1
+   18 (bash)     17 18
+   72 (bash)     18 18
+   73 (timeout)     72 18
+   74 (Naloga1)     73 18
+0
+
+  PID  PPID STANJE IME
+    1 (dockinit)      0 1
+   17  (su)      1 1
+   18 (bash)     17 18
+   72 (bash)     18 18
+   73 (timeout)     72 18
+   74 (Naloga1)     73 18
+0

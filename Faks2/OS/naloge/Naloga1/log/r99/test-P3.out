@@ -1,0 +1,11 @@
+dirmake: File exists
+test
+cpcat: No such file or directory
+cpcat: No such file or directory
+cpcat: No such file or directory
+cpcat: No such file or directory
+unlink: No such file or directory
+unlink: No such file or directory
+unlink: No such file or directory
+unlink: No such file or directory
+dirremove: Is a directory

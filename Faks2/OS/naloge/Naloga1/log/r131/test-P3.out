@@ -1,0 +1,20 @@
+test
+execvp: No such file or directory
+execvp: No such file or directory
+
+pipes "cat digits.txt" "tr 13579 abcde" "rev" >revdigits.txt
+
+pipes "cut -d: -f7" "sort" "uniq -c" "sort -nr" "head -2" </etc/passwd >shells.txt
+
+cpcat count.txt
+cpcat digits.txt
+cpcat revdigits.txt
+cpcat shells.txt
+
+unlink count.txt
+unlink digits.txt
+unlink revdigits.txt
+unlink shells.txt
+
+dirchange ..
+dirremove test

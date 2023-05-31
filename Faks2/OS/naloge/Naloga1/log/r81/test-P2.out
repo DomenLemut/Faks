@@ -1,0 +1,2 @@
+A NULL argv[0] was passed through an exec system call.
+unlink: No such file or directory

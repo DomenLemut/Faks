@@ -1,0 +1,10 @@
+mkdir() error: File exists
+unlink() error: No such file or directory
+unlink() error: No such file or directory
+rmdir() error: Directory not empty
+test
+22
+22
+22
+22
+22

@@ -1,0 +1,8 @@
+
+pipes "cat digits.txt" "rev" "tr 13579 abcde" "rev"
+
+pipes "cpcat digits.txt" "cat" "cpcat" "rev" "cat" "cpcat"
+
+pipes "cat /etc/passwd" "cut -d: -f7" "sort" "uniq -c" "sort -nr" "head -1" "cut -d/ -f4"
+
+unlink digits.txt

@@ -1,0 +1,27 @@
+A NULL argv[0] was passed through an exec system call.
+mysh
+0
+0
+lupina
+0
+0
+sh
+0
+0
+my sh
+0
+1
+my sh
+0
+
+/proc
+0
+0
+.
+0
+0
+/
+0
+1
+/
+0

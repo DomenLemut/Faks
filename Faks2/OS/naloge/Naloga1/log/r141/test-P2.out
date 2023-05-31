@@ -1,0 +1,61 @@
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+: cannot open LOGNAME=test: No such file or directory
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+: cannot open LOGNAME=test: No such file or directory
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+: cannot open LOGNAME=test: No such file or directory
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+exec: No such file or directory
+exec: No such file or directory
+exec: No such file or directory
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+: cannot open LOGNAME=test: No such file or directory
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+unlink: No such file or directory

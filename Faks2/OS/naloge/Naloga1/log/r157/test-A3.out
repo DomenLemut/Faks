@@ -1,0 +1,60 @@
+[TEST] => out: , in: 
+mysh
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+lupina
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+sh
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+my sh
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+1
+[TEST] => out: , in: 
+my sh
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+
+[TEST] => out: , in: 
+/proc
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+.
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+/
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+1
+[TEST] => out: , in: 
+/
+[TEST] => out: , in: 
+0
+[TEST] => out: , in: 

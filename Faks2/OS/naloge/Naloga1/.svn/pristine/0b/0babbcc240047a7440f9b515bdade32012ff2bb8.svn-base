@@ -1,0 +1,19 @@
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+test
+[TEST] => out: , in: 
+[TEST] => out: gori.txt, in: 
+Gori na gori gori >gori.txt
+[TEST] => out: , in: gori.txt
+cat: '<gori.txt': No such file or directory
+cat: '<gori.txt': No such file or directory
+cat: '>doli.txt': No such file or directory
+[TEST] => out: , in: 
+[TEST] => out: doli.txt, in: gori.txt
+[TEST] => out: , in: doli.txt
+cat: '<doli.txt': No such file or directory
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 

@@ -1,0 +1,24 @@
+/
+
+/
+mysh
+0
+mysh
+0
+/proc
+1
+21
+22
+80
+81
+82
+A NULL argv[0] was passed through an exec system call.
+
+linksoft "going nowhere" gn
+linkread gn
+
+unlink hostname
+unlink gn
+
+dirchange ..
+dirremove test

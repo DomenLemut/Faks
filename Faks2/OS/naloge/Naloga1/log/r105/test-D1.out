@@ -1,0 +1,28 @@
+count:0
+''
+EOF
+count:0
+''
+EOF
+count:1
+'sysinfo'
+''
+EOF
+Sysname: Linux
+Nodename: stroj
+Release: 3.10.0-1160.88.1.el7.x86_64
+Version: #1 SMP Tue Mar 7 15:41:52 UTC 2023
+Machine: x86_64
+count:1
+'echo'
+''
+EOF
+
+count:1
+'shellinfo'
+''
+EOF
+Uid: 1005
+EUid: 1005
+Gid: 1006
+EGid: 1006

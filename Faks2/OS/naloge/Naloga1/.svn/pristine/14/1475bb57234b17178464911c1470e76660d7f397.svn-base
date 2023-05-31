@@ -1,0 +1,18 @@
+/
+status
+cpcat hostname
+status
+
+cpcat /etc/fstab fstab
+status
+cpcat fstab
+status
+
+cpcat /etc/nowhere here
+status
+
+unlink hostname
+unlink fstab
+
+dirchange ..
+dirremove test

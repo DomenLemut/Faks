@@ -1,0 +1,12 @@
+/
+cpcat digits.txt
+cpcat revdigits.txt
+cpcat shells.txt
+
+unlink count.txt
+unlink digits.txt
+unlink revdigits.txt
+unlink shells.txt
+
+dirchange ..
+dirremove test

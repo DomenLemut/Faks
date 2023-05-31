@@ -1,0 +1,59 @@
+count:0
+''
+EOF
+count:0
+''
+EOF
+count:3
+'pipes'
+'/bin/echo 01234567890123456789'
+'cat'
+''
+EOF
+count:1
+'status'
+''
+EOF
+0
+count:0
+''
+EOF
+count:3
+'pipes'
+'echo 01234567890123456789'
+'rev'
+''
+EOF
+count:1
+'status'
+''
+EOF
+0
+count:0
+''
+EOF
+count:3
+'pipes'
+'cat /etc/passwd'
+'wc -l'
+''
+EOF
+count:1
+'status'
+''
+EOF
+0
+count:0
+''
+EOF
+count:3
+'pipes'
+'cpcat /etc/passwd'
+'wc -l'
+''
+EOF
+count:1
+'status'
+''
+EOF
+0

@@ -1,0 +1,79 @@
+dirmake: File exists
+linkhard: File exists
+unlink: No such file or directory
+unlink: No such file or directory
+rm: cannot remove 'the/gray sky': No such file or directory
+dirremove2: Is a directory
+test
+Ajka  a  a a     
+Bruno  b  b b  
+.
+..
+fb
+fs
+bus
+dma
+irq
+net
+sys
+tty
+acpi
+keys
+kmsg
+misc
+mtrr
+scsi
+stat
+iomem
+kcore
+locks
+swaps
+crypto
+driver
+mdstat
+mounts
+uptime
+vmstat
+cgroups
+cmdline
+cpuinfo
+devices
+ioports
+loadavg
+meminfo
+modules
+sysvipc
+version
+consoles
+kallsyms
+slabinfo
+softirqs
+zoneinfo
+buddyinfo
+diskstats
+key-users
+schedstat
+interrupts
+kpagecount
+kpageflags
+partitions
+timer_list
+execdomains
+filesystems
+sched_debug
+timer_stats
+vmallocinfo
+pagetypeinfo
+sysrq-trigger
+self
+1
+16
+17
+80
+81
+82
+.  ..   b
+  here     the  
+the/sky
+.  ..   b
+  here     the  

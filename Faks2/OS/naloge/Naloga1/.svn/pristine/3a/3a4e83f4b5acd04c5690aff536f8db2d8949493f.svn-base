@@ -1,0 +1,14 @@
+Izvajanje test-B1
+  Log datoteka: test-B1.log
+  Izhod programa: test-B1.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-B1.in
+  Izhodni status: 0
+  Realni cas izvajanja: 5
+  Uporabniski cas izvajanja: 0
+  Sistemski cas izvajanja: 6
+  Procesorski cas izvajanja: 6
+Preverjanje test-B1
+  Izhodni status: ok
+  Standardni izhod: ok
+  Tocke: 1

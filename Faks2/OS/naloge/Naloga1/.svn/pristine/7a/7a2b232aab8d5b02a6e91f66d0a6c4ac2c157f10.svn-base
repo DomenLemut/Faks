@@ -1,0 +1,13 @@
+Izvajanje test-A3
+  Log datoteka: test-A3.log
+  Izhod programa: test-A3.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-A3.in
+  Izhodni status: 139
+  Realni cas izvajanja: 4
+  Uporabniski cas izvajanja: 2
+  Sistemski cas izvajanja: 2
+  Procesorski cas izvajanja: 4
+Preverjanje test-A3
+  Izhodni status: err
+  Tocke: 0

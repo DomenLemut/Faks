@@ -1,0 +1,8 @@
+Naloga1.c: In function 'main':
+Naloga1.c:42:14: error: 'args' undeclared (first use in this function)
+         free(args);
+              ^
+Naloga1.c:42:14: note: each undeclared identifier is reported only once for each function it appears in
+Naloga1.c:47:9: warning: null argument where non-null required (argument 2) [-Wnonnull]
+         execvp("ls", NULL);
+         ^

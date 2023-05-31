@@ -1,0 +1,3 @@
+test
+cat: gori.txt: input file is output file
+cat: -: input file is output file

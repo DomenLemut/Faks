@@ -1,0 +1,14 @@
+Izvajanje test-J1
+  Log datoteka: test-J1.log
+  Izhod programa: test-J1.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-J1.in
+  Izhodni status: 0
+  Realni cas izvajanja: 34
+  Uporabniski cas izvajanja: 9
+  Sistemski cas izvajanja: 25
+  Procesorski cas izvajanja: 34
+Preverjanje test-J1
+  Izhodni status: ok
+  Standardni izhod: err
+  Tocke: 0

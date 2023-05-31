@@ -1,0 +1,22 @@
+0
+  PID  PPID STANJE IME
+    1     0      S bash
+   10     1      S bash
+   11    10      S sleep
+   12    10      S sleep
+   14     1      S dash
+   15    14      T dash
+   16    14      T dash
+   20    14      S copyproc.sh
+0
+
+  PID  PPID STANJE IME
+    1     0      S bash
+   10     1      S bash
+   11    10      S sleep
+   12    10      S sleep
+   14     1      S dash
+   15    14      T dash
+   16    14      T dash
+   20    14      S copyproc.sh
+0

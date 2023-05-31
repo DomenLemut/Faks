@@ -1,0 +1,43 @@
+A NULL argv[0] was passed through an exec system call.
+dirmake: File exists
+/bin/bash
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/bin/sync
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/bin/false
+/bin/false
+/bin/false
+/bin/false
+/bin/false
+/bin/bash
+linkread: No such file or directory
+unlink: No such file or directory
+dirremove2: Is a directory
+test
+Testiramo delovanje lupine: 1 2 3
+fork exec
+1
+mysh
+0
+1
+10
+11
+12
+14
+15
+16
+20

@@ -1,0 +1,32 @@
+/bin/bash
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/bin/sync
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/usr/sbin/nologin
+/bin/false
+/bin/false
+/bin/false
+/bin/false
+/bin/false
+/bin/bash
+unlink() error: No such file or directory
+unlink() error: No such file or directory
+test
+Testiramo delovanje lupine: 1 2 3
+fork exec
+1
+mysh
+1

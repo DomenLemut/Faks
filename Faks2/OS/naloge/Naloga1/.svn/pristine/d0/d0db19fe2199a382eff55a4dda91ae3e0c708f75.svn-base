@@ -1,0 +1,445 @@
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+*** Error in `./Naloga1': free(): invalid pointer: 0x0000000002499020 ***
+dup2: Bad file descriptor
+======= Backtrace: =========
+1
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f3c84fb27e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f3c84fbae0a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f3c84fbe98c]
+./Naloga1[0x402e6b]
+./Naloga1[0x401d8a]
+./Naloga1[0x403124]
+./Naloga1[0x401d7e]
+./Naloga1[0x401888]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f3c84f5b830]
+./Naloga1[0x401489]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 fd:02 411700375                          /home/test/src/Naloga1
+00603000-00604000 r--p 00003000 fd:02 411700375                          /home/test/src/Naloga1
+00604000-00605000 rw-p 00004000 fd:02 411700375                          /home/test/src/Naloga1
+00605000-00608000 rw-p 00000000 00:00 0 
+02498000-024ba000 rw-p 00000000 00:00 0                                  [heap]
+7f3c80000000-7f3c80021000 rw-p 00000000 00:00 0 
+7f3c80021000-7f3c84000000 ---p 00000000 00:00 0 
+7f3c84d25000-7f3c84d3b000 r-xp 00000000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84d3b000-7f3c84f3a000 ---p 00016000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3a000-7f3c84f3b000 rw-p 00015000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3b000-7f3c850fa000 r-xp 00000000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c850fa000-7f3c852fa000 ---p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fa000-7f3c852fe000 r--p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fe000-7f3c85300000 rw-p 001c3000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c85300000-7f3c85304000 rw-p 00000000 00:00 0 
+7f3c85304000-7f3c8532a000 r-xp 00000000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c85521000-7f3c85524000 rw-p 00000000 00:00 0 
+7f3c85526000-7f3c85527000 rw-p 00000000 00:00 0 
+7f3c85527000-7f3c85529000 rw-p 00000000 00:00 0 
+7f3c85529000-7f3c8552a000 r--p 00025000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552a000-7f3c8552b000 rw-p 00026000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552b000-7f3c8552c000 rw-p 00000000 00:00 0 
+7ffcb5e85000-7ffcb5ea6000 rw-p 00000000 00:00 0                          [stack]
+7ffcb5fb9000-7ffcb5fbb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+dup2: Bad file descriptor
+1
+dup2: Bad file descriptor
+1
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+: cannot open LOGNAME=test: A NULL argv[0] was passed through an exec system call.
+No such file or directory
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+*** Error in `./Naloga1': free(): invalid pointer: 0x000000000249a030 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f3c84fb27e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f3c84fbae0a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f3c84fbe98c]
+./Naloga1[0x402e6b]
+./Naloga1[0x401d8a]
+./Naloga1[0x403124]
+./Naloga1[0x401d7e]
+./Naloga1[0x401888]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f3c84f5b830]
+./Naloga1[0x401489]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 fd:02 411700375                          /home/test/src/Naloga1
+00603000-00604000 r--p 00003000 fd:02 411700375                          /home/test/src/Naloga1
+00604000-00605000 rw-p 00004000 fd:02 411700375                          /home/test/src/Naloga1
+00605000-00608000 rw-p 00000000 00:00 0 
+02498000-024ba000 rw-p 00000000 00:00 0                                  [heap]
+7f3c80000000-7f3c80021000 rw-p 00000000 00:00 0 
+7f3c80021000-7f3c84000000 ---p 00000000 00:00 0 
+7f3c84d25000-7f3c84d3b000 r-xp 00000000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84d3b000-7f3c84f3a000 ---p 00016000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3a000-7f3c84f3b000 rw-p 00015000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3b000-7f3c850fa000 r-xp 00000000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c850fa000-7f3c852fa000 ---p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fa000-7f3c852fe000 r--p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fe000-7f3c85300000 rw-p 001c3000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c85300000-7f3c85304000 rw-p 00000000 00:00 0 
+7f3c85304000-7f3c8532a000 r-xp 00000000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c85521000-7f3c85524000 rw-p 00000000 00:00 0 
+7f3c85526000-7f3c85527000 rw-p 00000000 00:00 0 
+7f3c85527000-7f3c85529000 rw-p 00000000 00:00 0 
+7f3c85529000-7f3c8552a000 r--p 00025000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552a000-7f3c8552b000 rw-p 00026000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552b000-7f3c8552c000 rw-p 00000000 00:00 0 
+7ffcb5e85000-7ffcb5ea6000 rw-p 00000000 00:00 0                          [stack]
+7ffcb5fb9000-7ffcb5fbb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+*** Error in `./Naloga1': free(): invalid pointer: 0x0000000002499020 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f3c84fb27e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f3c84fbae0a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f3c84fbe98c]
+./Naloga1[0x402e6b]
+./Naloga1[0x401d8a]
+./Naloga1[0x403124]
+./Naloga1[0x401d7e]
+./Naloga1[0x401888]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f3c84f5b830]
+./Naloga1[0x401489]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 fd:02 411700375                          /home/test/src/Naloga1
+00603000-00604000 r--p 00003000 fd:02 411700375                          /home/test/src/Naloga1
+00604000-00605000 rw-p 00004000 fd:02 411700375                          /home/test/src/Naloga1
+00605000-00608000 rw-p 00000000 00:00 0 
+02498000-024ba000 rw-p 00000000 00:00 0                                  [heap]
+7f3c80000000-7f3c80021000 rw-p 00000000 00:00 0 
+7f3c80021000-7f3c84000000 ---p 00000000 00:00 0 
+7f3c84d25000-7f3c84d3b000 r-xp 00000000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84d3b000-7f3c84f3a000 ---p 00016000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3a000-7f3c84f3b000 rw-p 00015000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3b000-7f3c850fa000 r-xp 00000000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c850fa000-7f3c852fa000 ---p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fa000-7f3c852fe000 r--p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fe000-7f3c85300000 rw-p 001c3000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c85300000-7f3c85304000 rw-p 00000000 00:00 0 
+7f3c85304000-7f3c8532a000 r-xp 00000000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c85521000-7f3c85524000 rw-p 00000000 00:00 0 
+7f3c85526000-7f3c85527000 rw-p 00000000 00:00 0 
+7f3c85527000-7f3c85529000 rw-p 00000000 00:00 0 
+7f3c85529000-7f3c8552a000 r--p 00025000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552a000-7f3c8552b000 rw-p 00026000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552b000-7f3c8552c000 rw-p 00000000 00:00 0 
+7ffcb5e85000-7ffcb5ea6000 rw-p 00000000 00:00 0                          [stack]
+7ffcb5fb9000-7ffcb5fbb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+dup2: Bad file descriptor
+A NULL argv[0] was passed through an exec system call.
+dup2: Bad file descriptor
+*** Error in `./Naloga1': free(): invalid pointer: 0x0000000002499020 ***
+dup2: Bad file descriptor
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f3c84fb27e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f3c84fbae0a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f3c84fbe98c]
+./Naloga1[0x402e6b]
+./Naloga1[0x401d8a]
+./Naloga1[0x403124]
+./Naloga1[0x401d7e]
+./Naloga1[0x401888]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f3c84f5b830]
+./Naloga1[0x401489]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 fd:02 411700375                          /home/test/src/Naloga1
+00603000-00604000 r--p 00003000 fd:02 411700375                          /home/test/src/Naloga1
+00604000-00605000 rw-p 00004000 fd:02 411700375                          /home/test/src/Naloga1
+00605000-00608000 rw-p 00000000 00:00 0 
+02498000-024ba000 rw-p 00000000 00:00 0                                  [heap]
+7f3c80000000-7f3c80021000 rw-p 00000000 00:00 0 
+7f3c80021000-7f3c84000000 ---p 00000000 00:00 0 
+7f3c84d25000-7f3c84d3b000 r-xp 00000000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84d3b000-7f3c84f3a000 ---p 00016000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3a000-7f3c84f3b000 rw-p 00015000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3b000-7f3c850fa000 r-xp 00000000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c850fa000-7f3c852fa000 ---p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fa000-7f3c852fe000 r--p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fe000-7f3c85300000 rw-p 001c3000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c85300000-7f3c85304000 rw-p 00000000 00:00 0 
+7f3c85304000-7f3c8532a000 r-xp 00000000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c85521000-7f3c85524000 rw-p 00000000 00:00 0 
+7f3c85526000-7f3c85527000 rw-p 00000000 00:00 0 
+7f3c85527000-7f3c85529000 rw-p 00000000 00:00 0 
+7f3c85529000-7f3c8552a000 r--p 00025000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552a000-7f3c8552b000 rw-p 00026000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552b000-7f3c8552c000 rw-p 00000000 00:00 0 
+7ffcb5e85000-7ffcb5ea6000 rw-p 00000000 00:00 0                          [stack]
+7ffcb5fb9000-7ffcb5fbb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+dup2: Bad file descriptor
+*** Error in `./Naloga1': free(): invalid pointer: 0x000000000249a030 ***
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: ======= Backtrace: =========
+No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f3c84fb27e5]
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f3c84fbae0a]
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f3c84fbe98c]
+: ./Naloga1[0x402e6b]
+No such file or directory
+./Naloga1[0x401d8a]
+./Naloga1[0x403124]
+: ./Naloga1[0x401d7e]
+cannot open HOME=/home/test./Naloga1[0x401888]
+: No such file or directory
+: cannot open LOGNAME=test/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f3c84f5b830]
+: ./Naloga1[0x401489]
+No such file or directory
+======= Memory map: ========
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+00400000-00404000 r-xp 00000000 fd:02 411700375                          /home/test/src/Naloga1
+00603000-00604000 r--p 00003000 fd:02 411700375                          /home/test/src/Naloga1
+00604000-00605000 rw-p 00004000 fd:02 411700375                          /home/test/src/Naloga1
+00605000-00608000 rw-p 00000000 00:00 0 
+02498000-024ba000 rw-p 00000000 00:00 0                                  [heap]
+7f3c80000000-7f3c80021000 rw-p 00000000 00:00 0 
+7f3c80021000-7f3c84000000 ---p 00000000 00:00 0 
+7f3c84d25000-7f3c84d3b000 r-xp 00000000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84d3b000-7f3c84f3a000 ---p 00016000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3a000-7f3c84f3b000 rw-p 00015000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3b000-7f3c850fa000 r-xp 00000000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c850fa000-7f3c852fa000 ---p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fa000-7f3c852fe000 r--p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fe000-7f3c85300000 rw-p 001c3000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c85300000-7f3c85304000 rw-p 00000000 00:00 0 
+7f3c85304000-7f3c8532a000 r-xp 00000000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c85521000-7f3c85524000 rw-p 00000000 00:00 0 
+7f3c85526000-7f3c85527000 rw-p 00000000 00:00 0 
+7f3c85527000-7f3c85529000 rw-p 00000000 00:00 0 
+7f3c85529000-7f3c8552a000 r--p 00025000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552a000-7f3c8552b000 rw-p 00026000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552b000-7f3c8552c000 rw-p 00000000 00:00 0 
+7ffcb5e85000-7ffcb5ea6000 rw-p 00000000 00:00 0                          [stack]
+7ffcb5fb9000-7ffcb5fbb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+*** Error in `./Naloga1': free(): invalid pointer: 0x000000000249a030 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f3c84fb27e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f3c84fbae0a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f3c84fbe98c]
+./Naloga1[0x402e6b]
+./Naloga1[0x401d8a]
+./Naloga1[0x403124]
+./Naloga1[0x401d7e]
+./Naloga1[0x401888]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f3c84f5b830]
+./Naloga1[0x401489]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 fd:02 411700375                          /home/test/src/Naloga1
+00603000-00604000 r--p 00003000 fd:02 411700375                          /home/test/src/Naloga1
+00604000-00605000 rw-p 00004000 fd:02 411700375                          /home/test/src/Naloga1
+00605000-00608000 rw-p 00000000 00:00 0 
+02498000-024ba000 rw-p 00000000 00:00 0                                  [heap]
+7f3c80000000-7f3c80021000 rw-p 00000000 00:00 0 
+7f3c80021000-7f3c84000000 ---p 00000000 00:00 0 
+7f3c84d25000-7f3c84d3b000 r-xp 00000000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84d3b000-7f3c84f3a000 ---p 00016000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3a000-7f3c84f3b000 rw-p 00015000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3b000-7f3c850fa000 r-xp 00000000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c850fa000-7f3c852fa000 ---p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fa000-7f3c852fe000 r--p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fe000-7f3c85300000 rw-p 001c3000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c85300000-7f3c85304000 rw-p 00000000 00:00 0 
+7f3c85304000-7f3c8532a000 r-xp 00000000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c85521000-7f3c85524000 rw-p 00000000 00:00 0 
+7f3c85526000-7f3c85527000 rw-p 00000000 00:00 0 
+7f3c85527000-7f3c85529000 rw-p 00000000 00:00 0 
+7f3c85529000-7f3c8552a000 r--p 00025000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552a000-7f3c8552b000 rw-p 00026000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552b000-7f3c8552c000 rw-p 00000000 00:00 0 
+7ffcb5e85000-7ffcb5ea6000 rw-p 00000000 00:00 0                          [stack]
+7ffcb5fb9000-7ffcb5fbb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+: cannot open LOGNAME=test: No such file or directory
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+*** Error in `./Naloga1': free(): invalid pointer: 0x000000000249a030 ***
+dup2: Bad file descriptor
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f3c84fb27e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f3c84fbae0a]
+dup2: Bad file descriptor
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f3c84fbe98c]
+./Naloga1[0x402e6b]
+./Naloga1[0x401d8a]
+./Naloga1[0x403124]
+./Naloga1[0x401d7e]
+./Naloga1[0x401888]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f3c84f5b830]
+./Naloga1[0x401489]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 fd:02 411700375                          /home/test/src/Naloga1
+00603000-00604000 r--p 00003000 fd:02 411700375                          /home/test/src/Naloga1
+00604000-00605000 rw-p 00004000 fd:02 411700375                          /home/test/src/Naloga1
+00605000-00608000 rw-p 00000000 00:00 0 
+02498000-024ba000 rw-p 00000000 00:00 0                                  [heap]
+7f3c80000000-7f3c80021000 rw-p 00000000 00:00 0 
+7f3c80021000-7f3c84000000 ---p 00000000 00:00 0 
+7f3c84d25000-7f3c84d3b000 r-xp 00000000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84d3b000-7f3c84f3a000 ---p 00016000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3a000-7f3c84f3b000 rw-p 00015000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3b000-7f3c850fa000 r-xp 00000000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c850fa000-7f3c852fa000 ---p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fa000-7f3c852fe000 r--p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fe000-7f3c85300000 rw-p 001c3000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c85300000-7f3c85304000 rw-p 00000000 00:00 0 
+7f3c85304000-7f3c8532a000 r-xp 00000000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c85521000-7f3c85524000 rw-p 00000000 00:00 0 
+7f3c85526000-7f3c85527000 rw-p 00000000 00:00 0 
+7f3c85527000-7f3c85529000 rw-p 00000000 00:00 0 
+7f3c85529000-7f3c8552a000 r--p 00025000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552a000-7f3c8552b000 rw-p 00026000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552b000-7f3c8552c000 rw-p 00000000 00:00 0 
+7ffcb5e85000-7ffcb5ea6000 rw-p 00000000 00:00 0                          [stack]
+7ffcb5fb9000-7ffcb5fbb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+A NULL argv[0] was passed through an exec system call.
+*** Error in `./Naloga1': free(): invalid pointer: 0x000000000249a030 ***
+======= Backtrace: =========
+A NULL argv[0] was passed through an exec system call.
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f3c84fb27e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f3c84fbae0a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f3c84fbe98c]
+./Naloga1[0x402e6b]
+./Naloga1[0x401d8a]
+./Naloga1[0x403124]
+./Naloga1[0x401d7e]
+./Naloga1[0x401888]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f3c84f5b830]
+./Naloga1[0x401489]
+======= Memory map: ========
+*** Error in `./Naloga1': free(): invalid pointer: 0x000000000249a030 ***
+00400000-00404000 r-xp 00000000 fd:02 411700375                          /home/test/src/Naloga1
+00603000-00604000 r--p 00003000 fd:02 411700375                          /home/test/src/Naloga1
+00604000-00605000 rw-p 00004000 fd:02 411700375                          /home/test/src/Naloga1
+00605000-00608000 rw-p 00000000 00:00 0 
+02498000-024ba000 rw-p 00000000 00:00 0                                  [heap]
+7f3c80000000-7f3c80021000 rw-p 00000000 00:00 0 
+7f3c80021000-7f3c84000000 ---p 00000000 00:00 0 
+7f3c84d25000-7f3c84d3b000 r-xp 00000000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84d3b000-7f3c84f3a000 ---p 00016000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3a000-7f3c84f3b000 rw-p 00015000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3b000-7f3c850fa000 r-xp 00000000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c850fa000-7f3c852fa000 ---p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fa000-7f3c852fe000 r--p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fe000-7f3c85300000 rw-p 001c3000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c85300000-7f3c85304000 rw-p 00000000 00:00 0 
+7f3c85304000-7f3c8532a000 r-xp 00000000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c85521000-7f3c85524000 rw-p 00000000 00:00 0 
+7f3c85526000-7f3c85527000 rw-p 00000000 00:00 0 
+7f3c85527000-7f3c85529000 rw-p 00000000 00:00 0 
+7f3c85529000-7f3c8552a000 r--p 00025000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552a000-7f3c8552b000 rw-p 00026000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552b000-7f3c8552c000 rw-p 00000000 00:00 0 
+7ffcb5e85000-7ffcb5ea6000 rw-p 00000000 00:00 0                          [stack]
+7ffcb5fb9000-7ffcb5fbb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f3c84fb27e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f3c84fbae0a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f3c84fbe98c]
+./Naloga1[0x402e6b]
+./Naloga1[0x401d8a]
+./Naloga1[0x403124]
+./Naloga1[0x401d7e]
+./Naloga1[0x401888]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f3c84f5b830]
+./Naloga1[0x401489]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 fd:02 411700375                          /home/test/src/Naloga1
+00603000-00604000 r--p 00003000 fd:02 411700375                          /home/test/src/Naloga1
+00604000-00605000 rw-p 00004000 fd:02 411700375                          /home/test/src/Naloga1
+00605000-00608000 rw-p 00000000 00:00 0 
+02498000-024ba000 rw-p 00000000 00:00 0                                  [heap]
+7f3c80000000-7f3c80021000 rw-p 00000000 00:00 0 
+7f3c80021000-7f3c84000000 ---p 00000000 00:00 0 
+7f3c84d25000-7f3c84d3b000 r-xp 00000000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84d3b000-7f3c84f3a000 ---p 00016000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3a000-7f3c84f3b000 rw-p 00015000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3b000-7f3c850fa000 r-xp 00000000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c850fa000-7f3c852fa000 ---p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fa000-7f3c852fe000 r--p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fe000-7f3c85300000 rw-p 001c3000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c85300000-7f3c85304000 rw-p 00000000 00:00 0 
+7f3c85304000-7f3c8532a000 r-xp 00000000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c85521000-7f3c85524000 rw-p 00000000 00:00 0 
+7f3c85526000-7f3c85527000 rw-p 00000000 00:00 0 
+7f3c85527000-7f3c85529000 rw-p 00000000 00:00 0 
+7f3c85529000-7f3c8552a000 r--p 00025000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552a000-7f3c8552b000 rw-p 00026000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552b000-7f3c8552c000 rw-p 00000000 00:00 0 
+7ffcb5e85000-7ffcb5ea6000 rw-p 00000000 00:00 0                          [stack]
+7ffcb5fb9000-7ffcb5fbb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+dup2: Bad file descriptor
+: cannot open SHELL=/bin/bash: No such file or directory
+: cannot open TERM=xterm: No such file or directory
+: cannot open USER=test: No such file or directory
+: cannot open MAIL=/var/mail/test: No such file or directory
+: cannot open PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+: cannot open PWD=/home/test/src: No such file or directory
+: cannot open SHLVL=1: No such file or directory
+: cannot open HOME=/home/test: No such file or directory
+: cannot open LOGNAME=test: No such file or directory
+: cannot open OLDPWD=/home/test: No such file or directory
+: cannot open _=/usr/bin/timeout: No such file or directory
+*** Error in `./Naloga1': free(): invalid pointer: 0x000000000249a030 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f3c84fb27e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f3c84fbae0a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f3c84fbe98c]
+./Naloga1[0x402e6b]
+./Naloga1[0x401d8a]
+./Naloga1[0x403124]
+./Naloga1[0x401d7e]
+./Naloga1[0x401888]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f3c84f5b830]
+./Naloga1[0x401489]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 fd:02 411700375                          /home/test/src/Naloga1
+00603000-00604000 r--p 00003000 fd:02 411700375                          /home/test/src/Naloga1
+00604000-00605000 rw-p 00004000 fd:02 411700375                          /home/test/src/Naloga1
+00605000-00608000 rw-p 00000000 00:00 0 
+02498000-024ba000 rw-p 00000000 00:00 0                                  [heap]
+7f3c80000000-7f3c80021000 rw-p 00000000 00:00 0 
+7f3c80021000-7f3c84000000 ---p 00000000 00:00 0 
+7f3c84d25000-7f3c84d3b000 r-xp 00000000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84d3b000-7f3c84f3a000 ---p 00016000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3a000-7f3c84f3b000 rw-p 00015000 fd:04 25166141                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3c84f3b000-7f3c850fa000 r-xp 00000000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c850fa000-7f3c852fa000 ---p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fa000-7f3c852fe000 r--p 001bf000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c852fe000-7f3c85300000 rw-p 001c3000 fd:04 25166120                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f3c85300000-7f3c85304000 rw-p 00000000 00:00 0 
+7f3c85304000-7f3c8532a000 r-xp 00000000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c85521000-7f3c85524000 rw-p 00000000 00:00 0 
+7f3c85526000-7f3c85527000 rw-p 00000000 00:00 0 
+7f3c85527000-7f3c85529000 rw-p 00000000 00:00 0 
+7f3c85529000-7f3c8552a000 r--p 00025000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552a000-7f3c8552b000 rw-p 00026000 fd:04 25166100                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f3c8552b000-7f3c8552c000 rw-p 00000000 00:00 0 
+7ffcb5e85000-7ffcb5ea6000 rw-p 00000000 00:00 0                          [stack]
+7ffcb5fb9000-7ffcb5fbb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]

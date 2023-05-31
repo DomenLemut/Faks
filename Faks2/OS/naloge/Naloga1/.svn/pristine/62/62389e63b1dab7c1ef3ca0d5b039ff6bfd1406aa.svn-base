@@ -1,0 +1,14 @@
+Izvajanje test-B5
+  Log datoteka: test-B5.log
+  Izhod programa: test-B5.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-B5.in
+  Izhodni status: 0
+  Realni cas izvajanja: 4
+  Uporabniski cas izvajanja: 1
+  Sistemski cas izvajanja: 4
+  Procesorski cas izvajanja: 5
+Preverjanje test-B5
+  Izhodni status: ok
+  Standardni izhod: err
+  Tocke: 0

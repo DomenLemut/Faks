@@ -1,0 +1,125 @@
+count:0
+''
+EOF
+count:0
+''
+EOF
+count:2
+'dirmake'
+'test'
+''
+EOF
+count:2
+'dirchange'
+'test'
+''
+EOF
+count:1
+'dirbase'
+''
+EOF
+test
+count:0
+''
+EOF
+count:3
+'echo'
+'Gori na gori gori'
+'>gori.txt'
+''
+EOF
+Gori na gori gori >gori.txt
+count:0
+''
+EOF
+cpcat: No such file or directory
+count:2
+'cpcat'
+'gori.txt'
+''
+EOF
+cpcat: No such file or directory
+count:2
+'cpcat'
+'<gori.txt'
+''
+EOF
+count:0
+''
+EOF
+cpcat: No such file or directory
+count:3
+'cpcat'
+'<gori.txt'
+'>doli.txt'
+''
+EOF
+count:0
+''
+EOF
+cpcat: No such file or directory
+count:2
+'cpcat'
+'doli.txt'
+''
+EOF
+cpcat: No such file or directory
+count:2
+'cpcat'
+'<doli.txt'
+''
+EOF
+count:0
+''
+EOF
+cpcat: No such file or directory
+count:3
+'cpcat'
+'gori.txt'
+'voli.txt'
+''
+EOF
+count:2
+'cpcat'
+'voli.txt'
+''
+EOF
+cpcat: No such file or directory
+count:2
+'cpcat'
+'<voli.txt'
+''
+EOF
+count:0
+''
+EOF
+unlink: No such file or directory
+count:2
+'unlink'
+'gori.txt'
+''
+EOF
+unlink: No such file or directory
+count:2
+'unlink'
+'doli.txt'
+''
+EOF
+count:2
+'unlink'
+'voli.txt'
+''
+EOF
+count:0
+''
+EOF
+count:2
+'dirchange'
+'..'
+''
+EOF
+count:2
+'dirremove'
+'test'
+''
+EOF

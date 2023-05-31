@@ -1,0 +1,13 @@
+Izvajanje test-D3
+  Log datoteka: test-D3.log
+  Izhod programa: test-D3.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-D3.in
+  Izhodni status: 139
+  Realni cas izvajanja: 4
+  Uporabniski cas izvajanja: 0
+  Sistemski cas izvajanja: 4
+  Procesorski cas izvajanja: 4
+Preverjanje test-D3
+  Izhodni status: err
+  Tocke: 0

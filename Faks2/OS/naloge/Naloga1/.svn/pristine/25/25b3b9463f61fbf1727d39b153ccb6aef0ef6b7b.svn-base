@@ -1,0 +1,60 @@
+count:0
+''
+EOF
+count:0
+''
+EOF
+count:4
+'pipes'
+'echo 01234567890123456789'
+'rev'
+'tee digits.txt'
+''
+EOF
+count:0
+''
+EOF
+count:5
+'pipes'
+'cat digits.txt'
+'rev'
+'tr 13579 abcde'
+'rev'
+''
+EOF
+count:0
+''
+EOF
+count:7
+'pipes'
+'cpcat digits.txt'
+'cat'
+'cpcat'
+'rev'
+'cat'
+'cpcat'
+''
+EOF
+count:0
+''
+EOF
+count:8
+'pipes'
+'cat /etc/passwd'
+'cut -d: -f7'
+'sort'
+'uniq -c'
+'sort -nr'
+'head -1'
+'cut -d/ -f4'
+''
+EOF
+count:0
+''
+EOF
+unlink: No such file or directory
+count:2
+'unlink'
+'digits.txt'
+''
+EOF

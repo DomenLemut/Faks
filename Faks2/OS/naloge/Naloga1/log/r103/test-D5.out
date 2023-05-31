@@ -1,0 +1,27 @@
+/
+A NULL argv[0] was passed through an exec system call.
+A NULL argv[0] was passed through an exec system call.
+linklist: No such file or directory
+linklist: No such file or directory
+unlink: No such file or directory
+unlink: No such file or directory
+unlink: No such file or directory
+unlink: No such file or directory
+unlink: No such file or directory
+unlink: No such file or directory
+unlink: No such file or directory
+unlink: No such file or directory
+/proc
+1
+21
+22
+85
+86
+87
+A NULL argv[0] was passed through an exec system call.
+.  ..  bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var  .dockerenv  dockinit  exec  
+unlink: No such file or directory
+linkread: No such file or directory
+rename: No such file or directory
+.  ..  bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var  .dockerenv  dockinit  exec  
+A NULL argv[0] was passed through an exec system call.

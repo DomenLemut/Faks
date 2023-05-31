@@ -1,0 +1,8 @@
+dirmake: File exists
+test
+opendir: No such file or directory
+/etc/passwd
+gesla
+null/nil/None
+opendir: No such file or directory
+dirremove: Directory not empty

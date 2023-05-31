@@ -1,0 +1,100 @@
+count:0
+''
+EOF
+count:0
+''
+EOF
+count:2
+'dirmake'
+'test'
+''
+EOF
+count:2
+'dirchange'
+'test'
+''
+EOF
+count:1
+'dirbase'
+''
+EOF
+test
+count:0
+''
+EOF
+Gori na gori gori >gori.txt
+count:3
+'/bin/echo'
+'Gori na gori gori'
+'>gori.txt'
+''
+EOF
+count:0
+''
+EOF
+cat: gori.txt: No such file or directory
+count:2
+'cat'
+'gori.txt'
+''
+EOF
+cat: '<gori.txt': No such file or directory
+count:2
+'cat'
+'<gori.txt'
+''
+EOF
+count:0
+''
+EOF
+cat: '<gori.txt': No such file or directory
+cat: '>doli.txt': No such file or directory
+count:3
+'cat'
+'<gori.txt'
+'>doli.txt'
+''
+EOF
+count:0
+''
+EOF
+cat: doli.txt: No such file or directory
+count:2
+'cat'
+'doli.txt'
+''
+EOF
+cat: '<doli.txt': No such file or directory
+count:2
+'cat'
+'<doli.txt'
+''
+EOF
+count:0
+''
+EOF
+unlink: No such file or directory
+count:2
+'unlink'
+'gori.txt'
+''
+EOF
+unlink: No such file or directory
+count:2
+'unlink'
+'doli.txt'
+''
+EOF
+count:0
+''
+EOF
+count:2
+'dirchange'
+'..'
+''
+EOF
+count:2
+'dirremove'
+'test'
+''
+EOF

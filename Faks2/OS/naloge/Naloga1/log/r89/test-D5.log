@@ -1,0 +1,14 @@
+Izvajanje test-D5
+  Log datoteka: test-D5.log
+  Izhod programa: test-D5.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-D5.in
+  Izhodni status: 0
+  Realni cas izvajanja: 4
+  Uporabniski cas izvajanja: 0
+  Sistemski cas izvajanja: 4
+  Procesorski cas izvajanja: 4
+Preverjanje test-D5
+  Izhodni status: ok
+  Standardni izhod: err
+  Tocke: 0

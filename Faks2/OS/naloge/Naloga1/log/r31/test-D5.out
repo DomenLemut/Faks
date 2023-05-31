@@ -1,0 +1,19 @@
+mkdir() error: File exists
+link() error: No such file or directory
+link() error: Operation not permitted
+unlink() error: No such file or directory
+unlink() error: Is a directory
+unlink() error: No such file or directory
+unlink() error: No such file or directory
+readlink() error: No such file or directory
+rename() error: No such file or directory
+rm: cannot remove 'the/gray skye': No such file or directory
+rmdir() error: Directory not empty
+rmdir() error: Directory not empty
+test
+Ajka  a  a a  
+Bruno  b  b b  
+. .. b bn fork exec  gn
+n a a b b the 
+. .. b bn fork exec  gn
+n a a b b the 

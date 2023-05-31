@@ -1,0 +1,16 @@
+mkdir() error: File exists
+link() error: File exists
+unlink() error: No such file or directory
+unlink() error: No such file or directory
+rm: cannot remove 'the/gray sky': No such file or directory
+rmdir() error: Directory not empty
+test
+Ajka  a  a a     
+Bruno  b  b b  
+. ..  b
+  gn
+   the 
+the/sky
+. ..  b
+  gn
+   the 

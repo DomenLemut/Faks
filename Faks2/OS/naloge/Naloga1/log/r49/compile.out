@@ -1,0 +1,16 @@
+Naloga1.c: In function 'pid_n':
+Naloga1.c:334:10: warning: passing argument 1 of 'perror' makes pointer from integer without a cast [-Wint-conversion]
+   perror(pid);
+          ^
+In file included from Naloga1.c:1:0:
+/usr/include/stdio.h:846:13: note: expected 'const char *' but argument is of type 'pid_t {aka int}'
+ extern void perror (const char *__s);
+             ^
+Naloga1.c: In function 'ppid_n':
+Naloga1.c:346:10: warning: passing argument 1 of 'perror' makes pointer from integer without a cast [-Wint-conversion]
+   perror(ppid);
+          ^
+In file included from Naloga1.c:1:0:
+/usr/include/stdio.h:846:13: note: expected 'const char *' but argument is of type 'pid_t {aka int}'
+ extern void perror (const char *__s);
+             ^

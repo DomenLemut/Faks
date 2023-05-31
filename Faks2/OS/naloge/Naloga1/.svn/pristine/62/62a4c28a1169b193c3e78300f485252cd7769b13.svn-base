@@ -1,0 +1,10 @@
+Gori na gori gori
+cat: gori.txt: No such file or directory
+cat: '<gori.txt': No such file or directory
+cat: '<gori.txt': No such file or directory
+cat: '>doli.txt': No such file or directory
+cat: doli.txt: No such file or directory
+cat: '<doli.txt': No such file or directory
+unlink() error: No such file or directory
+unlink() error: No such file or directory
+test

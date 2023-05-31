@@ -1,0 +1,12 @@
+mkdir() error: File exists
+Gori na gori gori
+cat: gori.txt: No such file or directory
+cat: '<gori.txt': No such file or directory
+cat: '<gori.txt': No such file or directory
+cat: '>doli.txt': No such file or directory
+cat: doli.txt: No such file or directory
+cat: '<doli.txt': No such file or directory
+unlink() error: No such file or directory
+unlink() error: No such file or directory
+rmdir() error: Directory not empty
+test

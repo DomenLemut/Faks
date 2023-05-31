@@ -1,0 +1,5 @@
+Naloga1.c: In function 'pinfo_n':
+Naloga1.c:673:47: error: 'proc1' undeclared (first use in this function)
+    snprintf(path, sizeof(path), "%s/%s/stat", proc1, entry->d_name);
+                                               ^
+Naloga1.c:673:47: note: each undeclared identifier is reported only once for each function it appears in

@@ -1,0 +1,13 @@
+Izvajanje test-D4
+  Log datoteka: test-D4.log
+  Izhod programa: test-D4.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-D4.in
+  Izhodni status: 139
+  Realni cas izvajanja: 4
+  Uporabniski cas izvajanja: 1
+  Sistemski cas izvajanja: 3
+  Procesorski cas izvajanja: 4
+Preverjanje test-D4
+  Izhodni status: err
+  Tocke: 0

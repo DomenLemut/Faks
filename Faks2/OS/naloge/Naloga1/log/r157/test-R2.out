@@ -1,0 +1,25 @@
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+test
+[TEST] => out: , in: 
+[TEST] => out: gori.txt, in: 
+Gori na gori gori >gori.txt
+[TEST] => out: , in: gori.txt
+cpcat: No such file or directory
+cpcat: No such file or directory
+[TEST] => out: , in: 
+[TEST] => out: doli.txt, in: gori.txt
+[TEST] => out: , in: doli.txt
+cpcat: No such file or directory
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: gori.txt, in: 
+Gori na gori gori >gori.txt
+[TEST] => out: , in: voli.txt
+cpcat: No such file or directory
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 
+[TEST] => out: , in: 

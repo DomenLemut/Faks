@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo PID: $$
+echo PPID: $PPID
+echo $BASHPID 

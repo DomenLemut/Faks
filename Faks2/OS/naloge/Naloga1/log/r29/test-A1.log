@@ -1,0 +1,14 @@
+Izvajanje test-A1
+  Log datoteka: test-A1.log
+  Izhod programa: test-A1.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-A1.in
+  Izhodni status: 16
+  Realni cas izvajanja: 5
+  Uporabniski cas izvajanja: 2
+  Sistemski cas izvajanja: 3
+  Procesorski cas izvajanja: 5
+Preverjanje test-A1
+  Izhodni status: ok
+  Standardni izhod: err
+  Tocke: 0

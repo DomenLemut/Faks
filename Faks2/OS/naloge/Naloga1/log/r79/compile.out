@@ -1,0 +1,5 @@
+Naloga1.c: In function 'pinfo_n':
+Naloga1.c:707:55: error: 'pot' undeclared (first use in this function)
+    snprintf(filepath, sizeof(filepath), "%s/%d/stat", pot, pid);
+                                                       ^
+Naloga1.c:707:55: note: each undeclared identifier is reported only once for each function it appears in

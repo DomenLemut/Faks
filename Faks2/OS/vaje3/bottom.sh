@@ -43,11 +43,11 @@ while true; do
 
   get_ps_args
 
-  # echo -e "${INVERSESTART}$(ps -eo pid,comm,%mem,user,%cpu --sort=-%cpu | head -n 10 | head -1) ${INVERSEEND}" && ps -eo pid,comm,%mem,user,%cpu --sort=-%cpu | head -n 10 | sed 1d
+   echo -e "${INVERSESTART}$(ps -eo pid,comm,%mem,user,%cpu --sort=-%cpu | head -n 10 | head -1) ${INVERSEEND}" && ps -eo pid,comm,%mem,user,%cpu --sort=-%cpu | head -n 10 | sed 1d
   
-  # echo $ps_args
+ # echo $ps_args
 
-  ps $ps_args
+  # ps $ps_args
 
   echo -e "\n${INVERSESTART}  Press q to quit, h for help ${INVERSEEND}"
 

@@ -1,0 +1,13 @@
+Izvajanje test-P2
+  Log datoteka: test-P2.log
+  Izhod programa: test-P2.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-P2.in
+  Izhodni status: 124
+  Realni cas izvajanja: 3004
+  Uporabniski cas izvajanja: 3
+  Sistemski cas izvajanja: 7
+  Procesorski cas izvajanja: 10
+Preverjanje test-P2
+  Izhodni status: err
+  Tocke: 0

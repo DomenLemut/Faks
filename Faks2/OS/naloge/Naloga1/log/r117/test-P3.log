@@ -1,0 +1,14 @@
+Izvajanje test-P3
+  Log datoteka: test-P3.log
+  Izhod programa: test-P3.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-P3.in
+  Izhodni status: 0
+  Realni cas izvajanja: 14
+  Uporabniski cas izvajanja: 6
+  Sistemski cas izvajanja: 8
+  Procesorski cas izvajanja: 14
+Preverjanje test-P3
+  Izhodni status: ok
+  Standardni izhod: err
+  Tocke: 0

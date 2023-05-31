@@ -1,0 +1,14 @@
+Izvajanje test-A2
+  Log datoteka: test-A2.log
+  Izhod programa: test-A2.out
+  Ukazna vrstica: ./Naloga1 
+  Preusmeritev vhoda: test-A2.in
+  Izhodni status: 14
+  Realni cas izvajanja: 4
+  Uporabniski cas izvajanja: 1
+  Sistemski cas izvajanja: 4
+  Procesorski cas izvajanja: 5
+Preverjanje test-A2
+  Izhodni status: ok
+  Standardni izhod: ok
+  Tocke: 1
