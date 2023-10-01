@@ -1,0 +1,93 @@
+Kaj je operacijski sistem?| Programska oprema za nadzorovanje izvajanja programov in povezovanje uporabnika s strojno opremo.
+Kako na operacijski sistem gleda uporabnik?| Uporabniški pogled na operacijski sistem vključuje vmesnik, ki olajša uporabo računalnika.
+Kako na operacijski sistem gleda računalničar?| Sistemski pogled na operacijski sistem vključuje upravljanje virov, nadzor delovanja sistema in ponujanje sistemskih storitev.
+Kaj sodi pod operacijski sistem?| Jedro, gonilniki naprav, lupina in sistemska orodja.
+Katere storitve nudi operacijski sistem?| Upravljanje z uporabniki, procesi, pomnilnikom, datotečnimi sistemi, V/I napravami, medprocesno komunikacijo, računalniško komunikacijo, zaščito procesov in varnost podatkov ter statistika in računovodstvo.
+Kakšni so cilji operacijskih sistemov?| Cilji vključujejo prikladnost uporabe, varnost, zanesljivost delovanja, učinkovitost delovanja in prilagodljivost sistema.
+Zakaj študirati operacijske sisteme?| Za uporabnike, aplikacijske programerje, sistemsko programerje, računalničarje in teoretične računalničarje je razumevanje operacijskih sistemov pomembno za različna področja.
+Kaj so splošni koncepti, ki se pojavljajo pri študiji operacijskih sistemov?| Abstrakcija, virtualizacija, varnost, sočasnost in persistenca so ključni koncepti pri študiji operacijskih sistemov.
+Kaj je jedro operacijskega sistema?| Jedro je programska koda, ki vsebuje bistvene storitve operacijskega sistema in omogoča nadzor nad strojno opremo.
+Kako poteka komunikacija med jedrom in strojno opremo?| Naprave in kontrolniki naprav skozi vmesnik jedra komunicirajo z jedrom operacijskega sistema.
+Kaj je arhitektura jedra operacijskega sistema?| Arhitektura jedra se nanaša na strukturo in način povezovanja med različnimi deli jedra ter vključuje različne vrste arhitektur, kot so monolitno, mikro, hibridno itd.
+Kako se razlikuje monolitno jedro od mikro jedra?| Monolitno jedro vsebuje celoten operacijski sistem, medtem ko mikro jedro vsebuje le osnovne funkcionalnosti, ostale funkcije pa se izvajajo zunaj jedra.
+Kaj je hibridno jedro?| Hibridno jedro je kombinacija mikrojedra in monolitnega jedra, ki omogoča ločene servise in funkcionalnosti.
+
+Kaj je sistemski klic?| Sistemski klic je mehanizem, preko katerega uporabniški program zahteva jedrno storitev.
+Kako se izvede sistemski klic?| Sistemski klic se izvede preko klica podprograma v jedru, ki implementira zahtevano storitev.
+Kaj je namen ovojnih funkcij?| Ovojne funkcije omogočajo enostavno uporabo sistemskih klicev s strani uporabniških programov, saj pripravijo argumente in upravljajo z vstopom v jedro.
+Zakaj se uporabljajo ovojne funkcije?| Ovojne funkcije olajšajo uporabo sistemskih klicev, zagotavljajo boljše upravljanje argumentov ter omogočajo večjo prenosljivost programov med različnimi operacijskimi sistemi.
+Kako je omogočena varnost pri sistemskih klicih?| Sistemski klici služijo tudi kot mehanizem za nadzor in avtorizacijo operacij, ki jih izvajajo procesi, kar pripomore k zagotavljanju varnosti sistema.
+Kaj je API?| API (Application Programming Interface) je vmesnik, preko katerega uporabniki komunicirajo s programskimi knjižnicami ali operacijskim sistemom.
+Kaj je ABI?| ABI (Application Binary Interface) je vmesnik med aplikacijami in operacijskim sistemom, ki temelji na številski predstavitvi, na primer številki funkcije.
+Kaj je POSIX?| POSIX (Portable Operating System Interface) je standard, ki določa prenosljivi vmesnik med aplikacijami in operacijskim sistemom ter omogoča prenosljivost programov med različnimi UNIX podobnimi sistemi.
+Kaj pomeni certificiranje v skladu s SUS standardom?| Certificirani Unix sistemi so tisti, ki izpolnjujejo zahteve Single UNIX Specification standarda, kar omogoča uporabo blagovne znamke UNIX™.
+Kako ovojne funkcije olajšajo uporabo sistemskih klicev?| Ovojne funkcije pripravijo argumente za sistemski klic ter upravljajo z vstopom v jedro, kar poenostavi uporabo in zagotavlja boljšo organizacijo kode.
+
+Kaj je namen uporabniškega računa?| Uporabniški račun omogoča razlikovanje med uporabniki, omogoča prijavo v sistem, ločevanje virov med uporabniki ter hrani osebne podatke, uporabniško ime in prijavno lupino.
+Kako se razlikujejo uporabniki v enouporabniškem in večuporabniškem operacijskem sistemu?| Enouporabniški OS nima razlikovanja med uporabniki in nima nadzora nad uporabo virov, medtem ko večuporabniški OS omogoča razlikovanje in razpoznavanje uporabnikov ter lastništvo virov.
+Kaj je enofaktorska overitev?| Enofaktorska overitev temelji na enem dejavniku, na primer znanju gesla. Vendar se zaradi pomanjkanja varnosti običajno odsvetuje.
+Kaj je večfaktorska overitev?| Večfaktorska overitev uporablja več dejavnikov, kot so znanje (geslo), lastništvo (fizične naprave) in prirojeni dejavniki (npr. prstni odtis), kar povečuje varnost pri prijavi v sistem.
+Kako se običajno izvaja oddaljena prijava v sistem?| Za oddaljeno prijavo se pogosto uporablja protokol SSH (Secure Shell) v Unix sistemih in Remote Desktop Connection v operacijskem sistemu Windows.
+Kaj pomeni soljenje gesel?| Soljenje gesel vključuje dodajanje naključnega niza (sol) k geslu pred zgoščevanjem, kar preprečuje napade z mavrično tabelo in povečuje varnost shranjenih gesel.
+Kje se hranijo podatki o uporabnikih in gesla v Linuxu?| Podatki o uporabnikih so shranjeni v datotekah /etc/passwd (za osnovne podatke) in /etc/shadow (za zgoščene vrednosti gesel).
+Kako se hranijo podatki o uporabniških skupinah v Linuxu?| Podatki o uporabniških skupinah so shranjeni v datotekah /etc/group (seznam uporabnikov v skupini) in /etc/gshadow (gesla skupin).
+Kaj je superuporabnik (sudoer)?| Superuporabnik je uporabnik, ki lahko začasno "dvigne" svoja dovoljenja s pomočjo ukaza sudo, kar omogoča izvajanje privilegiranih nalog.
+
+Kaj je datoteka v smislu logične organizacije podatkov?| Datoteka je osnovna zaključena zbirka podatkov, ki ima dolgotrajno obstojnost in jo lahko identificiramo preko imena. 
+Kaj vsebuje datoteka?| Vsebuje podatke ter atribute, kot so ime datoteke, velikost, datum in čas spremembe, lastnik in skupina ter dovoljenja za uporabo.
+Kaj je imenik?| Imenik omogoča združevanje sorodnih datotek in vsebuje seznam datotek in pripadajočih atributov. 
+Kakšno strukturo ima imenik?| Ima hierarhično strukturo, ki omogoča gnezdenje imenikov (podimenikov) in ustvarja drevesno strukturo organizacije podatkov.
+Kaj je pot do datoteke in kakšni sta absolutna ter relativna pot?| Pot do datoteke je seznam imen imenikov, ki vodijo od izvornega imenika do ciljne datoteke. Absolutna pot se začne pri korenskem imeniku, medtem ko relativna pot izhaja iz trenutnega delovnega imenika.
+Kako je hierarhična struktura imenikov organizirana?| Hierarhična struktura imenikov omogoča gnezdenje imenikov in ustvarja odnos med nadimeniki (super-directory) in podimeniki (sub-directory), s korenskim imenikom na vrhu.
+Kaj je trda povezava med datotekama?| Trda povezava je dodaten imeniški vnos, ki omogoča več imeniških vnosov, ki se nanašajo na isto datoteko. Ko brišemo en vnos, se datoteka ne izbriše, dokler ni odstranjen zadnji vnos.
+Kaj je simbolična (mehka) povezava med datotekama?| Simbolična povezava je datoteka posebnega tipa, ki vsebuje pot do ciljne datoteke. Lahko se prepozna kot posebna vrsta datoteke in omogoča lažje spreminjanje ciljne datoteke.
+Kako so datoteke kodirane v operacijskem sistemu?| Datoteke so lahko kodirane z uporabo različnih kodnih shem, kot je ASCII, Unicode (UTF-8, UTF-16, UTF-32) in druge sheme, ki predstavljajo znake in simbole v obliki zaporedja bajtov.
+Kako se izvaja kodiranje znakov v Unicode-u?| Obstajajo različne kodne točke za vsak znak, ki se lahko kodirajo z različnimi kodnimi prostori, kot je UTF-8 (1 do 4 bajti na znak), UTF-16 (1 ali 2 besedi) in UTF-32 (4 bajti na znak).
+Kako je skok v novo vrstico oblikovan v Unixih?| LF (line feed)
+Kako je skok v novo vrstico oblikovan v Windowsih?| CR+LF (carriage return + line feed)
+Kaj je imeniška struktura?| Imeniška struktura se nanaša na način, kako so organizirani imeniki (imeniški prostori) in datoteke v operacijskem sistemu.
+Kako poteka pripenjanje (mount) dodatnih datotečnih sistemov?| Pripenjanje se nanaša na proces povezovanja dodatnega datotečnega sistema v obstoječo imeniško strukturo. Točka pripenjanja (mount point) je ciljni imenik, v katerega se pripne dodaten datotečni sistem.
+Kaj je navidezni datotečni sistem (VFS)?| Navidezni datotečni sistem (VFS) je abstrakcija, ki omogoča različnim fizičnim datotečnim sistemom uporabo enotnega vmesnika. 
+Kako je zgrajen navidezni datotečni sistem (VFS)?| VFS uporablja objektno orientiran pristop, kjer so različni deli datotečnih sistemov predstavljeni kot objekti, kot so superblock, inode, dentry in datotečni deskriptor.
+Kako VFS podpira hierarhijo imenikov?| VFS podpira hierarhijo imenikov z uporabo struktur, kot so dentry (imeniški vnos) in inode (indeksni vnos). Dentry predstavlja vnos v imeniku, ki preslika ime datoteke v ustrezen inode. Inode vsebuje metapodatke datoteke, kot so velikost, dovoljenja, lastnik, itd. Te strukture omogočajo organizacijo hierarhične strukture imenikov.
+Kako se uporabljajo datotečni deskriptorji za upravljanje z odprtimi datotekami?| Datotečni deskriptorji so uporabljeni za sledenje odprtih datotek v procesu. Vsak datotečni deskriptor predstavlja odprto datoteko in vsebuje informacije, kot so kazalec na dentry, števec uporabe, informacije o uporabniku, položaj v datoteki...
+
+Kaj je zunanji pomnilnik in kakšna je naloga operacijskega sistema v zvezi z njim?| Zunanji pomnilnik je naprava za hranjenje podatkov, ki omogoča trajno shranjevanje informacij. 
+Kakšna je naloga zunanjega pomnilnika v zvezi z OS?| Naloga operacijskega sistema v zvezi z zunanjim pomnilnikom je upravljanje s podatki na teh napravah, vključno z organizacijo, dostopom, varnostjo in nadzorom.
+Kako so bločne naprave organizirane?| Bločne naprave so organizirane kot zaporedje blokov, ki so običajno enake velikosti, na primer 512 bajtov ali 4 KiB. 
+Kakšna je vloga gonilnikov bločnih naprav?| Gonilniki bločnih naprav so programske komponente, ki omogočajo operacijskemu sistemu komuniciranje in upravljanje s tovrstnimi napravami, vključno z branjem, pisanjem in premikanjem podatkov med pomnilnikom in napravo.
+Kaj je fragmentacija in kakšna je razlika med notranjo in zunanjo fragmentacijo?| Fragmentacija je pojav, kjer neizkoriščen prostor na pomnilniški napravi povzroči zmanjšanje učinkovitosti in zmogljivosti. Notranja fragmentacija se pojavi, ko so posamezni bloki datotek delno izkoriščeni, kar vodi do zapravljanja prostora. Zunanja fragmentacija pa nastane, ko so prosti bloki na disku razdrobljeni in ni več dovolj velikih skupnih območij za shranjevanje novih podatkov.
+Kako je disk razdeljen| Disk se lahko razdeli na več razdelkov, ki se obnašajo kot ločeni diski. 
+Kako deluje particija FAT? Particija FAT uporablja datotečni sistem File Allocation Table, kjer so podatki organizirani v grozdih (clustrih). Ta particija vsebuje tudi tabelo FAT, ki določa zaporedje grozdov, ki tvorijo datoteke. Imenik in datoteke se hranijo v grozdih, medtem ko tabela FAT sledi, kako so grozdi povezani in tvorijo datoteke.
+
+Kaj je proces?| Aktivna entiteta, ki izvaja programsko kodo in ima stanja kot so podatki, sklad, kopica, datoteke, VI naprave.
+Kako poteka življenje procesa?| Stvaritev, izvajanje, čakanje na dogodke, končanje, kjer proces prehaja med različnimi stanji.
+Kaj je lastništvo procesov v operacijskem sistemu?| Procesi lastnikom virov, kot so pomnilnik, V/I naprave, datoteke.
+Kako se izvajajo programi v procesih?| Izvajanje kode sledi potem prek več programov, ki tekmujejo za vir.
+Kateri glavni izzivi procesov so značilni v operacijskih sistemih?| Lastništvo virov, izvajanje kode, neodvisnost procesov, konkurenca za vire.
+Kaj so deskriptorji procesa?| Nadzorni podatki za upravljanje procesa, vključno z identifikacijo, stanjem, kontekstom, statusom V/I operacij.
+Kako procesi pristopajo do naslovnega prostora v pomnilniku?| Procesi lahko naslavljajo pomnilnik s pomočjo naslovov, ki so dodeljeni zanje.
+Kako se ustvarjajo procesi in kako poteka njihova stvaritev?| Procesi se ustvarjajo z zagonom programov iz izvršljivih datotek ali z različnimi metodami kot je fork() ali clone().
+Kaj je stanje procesa "pripravljen"?| Stanje, v katerem je proces pripravljen na izvajanje, vendar trenutno ne izvaja na procesorju.
+Kako se konča proces?| Proces se lahko konča z normalnim zaključkom, napako pri izvajanju, zunanjimi zahtevami ali prek sistemskega klica
+
+Kako se imenuje tehnika, ki omogoča izvajanje več procesov na enem (ali nekaj) procesorju?| Virtualizacija procesorja
+Kaj pomeni večprocesiranje (multiprocessing)?| Vzporedno izvajanje več programov oz. procesov na več procesorjih
+Kakšna je glavna prednost večprocesiranja (multiprocessing)?| Boljša izkoriščenost virov, kot so procesorji, pomnilnik, naprave itd.
+Kakšna je osnovna razlika med sodelovalno in prevzemno večopravilnostjo?| Sodelovalna večopravilnost temelji na sodelovanju procesov, medtem ko prevzemna večopravilnost temelji na prekinitvah in prekinitvenih rokovalnikih.
+Kako se imenuje mehanizem, ki omogoča procesom, da se sočasno izvajajo na enem procesorju?| Časovno dodeljevanje (time sharing)
+Kako lahko proces sam prostovoljno prepusti procesor v primeru sodelovalne večopravilnosti?| Sistemski klic yield
+Kako se imenuje mehanizem, ki temelji na prekinjanju procesa in omogoča izvajanje več procesov na istem procesorju?| Prevzemna večopravilnost
+Kaj je časovna rezina v kontekstu prevzemne večopravilnosti?| Čas, ki ga ima proces na voljo za izvajanje preden mu je odvzet procesor in dodeljen drugemu procesu.
+Kako se imenuje mehanizem, ki omogoča procesom deljenje istega procesorja, pomnilnika, vodil in naprav?| Souporaba virov (resource sharing)
+Kako se imenuje mehanizem, pri katerem se kontekst preklopi med procesi, da se doseže večopravilnost?| Preklop procesa
+Kaj pomeni izraz "kontekst procesa"?| Vključuje vse informacije o izvajanju procesa, vključno s stanjem registrov, kazalcev in drugih pomembnih podatkov.
+Kako se imenuje mehanizem, ki omogoča, da se procesu prepusti procesor brez tveganja, da bi ga zasedel za nedoločen čas?| Preklop konteksta
+Kateri komponenti procesorja se morata med preklopom konteksta shraniti in obnoviti?| Stanje registrov (kot so PC, statusni register, ipd.) in kazalcev (kot je kazalec na vrh klicnega skladu).
+Kaj je cilj razvrščevalnega algoritma pri preklopu procesa?| Izbrati naslednji pripravljeni proces za izvajanje.
+Kako se imenuje mehanizem, ki preprečuje, da bi proces zasedel procesor za nedoločen čas?| Časovno omejenoneposredno izvajanje.
+Kako se izvajajo sistemski klici in prekinitve v kontekstu neposrednega izvajanja?| Z uporabo preklopa načina izvajanja, ki omogoča izvajanje privilegiranih operacij.
+Kako se imenuje mehanizem, ki preprečuje izgubo nadzora nad operacijskim sistemom med izvajanjem uporabniških programov?| Mehak preklop načina izvajanja
+Kaj so nekatere težave, povezane z izvajanjem neposrednega izvajanja?| Težje nadziranje, možnost trkov med procesi, izguba nadzora nad sistemom
+Kdaj operacijski sistem pridobi nadzor nad izvajanjem procesov med neposrednim izvajanjem?| Ob strojni prekinitvi, izjemi pri izvajanju procesa ali ob sistemskem klicu
+Kako se imenuje funkcija, ki omogoča preklapljanje med procesi v kontekstu neposrednega izvajanja?| Izklopna rutina (switching routine)
