@@ -1,5 +1,4 @@
-<link rel="stylesheet" type="css" href="./style/style.css">
-
+![](./img/F1231055-01.jpg)
 
 # VGRS
 

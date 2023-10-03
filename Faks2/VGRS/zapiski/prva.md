@@ -1,5 +1,3 @@
-![](./img/F1231055-01.jpg)
-
 # Prekinitve pri ARM - Cortex
 
 ## RISC IN ZASNOVA
