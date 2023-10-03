@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="css" href="./style/style.css">
+
+
 # VGRS
 
 ### KONTAKT 
