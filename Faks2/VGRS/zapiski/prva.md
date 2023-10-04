@@ -7,10 +7,10 @@
 RISC >> CISC?
 
 ### PROGRAMSKI MODEL CPE:
+
 - 16 splosno namenskih registrov (R0 - R15)
 - specificni registri imanjo dolocen namen(R13 - STACK POINTER, R14 - LINK REGISTER, R15 - PROGRAM COUNTER)
 - 32 bitni registri
-
 
 ortogonalnost iz ARS-a (ukazi se enako kodirajo, enako dolgi...)
 
@@ -20,13 +20,15 @@ Glavni program sploh ne sme zaznati, da se je prekinitveno servisni podprogram s
 Registri morajo biti enaki kot so bili prej **-> TRANSPARENTNOST**.
 
 ### RESITVE
+
 1. **Registre, uporabljene med izvedbo** prekinitveno servisnega programa shranimo na sklad.
 2. **Vse registre** pred izvajanjem prekinitveno servisnega podprograma vrzemo na sklad.
 
-***Zagotovo se umazejo R12, R13, R14, R15, zraven pa se zaradi posiljanja argumentov v podprograme umazejo tudi R0 - R3.
-Vse te damo na sklad.***
+**_Zagotovo se umazejo R12, R13, R14, R15, zraven pa se zaradi posiljanja argumentov v podprograme umazejo tudi R0 - R3.
+Vse te damo na sklad._**
 
 ### OSTALI REGISTRI
+
 - imamo dva razlicna stack pointerja, **MSP(Main stack pointer) in PSP(Processor stack pointer)**. Pri tem je MSP namenjen kodi iz operacijskega sistema, PSP pa je namenjen kodi iz zunanjih programih.
 
 - imamo se dva registra, do katerih lahko dostopamo le s posebnimi ukazi: **CR() in PSR(program status register)**
@@ -37,16 +39,18 @@ Vse te damo na sklad.***
 - **CR ima nPRV bit**
 
 ### NIVOJI PRIVILIGIRANOSTI
+
 1. **Visji (Handler mode) - namenjen PSP** (Obstajajo ukazi, ki jih procesor lahko izvaja le v visjem nacinu proviligiranosti.)
 2. **Nizji (Thread mode) - namenjen MSP**
 
 ## SKLAD
 
 **ARM ABI** : FULL DESCENDING
+
 - SP kaze na zadnji vstavljen podatek
 - Sklad narasca v smeri padajocih naslovov
-  
-**PUSH REG:** 
+
+**PUSH REG:**
+
 1. SP <- SP - 4 (ADDI R13, R13, -4)
 2. M[SP] <- reg (sw O(R13), reg) "(STR)"
-
