@@ -1,3 +1,7 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="../style/retro.css" />
+</head>
+
 # Prekinitve pri ARM - Cortex
 
 ## RISC IN ZASNOVA
