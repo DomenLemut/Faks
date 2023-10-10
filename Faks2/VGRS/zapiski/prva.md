@@ -1,8 +1,10 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="../style/retro.css" />
+    <link rel="stylesheet" type="text/css" href="../.style/md_style.css" />
 </head>
 
-# Prekinitve pri ARM - Cortex
+# ARM - Cortex
+
+> prvo predavanje
 
 ## RISC IN ZASNOVA
 
@@ -52,6 +54,36 @@ V tem sistemu imamo dva nivoja to sta: `Visji (Handler mode) - namenjen PSP` (Ob
 #### **PUSH REG:**
 
 ```
-1. SP <- SP - 4 (ADDI R13, R13, -4)
-1. M[SP] <- reg (sw O(R13), reg) "(STR)"
+SP <- SP - 4 (ADDI R13, R13, -4)
+M[SP] <- reg (sw O(R13), reg) "(STR)"
+```
+
+> drugo predavanje
+
+### Ukazi za delo s skladom
+
+Imamo dva ukaza, to sta `LDMFD`, ki deluje kot **POP** ukaz, in `STMFD`, ki deluje kot **PUSH** ukaz.
+
+RISC procesorji nimajo ukazov za delo s skladom.
+
+### Vstop v prekinitev
+
+Ko procesor dobi prekinitveno zahtevo, `CPE rabi izvedeti, kdo ga je prekinil`. Za ta namen ima Cortex `254 ID-jev vira` (od 1 do 254).
+
+1. **Izvede ukaze** do vklučno stopnje EX v cevovodu.
+
+2. CPE hardwersko (brez izvajanja ukazov) **na sklad porine naslednje registre**: PSR, PC, LR, R12, R3, R2, R1, R0. (to je del konteksta, ki se hardwaresko shrani in programerja za to ni treba skbeti.)
+3. ```
+   PC <- M [4 * ID]
+   ```
+   <small>(ID je identifikator vira prekinitve, ki ga je prejel CPE, 4 \* ID je naslov v vektorju prekinitvenih vektorjev, M je pomnilnik, PC je program counter) </small>
+
+S posebnim ukazom `IRED` se vrnemo iz prekinitveno servisnega podprograma.
+
+Vrnitev iz Prekinitveno servisnega podprograma:
+
+```
+pc <- lr
+lr <- M[sp]
+sp <- sp + 4 (ali 8)
 ```
