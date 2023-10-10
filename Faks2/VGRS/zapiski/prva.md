@@ -117,7 +117,7 @@ drugi bit: MSP/PSP
 - `9: thread mode + MSP`
 - `D: handler mode + PSP`
 
-#### Tabela prekinitvenih vektorjev (vektorska tabela)
+#### TABELA PREKINITVENIH VEKTORJEV (VEKTORSKA TABELA)
 
 > Začne se na naslovu 0x00000004
 
