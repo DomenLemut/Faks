@@ -60,13 +60,13 @@ M[SP] <- reg (sw O(R13), reg) "(STR)"
 
 > drugo predavanje
 
-### Ukazi za delo s skladom
+### UKAZI ZA DELO S SKLADOM
 
 Imamo dva ukaza, to sta `LDMFD`, ki deluje kot **POP** ukaz, in `STMFD`, ki deluje kot **PUSH** ukaz.
 
 RISC procesorji nimajo ukazov za delo s skladom.
 
-### Vstop v prekinitev
+### VSTOP V PREKINITEV
 
 Ko procesor dobi prekinitveno zahtevo, `CPE rabi izvedeti, kdo ga je prekinil`. Za ta namen ima Cortex `254 ID-jev vira` (od 1 do 254).
 
@@ -99,7 +99,7 @@ POP pc
 POP psr
 ```
 
-### Vektor prekinitvenih vektorjev
+### VEKTOR PREKINITVENIH VEKTORJEV
 
 x = {1, 9, d}
 
@@ -110,6 +110,23 @@ x = {1, 9, d}
 Na zadnjih dveh mestih naslova ne more biti ukaz, ker je povsod kodirano enako.
 Na prvih dveh pa pa kodiramo kot:
 
-- `1: handler mode + PSP`
-- `9: thread mode + PSP`
-- `D: handler mode + MSP`
+prvi bit: handler
+drugi bit: MSP/PSP
+
+- `1: handler mode + MSP`
+- `9: thread mode + MSP`
+- `D: handler mode + PSP`
+
+#### Tabela prekinitvenih vektorjev (vektorska tabela)
+
+> Začne se na naslovu 0x00000004
+
+`Tabela:`
+
+| naslov     | vrednost             |
+| ---------- | -------------------- |
+| 0x00000000 | začetna vrednost SP  |
+| 0x00000004 | naslov PSP ja za ID1 |
+| 0x00000008 | naslov PSP ja za ID2 |
+| 0x0000000C | naslov PSP ja za ID3 |
+| ...        | ...                  |
