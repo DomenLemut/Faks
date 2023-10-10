@@ -6,7 +6,7 @@
 
 > prvo predavanje
 
-## RISC IN ZASNOVA
+## RISC IN ZASNOVA ⚙️
 
 **ARM temelji na RISC tehnologiji, samo en pomnilniski operand je lahko v ukazih. Po RISC-u ima zadostno stevilo registrov.**
 
@@ -18,7 +18,7 @@ Ima 16 splosno namenskih registrov (R0 - R15), pri tem imajo specificni registri
 
 ortogonalnost iz ARS-a (ukazi se enako kodirajo, so enako dolgi...)
 
-## PREKINITVE
+## PREKINITVE ✂️
 
 Glavni program sploh ne sme zaznati, da se je prekinitveno servisni podprogram sploh izvedel
 Registri morajo biti enaki kot so bili prej. Temu recemo `TRANSPARENTNOST`.
@@ -43,7 +43,7 @@ imamo se dva registra, do katerih lahko dostopamo le s posebnimi ukazi: `CR() in
 
 V tem sistemu imamo dva nivoja to sta: `Visji (Handler mode) - namenjen PSP` (Obstajajo ukazi, ki jih procesor lahko izvaja le v visjem nacinu proviligiranosti in `Nizji (Thread mode)` - namenjen MSP
 
-## SKLAD
+## SKLAD 📚
 
 #### **ARM ABI** : FULL DESCENDING
 
@@ -72,8 +72,10 @@ Ko procesor dobi prekinitveno zahtevo, `CPE rabi izvedeti, kdo ga je prekinil`. 
 
 1. **Izvede ukaze** do vklučno stopnje EX v cevovodu.
 
-2. CPE hardwersko (brez izvajanja ukazov) **na sklad porine naslednje registre**: PSR, PC, LR, R12, R3, R2, R1, R0. (to je del konteksta, ki se hardwaresko shrani in programerja za to ni treba skbeti.)
-3. ```
+2. CPE hardwersko (brez izvajanja ukazov) **na sklad porine naslednje registre**: PSR, PC, LR, R12, R3, R2, R1, R0. (to je del konteksta, ki se hardwaresko shrani in programerja za to ni treba skbeti.) (Temu se rece `HARDWARE STACKING`)
+3. CPE sama zapise: LR <- 0xFFFFFFFx (x oznacuje, ali je prekinitev nastala v visjem ali nizjem nacinu priviligiranosti in kateri stack uporablja)
+   > CPE rece: Hej, v prekinitvi sem 😄
+4. ```
    PC <- M [4 * ID]
    ```
    <small>(ID je identifikator vira prekinitve, ki ga je prejel CPE, 4 \* ID je naslov v vektorju prekinitvenih vektorjev, M je pomnilnik, PC je program counter) </small>
@@ -84,6 +86,30 @@ Vrnitev iz Prekinitveno servisnega podprograma:
 
 ```
 pc <- lr
-lr <- M[sp]
-sp <- sp + 4 (ali 8)
 ```
+
+```
+POP r0
+POP r1
+POP r2
+POP r3
+POP r12
+POP lr
+POP pc
+POP psr
+```
+
+### Vektor prekinitvenih vektorjev
+
+x = {1, 9, d}
+
+- 1: 0001
+- 9: 1001
+- D: 1101
+
+Na zadnjih dveh mestih naslova ne more biti ukaz, ker je povsod kodirano enako.
+Na prvih dveh pa pa kodiramo kot:
+
+- `1: handler mode + PSP`
+- `9: thread mode + PSP`
+- `D: handler mode + MSP`
