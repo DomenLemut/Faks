@@ -1,25 +1,47 @@
-Na kateri veji lahko razdelimo računalništvo? Aplikativno/inžinirsko in teoretično računlništvo.
-Kaj je naloga aplikativnega računalništva? Razvija računalniško opremo.
-Kaj je naloga teoretičnega računalništva? Raziskuje osnovne pojme in zamisli ter modele računalništva.
-Kaj je cilj teoretičnega računalništva? Analizirati, kar so inžinirji uresničili, kaj bi lahko še uresničili in česar ne bodo mogli nikoli uresničiti.
-Kako teoretično računalništvo dosega svoje cilje? Matematično modelira računske probleme, rešuje probleme na algoritmičen način, raspoznava kateri problemi so algoritmično rešljivi in kateri niso in ugotavlja zadostne vire.
-Kaj je model računanja? Je formalna definicija osnovnih pojmov in sestavin algoritmičnega računanja.
-Kaj definira model računanja? Pojem algoritma, potrebno okolje in izvajanje algoritma v okolju.
-Kaj je bistvo modela računanja? Omogočijo da teo. rač. dosega svoje cilje na strogo matematičen način.
-Zakaj poznamo različne modele računanja? Ker ima teo. rač. korenine v več področjih znanosti.
-Kateri modeli računanja veljajo za osrednje? To so končni avtomat, skladovni avtomat in Turingov stroj.
+Na kateri veji lahko razdelimo računalništvo?|Aplikativno/inžinirsko in teoretično računlništvo.
+Kaj je naloga aplikativnega računalništva?|Razvija računalniško opremo.
+Kaj je naloga teoretičnega računalništva?|Raziskuje osnovne pojme in zamisli ter modele računalništva.
+Kaj je cilj teoretičnega računalništva?|Analizirati, kar so inžinirji uresničili, kaj bi lahko še uresničili in česar ne bodo mogli nikoli uresničiti.
+Kako teoretično računalništvo dosega svoje cilje?|Matematično modelira računske probleme, rešuje probleme na algoritmičen način, raspoznava kateri problemi so algoritmično rešljivi in kateri niso in ugotavlja zadostne vire.
+Kaj je model računanja?|Je formalna definicija osnovnih pojmov in sestavin algoritmičnega računanja.
+Kaj definira model računanja?|Pojem algoritma, potrebno okolje in izvajanje algoritma v okolju.
+Kaj je bistvo modela računanja?|Omogočijo da teo. rač. dosega svoje cilje na strogo matematičen način.
+Zakaj poznamo različne modele računanja?|Ker ima teo. rač. korenine v več področjih znanosti.
+Kateri modeli računanja veljajo za osrednje?|To so končni avtomat, skladovni avtomat in Turingov stroj.
 
-Kaj je množica? Je zbirka objektov brez ponovitve.
-Na kakšne načine lahko podamo množico? Kot seznam njenih elementov ali s karakterističnim predikatom.
-Kaj je razlika med pravo podmnožico in podmnožico? Ko množici, ki ju primerjamo gotovo nista enaki.
-Kdaj sta množici enaki? Ko imata iste elemente.(A⊆B in B⊆A)
-Katere operacije nad množicami poznamo? Unija, presek, razlika in kartezični produkt ter potenčno množico.
-Kaj je potenčna množica? Potenčna množica množice A, je množica vseh množic, ki so podmnožice množice A.
-Kdaj imata množici isto moč? Če obstaja bijektivna funkcija f:A→B.
-Kdaj je množica končna? Ko je njena moč naravno število.
-Če sta A,B neskončni množici in je A podmnožica množice B, imata lahko A in B lahko isto moč? Da, lahko imata.
-Povej mi o števnosti in končnosti množice s preslikavo v mnš. Množica A, ki se da injektivno preslikati v množico naravnih števil, je števna (če A končna) ali števno neskončna (če A neskončna).
-Naštej mi lastnosti relacij in jih opisi. Refleksivna, Irefleksivna, Tranzitivna, Simetrična in Asimetrična.
-Ali velja, če je R asimetrična, potem ni irefleksivna. Ne, v tem primeru je gotovo tudi irefleksivna.
-Kako pravimo relaciji R, ki je refleksivna, simetrična in tranzitivna? Ekvivalenčna relacija.
-Na kaj razdeli ekvivalenčna relacija R na S razdeli množico S? Na disjunktne neprazne podmnožice, imenovane ekvivalenčni razredi.
+Kaj je množica?|Je zbirka objektov brez ponovitve.
+Na kakšne načine lahko podamo množico?|Kot seznam njenih elementov ali s karakterističnim predikatom.
+Kaj je razlika med pravo podmnožico in podmnožico?|Ko množici, ki ju primerjamo gotovo nista enaki.
+Kdaj sta množici enaki?|Ko imata iste elemente.(A⊆B in B⊆A)
+Katere operacije nad množicami poznamo?|Unija, presek, razlika in kartezični produkt ter potenčno množico.
+Kaj je potenčna množica?|Potenčna množica množice A, je množica vseh množic, ki so podmnožice množice A.
+Kdaj imata množici isto moč?|Če obstaja bijektivna funkcija f:A→B.
+Kdaj je množica končna?|Ko je njena moč naravno število.
+Če sta A,B neskončni množici in je A podmnožica množice B, imata lahko A in B lahko isto moč?|Da, lahko imata.
+Povej mi o števnosti in končnosti množice s preslikavo v mnš!|Množica A, ki se da injektivno preslikati v množico naravnih števil, je števna (če A končna) ali števno neskončna (če A neskončna).
+Naštej mi lastnosti relacij in jih opisi!|Refleksivna, Irefleksivna, Tranzitivna, Simetrična in Asimetrična.
+Ali velja, če je R asimetrična, potem ni irefleksivna?|Ne, v tem primeru je gotovo tudi irefleksivna.
+Kako pravimo relaciji R, ki je refleksivna, simetrična in tranzitivna?|Ekvivalenčna relacija.
+Na kaj razdeli ekvivalenčna relacija R na S razdeli množico S?|Na disjunktne neprazne podmnožice, imenovane ekvivalenčni razredi.
+
+Kaj je končni avtomat?|Je matematični model sistemov s končno mnogo stanji.
+Kaj je primer končnega avtomata?|Preklopna vezja, programi...
+Kaj velja za končne avtomate?|Je vedno v kakaem stanju, korakoma bere diskretne podatke iz okolice, po vsakem branju lahko spremeni stanje.
+Zakaj končni avtomat ne zajema vsega, kar si intuitivno predstavljamo kot računanje?|Potrebovali bi neskončno dolg pomnilnik (Touringov stroj).
+Kaj sestavlja DKA?|Končna množica stanj, vhodna abeceda, začetno stanje, množica končnih stanj in funkcija prehodov.
+Kaj velja za vhodne simbole in prehode pri DKA?|Za vsak vhodni simbol in vsako stanje obstaja natanko en simbol.
+Ali so lahko stanja končna?|Da, lahko se zapletemo v neskončno zanko.
+Kaj je q0 pri DKA?|Začetno stanje.
+Ali DKA vsebuje usmerjene ali neusmerjene povezave?|Vsebuje usmerjene povezave.
+Kako definiramo razširjeno funkcijo prehodov?|Definiramo jo rekurzivno... (str. 47.)
+Opiši definicijo DKA!|(str. 48)
+Opiši Jezik DKA!|(str. 48)
+Napiši pogoj regularnosti jezika!|(str. 48)
+
+Kako iz DKA dobimo NKA?|Če dopustimo nič, enega ali celo več prehodov iz kakega stanja pri istem vhodnem simbolu.
+Čemu koristi nerealistični model računanja NKA?|Pri določanju spodnjih meja časa, potrebnega za rešitev računskega problema.
+Iz česa je sestavljen NKA?|Iz končne množice stanj, vhodne abecede, začetnega stanja, končnih stanj in funkcije prehodov.
+Kako si s trakom predstavljamo NKA?|Enako kot DKA, le da imamo lahko pri NKA več vzporednih trakov z različnimi stanji.
+Kaj so tihi prehodi?|Prehodi, ki se zgodijo, ne da bi avtomat prebral simbol v oknu.
+
+
