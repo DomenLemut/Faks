@@ -123,10 +123,12 @@ drugi bit: MSP/PSP
 
 `Tabela:`
 
-| naslov     | vrednost             |
-| ---------- | -------------------- |
-| 0x00000000 | začetna vrednost SP  |
-| 0x00000004 | naslov PSP ja za ID1 |
-| 0x00000008 | naslov PSP ja za ID2 |
-| 0x0000000C | naslov PSP ja za ID3 |
-| ...        | ...                  |
+| naslov         | vrednost                 |
+| -------------- | ------------------------ |
+| **0x00000000** | **začetna vrednost SP**  |
+| 0x00000004     | naslov PSP ja za **ID1** |
+| 0x00000008     | naslov PSP ja za **ID2** |
+| 0x0000000C     | naslov PSP ja za **ID3** |
+| ...            | ...                      |
+
+V prekinitveni tabeli Cortexa so naslovi, v prejšnjih sistemih so bili `jump ukazi`.
