@@ -1,10 +1,9 @@
 #!/bin/bash
 
-g++ -std=c++20 -o program ../osvetlitev.cpp
+NAME="$1"
 
-NUMBER="$1"
+g++ -std=c++20 -o program ../${NAME}.cpp
 
-cat ./1/testi/test${NUMBER}.txt | ./program > out.txt
-diff ./1/testi/test${NUMBER}res.txt out.txt
+cat ${NAME}/test01.txt | ./program
 
 rm program

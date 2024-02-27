@@ -1,6 +1,6 @@
 # Lema o napihovanju
 
-$$L regular \Rightarrow (\exists n)(\forall z) [z \in L  \land |z| \geq n \Rightarrow (\exists u,v,w)[z=uvw \land |uv| \leq n \land (\forall i \geq 0)u v^i w \in L]]$$
+$$L regular \Rightarrow (\exists n)(\forall z) [z \in L  \land |z| \geq n \Rightarrow (\exists u,v,w)[z=uvw \land |uv| \leq n \land |v| \geq 1 \land (\forall i \geq 0)u v^i w \in L]]$$
 
 ### Z BESEDAMI
 

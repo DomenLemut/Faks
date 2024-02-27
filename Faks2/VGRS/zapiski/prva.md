@@ -132,3 +132,4 @@ drugi bit: MSP/PSP
 | ...            | ...                      |
 
 V prekinitveni tabeli Cortexa so naslovi, v prejšnjih sistemih so bili `jump ukazi`.
+

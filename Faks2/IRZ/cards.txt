@@ -44,4 +44,20 @@ Iz česa je sestavljen NKA?|Iz končne množice stanj, vhodne abecede, začetneg
 Kako si s trakom predstavljamo NKA?|Enako kot DKA, le da imamo lahko pri NKA več vzporednih trakov z različnimi stanji.
 Kaj so tihi prehodi?|Prehodi, ki se zgodijo, ne da bi avtomat prebral simbol v oknu.
 
+Katere Leme uporabljamo za dokazovanje lastnosti jezikov?|Lema o napihovanju, lema o črpanju, odločitveni problemi in Myhill-Nerodejev izrek.
+Kaj lahko dokažemo s Lemo o napihovanju? Da nekateri jeziki niso regularni ali da jeziki niso končni.
+Razloži lemo o napihovanju.|...
+Kdaj je razred regularnih jezikov zaprt za dano operacijo?| Če je rezultat operacije nad regularnimi jeziki tudi sam regularni jezik.
+Kaj je Kleenovo zapletje?| Nobody knows.
+Ali je razred regularnih jezikov zaprt za operacije unija, stik in Kleenovo zaprtje?| Da.
+Ali je razred regularnih jezikov zaprt za operacijo komplement in presek?| Da.
+Kdaj je regularni jezik neprazen?| Če je M končni avtomat z n stanji, potem je L(M) neprazen če in samo če sprejme besedo z dolžine manjše od n.
+Kdaj je regularni jezik neskončen?| Če je M končni avtomat z n stanje, potem je L(M) neskončen če in samo če sprejme besedo dolžine l, kjer velja n <= l < 2n.
+Kako torej ugotavljamo a je L neprazen?| Preverimo, ali v L(M) obstaja beseda dolžine l < n;
+Kako torej ugotavljamo a je L neskončen?| Preverimo, ali v L(M) obstaja beseda dolžine l, kjer velja n <= l < 2n;
+Kdaj sta končna avtomata ekvivalentna?| Če sprejmeta isti jezik.
+Ali obstaja najmanjši ekvivalentni končni avtomat?| Da.
+
+
+
 

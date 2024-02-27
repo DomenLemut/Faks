@@ -1,0 +1,13 @@
+7
+algoritem 20
+drevo 1
+zaba 3
+zebra 10
+algebra 4
+alge 8
+program 5
+4
+alge
+x
+a
+zeb
