@@ -1,0 +1,5 @@
+svd has a second arguments, the first one is a matrix, second "0" or "econ" is the same.
+
+pinv() is a function to calculate moore-penrose inverse.
+
+rref() is a function to find reduced form of a matrix

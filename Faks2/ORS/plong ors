@@ -1,0 +1,83 @@
+RISC-preprosti ukazi(Reduced instruction set computer)
+CISC-kompleksni ukazi(complete instruction set computer)
+VRSTE REGISTROV V/I: statusni, podatkovni in kontrolni
+PROSTORSKA LOKALNOST - ukazi so shranjeni na zaporednih pomnilniških naslovih
+ČASOVNA LOKALNOST - zanke(večkrat v časovnem intervalu dostopamo do istih pomnilniških besed)
+MAR - memory address register
+-> naslovno dekodiranje, dekodira naslov da omogoči le en CS (chip select)
+MDR - memory data register(tle je pa data)
+POPOLNO/NEPOPOLNO NASLOVNO KODIRANJE 
+popolno - uporablja vse naslovne bite
+nepopolno - ne uporablja vseh naslovnih bitov
+
+---------------------------------------------
+PREKINITVE
+prekinemo trenutni program in začnemo z izvajanjem prekinitvo-servisnega programa(PSP)
+CPE ima vhodni signal IRQ
+izvesti moramo še EX,MEM,WB, zavržemo IF in ID
+shranimo PC prekinjenjega programa
+resitev: EPC <- PC
+PAST - prekinitev znotraj naprave
+kako izvemo kdo prekinja: 1. polling, 2. vsaka naprava ima svoj IRQ(PC <- f(ID) npr. PC <- M[naslov + 4xID])
+KAKO DOBI NASLOV PSP?
+RISC:
+	(PC <- definiran naslov + 4xID)
+	na tah naslovih so potem shranjeni jump ukazi
+
+ARM Cortex:
+	16 notranjih izjem in 210 zunanjih izjem
+	vsaka izjema ima ID in prioriteto :)
+	nizje kot je prioritetno število, večja je prioriteta
+	tabela prekinitvenih vektorjev na 0x00000000
+Intel:
+	32 pasti in 224 zunanjih prekinitev
+	vsaka ima svoj id
+	
+specialni registri
+	mcause: vzrok prekinitve
+	mtvec: pravilo, kako tvoriti naslov psp
+	mepc: direktni register, shranjevanje pc
+prekinitev se zaključi s ukazom mret
+
+PREKINITVENI KRMILNIKI:
+	INTEL 8259A:
+		interrupt ack INTA
+		interrupt recognise INTR
+		zgradba: ISR; kodirnik, priority controller, control unit
+		KASKADNA VEZAVA - "OFFSET!!!"
+		
+	NVIC(ARM Cortex)
+		256 pasti in prekinitev
+		100 pomniliniško preslikanih 32-bit reg.
+		ISER in ICER registri
+		IPR - interrupt priority register
+	RISC-V 
+		ne dovoli gnezdenih prekinitev
+		NVIC -  dodatni prekinitveni krmilnik, ki sprejema zahteve iz pinov in jih posreduje NVIC-u
+	INTEL APIC(advanced pic)
+		lokalni lapici in apic
+	PCI
+		peripheral component interconnect
+		APIC (PIRQA->INT16, PIRQB->INT17...)
+	MSI - message signalled interrupts
+		novejse naprave, PCI same generirajo sporocila lapicom
+		
+KRMILNIKI ZA NEPOSREDEN DOSTOP DO POMNILNIKA
+	- DIRECT MEMORY ACCESS(DMA)
+	dve vrsti: fly thru in fly by
+	
+	FLY BY:
+		najprej se naslovi pomnilnik in ne prebere podatka -> DMA samo narekuje prenose in naslavlja
+		
+	FLY THRU:
+		stirje registri:
+			- destination address,
+			- source address,
+			- števec prenosov,
+			- data register(buffer)
+	DMA krmilnik iz CPE predstavlja 4 registre:
+		MAR(memory address reg.), PAR(peripheral address reg.), NTDR(number of data transfer reg.), CR(configuration reg.)
+		
+	zaporedje: nastavi MAR, nastavi PAR, nastavi število beesed v NTDR, v CR nastavi smer prenosa, CPE zažene DMA prenos.
+
+
