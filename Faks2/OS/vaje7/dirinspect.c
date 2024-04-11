@@ -23,9 +23,19 @@ int main(int argc, char ** argv) {
 	for(int i = 0; i < 30; i++)
 		printf("—");
 	printf("\n");
-
+	char type;
 	while((entry = readdir(d)) != NULL) {
-		printf("%-10lu %-10c %-10s\n", entry->d_ino, entry->d_type, entry->d_name);
+		switch (entry->d_type) {
+	            case DT_BLK: type = 'b'; break;
+	            case DT_CHR: type = 'c'; break;
+	            case DT_DIR: type = 'd'; break;
+	            case DT_FIFO: type = 'p'; break;
+	            case DT_LNK: type = 'l'; break;
+	            case DT_REG: type = '-'; break;
+	            case DT_SOCK: type = 's'; break;
+	            default: type = '?'; break;
+	        }
+		printf("%-10lu %-10c %-10s\n", entry->d_ino, type, entry->d_name);
 	}
 	
 
